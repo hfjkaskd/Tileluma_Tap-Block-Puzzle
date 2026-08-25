@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e45cd7f71d43834ca2e7d0efdeae07f, type: 3}
+  m_Name: Oversea
+  m_EditorClassIdentifier: 
+  channel: Android
+  platformType: 2
+  AppId: starblastpuzzle
+  editorPlatformType: 1
+  defaultLanguage: en-US
+  GM: 0
+  debugMode: 0
+  httpConfig:
+    domain: https://busstopmaster.top
+    doc_version: 
+    bundle_name: 
+    aes_key: Shining2624Puzzle
+    salt: 
+  real_CustomConfig:
+    singleCurrencyMode: 0
+    country: 0
+    useEditorUserId: 0
+    editorUserId: 82048035625361215488
+    testECPM1000: 0
+    TestECPMValue: 230.13315
+    openTestDevice: 0
+    testDeviceIds:
+    - 7bbffb50-eea6-46be-8985-1243c81e67c6
+    GenerateFakeAndroidId: Assets/BizzaWZ/Real/Tools/GenereatedInfo
+    enterNewbieGuide: 0
+    failOpenAd: 0
+    versionLog: 08211553_1.0.3
+    interAdNotReady: 0
+    rewardAdNotReady: 0
+  real_PageTestConfig:
+    testExPanel: 0
+    testDialyWithdrawalPanel: 0
+  real_ADStatistics:
+    CloseGetRewardCount: 4
+    ShowGetRewardCount: 7
+    ShowDollarCount: 2
+  attributeConfig: 1
+  adjustKey: g4ekxmbpp2ps
+  tenjinKey: MDHQTZIGZYRTV7DSQQWX3HNDZKEKX1QX
+  analysisSdkType: 2
+  tkConfig:
+    appId: 2d088fbd5cb9433ebfcf144eb8edea0b
+    serverUrl: https://ss.playwinner.org
+    appCode: IOS@OceanShine
+    debug: 1
+  sourceAds:
+  - AdsSource: 1
+    rewardAdId: 80e5e41c402c48e5
+    interAdId: 07083f8f33ae059f
+    bannerAdId: 
+    openAdId: 
+  useInterReplenishReward: 1
+  useRewardReplenishInter: 0

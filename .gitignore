@@ -1,0 +1,31 @@
+# Keep the repository focused on the reproducible Unity project.
+/*
+
+!/.gitignore
+!/README.md
+!/Assets/
+!/Assets/**
+!/Packages/
+!/Packages/**
+!/ProjectSettings/
+!/ProjectSettings/**
+!/_Bizza_BuildTemplate/
+!/_Bizza_BuildTemplate/**
+!/_Bizza_Tools/
+!/_Bizza_Tools/**
+!/Tools/
+!/Tools/**
+
+# Private signing and generated obfuscation credentials must stay local.
+*.jks
+*.jks.meta
+*.keystore
+*.keystore.meta
+*.p12
+*.p12.meta
+*.pfx
+*.pfx.meta
+/Assets/Resources/Obfuz/defaultDynamicSecretKey.bytes
+/Assets/Resources/Obfuz/defaultDynamicSecretKey.bytes.meta
+/Assets/Resources/Obfuz/defaultStaticSecretKey.bytes
+/Assets/Resources/Obfuz/defaultStaticSecretKey.bytes.meta

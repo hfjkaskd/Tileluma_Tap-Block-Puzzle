@@ -1,0 +1,164 @@
+[
+  {
+    "id": "1",
+    "levelId": 1,
+    "rowRange": {
+      "x": 1,
+      "y": 6
+    },
+    "colRange": {
+      "x": 1,
+      "y": 21
+    },
+    "groupNum": 36,
+    "moneyGroupNum": 8,
+    "idRange": {
+      "x": 2,
+      "y": 8
+    },
+    "groupRowRange": {
+      "x": 1,
+      "y": 3
+    },
+    "groupColRange": {
+      "x": 1,
+      "y": 3
+    },
+    "priorityNear": true
+  },
+  {
+    "id": "2",
+    "levelId": 2,
+    "rowRange": {
+      "x": 1,
+      "y": 9
+    },
+    "colRange": {
+      "x": 1,
+      "y": 21
+    },
+    "groupNum": 48,
+    "moneyGroupNum": 8,
+    "idRange": {
+      "x": 2,
+      "y": 9
+    },
+    "groupRowRange": {
+      "x": 1,
+      "y": 3
+    },
+    "groupColRange": {
+      "x": 1,
+      "y": 5
+    },
+    "priorityNear": true
+  },
+  {
+    "id": "3",
+    "levelId": 3,
+    "rowRange": {
+      "x": 1,
+      "y": 9
+    },
+    "colRange": {
+      "x": 1,
+      "y": 21
+    },
+    "groupNum": 48,
+    "moneyGroupNum": 8,
+    "idRange": {
+      "x": 2,
+      "y": 9
+    },
+    "groupRowRange": {
+      "x": 1,
+      "y": 3
+    },
+    "groupColRange": {
+      "x": 1,
+      "y": 7
+    },
+    "priorityNear": true
+  },
+  {
+    "id": "4",
+    "levelId": 4,
+    "rowRange": {
+      "x": 1,
+      "y": 9
+    },
+    "colRange": {
+      "x": 1,
+      "y": 21
+    },
+    "groupNum": 48,
+    "moneyGroupNum": 8,
+    "idRange": {
+      "x": 2,
+      "y": 9
+    },
+    "groupRowRange": {
+      "x": 2,
+      "y": 4
+    },
+    "groupColRange": {
+      "x": 1,
+      "y": 7
+    },
+    "priorityNear": true
+  },
+  {
+    "id": "5",
+    "levelId": 5,
+    "rowRange": {
+      "x": 1,
+      "y": 9
+    },
+    "colRange": {
+      "x": 1,
+      "y": 21
+    },
+    "groupNum": 48,
+    "moneyGroupNum": 8,
+    "idRange": {
+      "x": 2,
+      "y": 9
+    },
+    "groupRowRange": {
+      "x": 1,
+      "y": 3
+    },
+    "groupColRange": {
+      "x": 1,
+      "y": 7
+    },
+    "priorityNear": true
+  },
+  {
+    "id": "6",
+    "levelId": 6,
+    "rowRange": {
+      "x": 1,
+      "y": 9
+    },
+    "colRange": {
+      "x": 1,
+      "y": 21
+    },
+    "groupNum": 48,
+    "moneyGroupNum": 8,
+    "idRange": {
+      "x": 2,
+      "y": 9
+    },
+    "groupRowRange": {
+      "x": 2,
+      "y": 4
+    },
+    "groupColRange": {
+      "x": 1,
+      "y": 7
+    },
+    "priorityNear": true
+  }
+]

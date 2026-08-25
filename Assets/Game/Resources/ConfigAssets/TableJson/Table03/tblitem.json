@@ -1,0 +1,73 @@
+[
+  {
+    "id": 3,
+    "numRange": [],
+    "weightFactors": [],
+    "numRange2": [
+      100,
+      300,
+      400
+    ],
+    "multFactors": [
+      0.6,
+      0.4,
+      0.2
+    ],
+    "name": "ItemName_Dollar",
+    "icon": "Icons/Dollar"
+  },
+  {
+    "id": 2,
+    "numRange": [],
+    "weightFactors": [],
+    "numRange2": [],
+    "multFactors": [],
+    "name": "ItemName_Coin",
+    "icon": "Icons/Coin"
+  },
+  {
+    "id": 23,
+    "numRange": [],
+    "weightFactors": [],
+    "numRange2": [],
+    "multFactors": [],
+    "name": "ItemName_BackProp",
+    "icon": "Icons/BackProp"
+  },
+  {
+    "id": 24,
+    "numRange": [],
+    "weightFactors": [],
+    "numRange2": [],
+    "multFactors": [],
+    "name": "ItemName_ClearProp",
+    "icon": "Icons/ClearProp"
+  },
+  {
+    "id": 25,
+    "numRange": [],
+    "weightFactors": [],
+    "numRange2": [],
+    "multFactors": [],
+    "name": "ItemName_RefreshProp",
+    "icon": "Icons/RefreshProp"
+  },
+  {
+    "id": 27,
+    "numRange": [],
+    "weightFactors": [],
+    "numRange2": [],
+    "multFactors": [],
+    "name": "",
+    "icon": ""
+  },
+  {
+    "id": 28,
+    "numRange": [],
+    "weightFactors": [],
+    "numRange2": [],
+    "multFactors": [],
+    "name": "",
+    "icon": ""
+  }
+]

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f91a01f68cac14bb92f81ce172ce70, type: 3}
+  m_Name: BlockTapVisualConfig
+  m_EditorClassIdentifier: 
+  blockSprites:
+  - {fileID: 21300000, guid: ac7deddfe7ef9ac4d8131d6c6ed75f7a, type: 3}
+  - {fileID: 21300000, guid: 85e98817b15b1e244a46dee87017f722, type: 3}
+  - {fileID: 21300000, guid: 48515914b592913418b76d8d912dad40, type: 3}
+  - {fileID: 21300000, guid: d04af4f7dbc2f1946a5cf311939dcc6f, type: 3}
+  - {fileID: 21300000, guid: 39aca26c32fae6146abb3bd041a3da87, type: 3}
+  - {fileID: 21300000, guid: 796b3a02ee267354a856d1e81c30deaf, type: 3}
+  - {fileID: 21300000, guid: 5ee39dd99ad6f844886a7871da2989e0, type: 3}
+  goalSprites:
+  - {fileID: 21300000, guid: ac7deddfe7ef9ac4d8131d6c6ed75f7a, type: 3}
+  - {fileID: 21300000, guid: 85e98817b15b1e244a46dee87017f722, type: 3}
+  - {fileID: 21300000, guid: 48515914b592913418b76d8d912dad40, type: 3}
+  - {fileID: 21300000, guid: d04af4f7dbc2f1946a5cf311939dcc6f, type: 3}
+  - {fileID: 21300000, guid: 39aca26c32fae6146abb3bd041a3da87, type: 3}
+  - {fileID: 21300000, guid: 796b3a02ee267354a856d1e81c30deaf, type: 3}
+  - {fileID: 21300000, guid: 5ee39dd99ad6f844886a7871da2989e0, type: 3}
+  referenceResolution: {x: 1080, y: 1920}
+  boardCellSize: 128
+  boardSpacing: 0
+  spawnDuration: 0.2
+  spawnColumnDelay: 0.02
+  spawnRowDelay: 0.02
+  moveDuration: 0.12
+  collectFlyDuration: 0.35
+  removePunchDuration: 0.2
+  boardSlideDuration: 0.45
+  bombPulseDuration: 0.85

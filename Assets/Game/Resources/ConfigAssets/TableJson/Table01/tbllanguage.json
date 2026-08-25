@@ -1,0 +1,3457 @@
+[
+  {
+    "Id": "测试key",
+    "dict": [
+      [
+        "en-US",
+        "美国"
+      ],
+      [
+        "pt-BR",
+        "巴西"
+      ],
+      [
+        "id-ID",
+        "印尼"
+      ]
+    ]
+  },
+  {
+    "Id": "Common_Name",
+    "dict": [
+      [
+        "en-US",
+        "Name"
+      ],
+      [
+        "pt-BR",
+        "Nome"
+      ],
+      [
+        "id-ID",
+        "Nama"
+      ]
+    ]
+  },
+  {
+    "Id": "Common_Phone",
+    "dict": [
+      [
+        "en-US",
+        "Phone"
+      ],
+      [
+        "pt-BR",
+        "Telefone"
+      ],
+      [
+        "id-ID",
+        "Telepon"
+      ]
+    ]
+  },
+  {
+    "Id": "Common_Address",
+    "dict": [
+      [
+        "en-US",
+        "Address"
+      ],
+      [
+        "pt-BR",
+        "Endereço"
+      ],
+      [
+        "id-ID",
+        "Alamat"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Submit",
+    "dict": [
+      [
+        "en-US",
+        "Submit"
+      ],
+      [
+        "pt-BR",
+        "Enviar"
+      ],
+      [
+        "id-ID",
+        "Kirim"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Withdraw",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw"
+      ],
+      [
+        "pt-BR",
+        "Retirar"
+      ],
+      [
+        "id-ID",
+        "Tarik"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Yes",
+    "dict": [
+      [
+        "en-US",
+        "Yes"
+      ],
+      [
+        "pt-BR",
+        "Sim"
+      ],
+      [
+        "id-ID",
+        "Ya"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_No",
+    "dict": [
+      [
+        "en-US",
+        "No"
+      ],
+      [
+        "pt-BR",
+        "Não"
+      ],
+      [
+        "id-ID",
+        "Tidak"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Claim",
+    "dict": [
+      [
+        "en-US",
+        "Claim"
+      ],
+      [
+        "pt-BR",
+        "Resgatar"
+      ],
+      [
+        "id-ID",
+        "Klaim"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Continue",
+    "dict": [
+      [
+        "en-US",
+        "Continue"
+      ],
+      [
+        "pt-BR",
+        "Continuar"
+      ],
+      [
+        "id-ID",
+        "Lanjutkan"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Leave",
+    "dict": [
+      [
+        "en-US",
+        "Leave"
+      ],
+      [
+        "pt-BR",
+        "Sair"
+      ],
+      [
+        "id-ID",
+        "Keluar"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Back",
+    "dict": [
+      [
+        "en-US",
+        "Back"
+      ],
+      [
+        "pt-BR",
+        "Voltar"
+      ],
+      [
+        "id-ID",
+        "Kembali"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_RePlay",
+    "dict": [
+      [
+        "en-US",
+        "Restart"
+      ],
+      [
+        "pt-BR",
+        "Recomeçar"
+      ],
+      [
+        "id-ID",
+        "Mulai Ulang"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Menu",
+    "dict": [
+      [
+        "en-US",
+        "Menu"
+      ],
+      [
+        "pt-BR",
+        "Menu"
+      ],
+      [
+        "id-ID",
+        "Menu"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_NoThanks",
+    "dict": [
+      [
+        "en-US",
+        "No Thanks"
+      ],
+      [
+        "pt-BR",
+        "Não, obrigado"
+      ],
+      [
+        "id-ID",
+        "Tidak Perlu"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Free",
+    "dict": [
+      [
+        "en-US",
+        "Free"
+      ],
+      [
+        "pt-BR",
+        "Gratis"
+      ],
+      [
+        "id-ID",
+        "Gratis"
+      ]
+    ]
+  },
+  {
+    "Id": "Setting_Title",
+    "dict": [
+      [
+        "en-US",
+        "Settings"
+      ],
+      [
+        "pt-BR",
+        "Configurações"
+      ],
+      [
+        "id-ID",
+        "Pengaturan"
+      ]
+    ]
+  },
+  {
+    "Id": "Tips_AdNotReady",
+    "dict": [
+      [
+        "en-US",
+        "Ad is not ready yet"
+      ],
+      [
+        "pt-BR",
+        "Anúncio ainda não está pronto"
+      ],
+      [
+        "id-ID",
+        "Iklan belum siap"
+      ]
+    ]
+  },
+  {
+    "Id": "CurrencyToken",
+    "dict": [
+      [
+        "en-US",
+        "$"
+      ],
+      [
+        "pt-BR",
+        "R$"
+      ],
+      [
+        "id-ID",
+        "Rp"
+      ]
+    ]
+  },
+  {
+    "Id": "Common_TapToClose",
+    "dict": [
+      [
+        "en-US",
+        "Click to close"
+      ],
+      [
+        "pt-BR",
+        "Clicar para fechar"
+      ],
+      [
+        "id-ID",
+        "Klik untuk menutup"
+      ]
+    ]
+  },
+  {
+    "Id": "Tips_Loading",
+    "dict": [
+      [
+        "en-US",
+        "Loading..."
+      ],
+      [
+        "pt-BR",
+        "Carregando..."
+      ],
+      [
+        "id-ID",
+        "Memuat..."
+      ]
+    ]
+  },
+  {
+    "Id": "Tips_CannotBack",
+    "dict": [
+      [
+        "en-US",
+        "Cannot use this item"
+      ],
+      [
+        "pt-BR",
+        "Não é possível usar este item"
+      ],
+      [
+        "id-ID",
+        "Tidak bisa menggunakan item ini"
+      ]
+    ]
+  },
+  {
+    "Id": "Tips_CannotClear",
+    "dict": [
+      [
+        "en-US",
+        "Cannot use this item"
+      ],
+      [
+        "pt-BR",
+        "Não é possível usar este item"
+      ],
+      [
+        "id-ID",
+        "Tidak bisa menggunakan item ini"
+      ]
+    ]
+  },
+  {
+    "Id": "Tips_PropReachMaxTimes",
+    "dict": [
+      [
+        "en-US",
+        "Item has reached maximum usage"
+      ],
+      [
+        "pt-BR",
+        "Item atingiu o número máximo de usos"
+      ],
+      [
+        "id-ID",
+        "Item mencapai batas penggunaan maksimal"
+      ]
+    ]
+  },
+  {
+    "Id": "Menu_LevelBtn",
+    "dict": [
+      [
+        "en-US",
+        "Level {0}"
+      ],
+      [
+        "pt-BR",
+        "Nível {0}"
+      ],
+      [
+        "id-ID",
+        "Level {0}"
+      ]
+    ]
+  },
+  {
+    "Id": "Win_Title",
+    "dict": [
+      [
+        "en-US",
+        "Victory"
+      ],
+      [
+        "pt-BR",
+        "Vitória"
+      ],
+      [
+        "id-ID",
+        "Kemenangan"
+      ]
+    ]
+  },
+  {
+    "Id": "Failed_Title",
+    "dict": [
+      [
+        "en-US",
+        "Defeat"
+      ],
+      [
+        "pt-BR",
+        "Derrota"
+      ],
+      [
+        "id-ID",
+        "Kekalahan"
+      ]
+    ]
+  },
+  {
+    "Id": "Win_Btn",
+    "dict": [
+      [
+        "en-US",
+        "Confirm"
+      ],
+      [
+        "pt-BR",
+        "Confirmar"
+      ],
+      [
+        "id-ID",
+        "Konfirmasi"
+      ]
+    ]
+  },
+  {
+    "Id": "Failed_Btn",
+    "dict": [
+      [
+        "en-US",
+        "Confirm"
+      ],
+      [
+        "pt-BR",
+        "Confirmar"
+      ],
+      [
+        "id-ID",
+        "Konfirmasi"
+      ]
+    ]
+  },
+  {
+    "Id": "Task_Title",
+    "dict": [
+      [
+        "en-US",
+        "Daily Mission"
+      ],
+      [
+        "pt-BR",
+        "Missão diária"
+      ],
+      [
+        "id-ID",
+        "Tugas harian"
+      ]
+    ]
+  },
+  {
+    "Id": "Prop_Title",
+    "dict": [
+      [
+        "en-US",
+        "Item"
+      ],
+      [
+        "pt-BR",
+        "Item"
+      ],
+      [
+        "id-ID",
+        "Item"
+      ]
+    ]
+  },
+  {
+    "Id": "Reward_Title",
+    "dict": [
+      [
+        "en-US",
+        "Congratulations"
+      ],
+      [
+        "pt-BR",
+        "Parabéns"
+      ],
+      [
+        "id-ID",
+        "Selamat"
+      ]
+    ]
+  },
+  {
+    "Id": "Revive_Title",
+    "dict": [
+      [
+        "en-US",
+        "Revive"
+      ],
+      [
+        "pt-BR",
+        "Reviver"
+      ],
+      [
+        "id-ID",
+        "Bangkitkan"
+      ]
+    ]
+  },
+  {
+    "Id": "Prop_Limit",
+    "dict": [
+      [
+        "en-US",
+        "Limit: {0}"
+      ],
+      [
+        "pt-BR",
+        "Limite: {0}"
+      ],
+      [
+        "id-ID",
+        "Batas: {0}"
+      ]
+    ]
+  },
+  {
+    "Id": "Withdraw_Title",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw"
+      ],
+      [
+        "pt-BR",
+        "Sacar dinheiro"
+      ],
+      [
+        "id-ID",
+        "Tarik tunai"
+      ]
+    ]
+  },
+  {
+    "Id": "Teach_Withdraw",
+    "dict": [
+      [
+        "en-US",
+        "Click here to withdraw"
+      ],
+      [
+        "pt-BR",
+        "Clique aqui para sacar"
+      ],
+      [
+        "id-ID",
+        "Klik sini untuk tarik tunai"
+      ]
+    ]
+  },
+  {
+    "Id": "Teach_coin",
+    "dict": [
+      [
+        "en-US",
+        "Gold coins can also be exchanged for cash and withdrawn in full."
+      ],
+      [
+        "pt-BR",
+        "As moedas também podem ser convertidas em dinheiro e sacadas integralmente."
+      ],
+      [
+        "id-ID",
+        "Koin dapat dikonversi menjadi uang tunai dan dicairkan seluruhnya."
+      ]
+    ]
+  },
+  {
+    "Id": "Teach_dollar",
+    "dict": [
+      [
+        "en-US",
+        "Dollars can also be exchanged for cash and withdrawn in full."
+      ],
+      [
+        "pt-BR",
+        "Dollars também pode ser trocado por dinheiro e sacado integralmente."
+      ],
+      [
+        "id-ID",
+        "Dollars juga dapat ditukar menjadi uang tunai dan ditarik sepenuhnya."
+      ]
+    ]
+  },
+  {
+    "Id": "DailyTaskPage_desc1",
+    "dict": [
+      [
+        "en-US",
+        "online 10 minutes"
+      ],
+      [
+        "pt-BR",
+        "10 minutos online"
+      ],
+      [
+        "id-ID",
+        "10 menit online"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyTaskPage_desc2",
+    "dict": [
+      [
+        "en-US",
+        "online 20 minutes"
+      ],
+      [
+        "pt-BR",
+        "20 minutos online"
+      ],
+      [
+        "id-ID",
+        "20 menit online"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyTaskPage_desc3",
+    "dict": [
+      [
+        "en-US",
+        "online 40 minutes"
+      ],
+      [
+        "pt-BR",
+        "40 minutos online"
+      ],
+      [
+        "id-ID",
+        "40 menit online"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyTaskPage_desc4",
+    "dict": [
+      [
+        "en-US",
+        "online 60 minutes"
+      ],
+      [
+        "pt-BR",
+        "60 minutos online"
+      ],
+      [
+        "id-ID",
+        "60 menit online"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyTaskPage_desc5",
+    "dict": [
+      [
+        "en-US",
+        "online 90 minutes"
+      ],
+      [
+        "pt-BR",
+        "90 minutos online"
+      ],
+      [
+        "id-ID",
+        "90 menit online"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_Double",
+    "dict": [
+      [
+        "en-US",
+        "Double"
+      ],
+      [
+        "pt-BR",
+        "Dobro"
+      ],
+      [
+        "id-ID",
+        "Ganda"
+      ]
+    ]
+  },
+  {
+    "Id": "Btn_GetOnly",
+    "dict": [
+      [
+        "en-US",
+        "Get only {0}"
+      ],
+      [
+        "pt-BR",
+        "Apenas obter {0}"
+      ],
+      [
+        "id-ID",
+        "Hanya dapatkan {0}"
+      ]
+    ]
+  },
+  {
+    "Id": "Channel_Title",
+    "dict": [
+      [
+        "en-US",
+        "Account verification"
+      ],
+      [
+        "pt-BR",
+        "Verificação da conta"
+      ],
+      [
+        "id-ID",
+        "Verifikasi akun"
+      ]
+    ]
+  },
+  {
+    "Id": "Channel_Des",
+    "dict": [
+      [
+        "en-US",
+        "Please confirm account information to withdraw"
+      ],
+      [
+        "pt-BR",
+        "Confirme as informações da conta para sacar"
+      ],
+      [
+        "id-ID",
+        "Harap konfirmasi informasi akun untuk penarikan"
+      ]
+    ]
+  },
+  {
+    "Id": "Channel_InputTips",
+    "dict": [
+      [
+        "en-US",
+        "Enter account information"
+      ],
+      [
+        "pt-BR",
+        "Digite as informações da conta"
+      ],
+      [
+        "id-ID",
+        "Masukkan informasi akun"
+      ]
+    ]
+  },
+  {
+    "Id": "Channel_Account",
+    "dict": [
+      [
+        "en-US",
+        "Account:"
+      ],
+      [
+        "pt-BR",
+        "Conta:"
+      ],
+      [
+        "id-ID",
+        "Akun:"
+      ]
+    ]
+  },
+  {
+    "Id": "Channel_InvalidAccount",
+    "dict": [
+      [
+        "en-US",
+        "Invalid account"
+      ],
+      [
+        "pt-BR",
+        "Conta inválida"
+      ],
+      [
+        "id-ID",
+        "Akun tidak valid"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawTask1",
+    "dict": [
+      [
+        "en-US",
+        "Achieving {0} matches"
+      ],
+      [
+        "pt-BR",
+        "Alcançar {0} combinações"
+      ],
+      [
+        "id-ID",
+        "Mencapai {0} pencocokan"
+      ]
+    ]
+  },
+  {
+    "Id": "HTTPNetworkProblem",
+    "dict": [
+      [
+        "en-US",
+        "Network error, please try again later."
+      ],
+      [
+        "pt-BR",
+        "Erro de rede, tente novamente mais tarde."
+      ],
+      [
+        "id-ID",
+        "Kesalahan jaringan, silakan coba lagi nanti."
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawMission_Desc_Money",
+    "dict": [
+      [
+        "en-US",
+        "The cash balance reaches {0} and can be withdrawn, but there is still a difference of {1}"
+      ],
+      [
+        "pt-BR",
+        "O saldo em dinheiro atingiu {0} e pode ser sacado, mas ainda falta {1}"
+      ],
+      [
+        "id-ID",
+        "Saldo tunai mencapai {0} dan dapat ditarik, tetapi masih kurang {1}"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawMission_Desc_Level",
+    "dict": [
+      [
+        "en-US",
+        "To reach the threshold for withdrawal, you need to complete {0} more levels. However, you still need to play {1} more levels"
+      ],
+      [
+        "pt-BR",
+        "Para atingir o limite de saque, você precisa concluir mais {0} níveis. Ainda faltam {1} níveis"
+      ],
+      [
+        "id-ID",
+        "Untuk mencapai batas penarikan, Anda perlu menyelesaikan {0} level lagi. Masih perlu memainkan {1} level"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawMission_Desc_Video",
+    "dict": [
+      [
+        "en-US",
+        "Watch {0} videos in total to withdraw. {1} videos remaining."
+      ],
+      [
+        "pt-BR",
+        "Assista a {0} vídeos no total para sacar. Restam {1} vídeos."
+      ],
+      [
+        "id-ID",
+        "Tonton total {0} video untuk melakukan penarikan. Tersisa {1} video lagi."
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawMission_Desc_TotalDayLevelPass",
+    "dict": [
+      [
+        "en-US",
+        "Log in to {0} and fill in the form. You can withdraw your money only after completing {1} tasks each day"
+      ],
+      [
+        "pt-BR",
+        "Faça login em {0} e preencha o formulário. Você só poderá sacar após concluir {1} tarefas por dia"
+      ],
+      [
+        "id-ID",
+        "Masuk ke {0} dan isi formulir. Penarikan hanya dapat dilakukan setelah menyelesaikan {1} tugas per hari"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawMission_Desc_WithDrawDanDollar",
+    "dict": [
+      [
+        "en-US",
+        "The cash balance reaches {0} can be withdrawn, but there is still a difference of {1}"
+      ],
+      [
+        "pt-BR",
+        "O saldo em dinheiro atingiu {0} e pode ser sacado, mas ainda falta {1}"
+      ],
+      [
+        "id-ID",
+        "Saldo tunai mencapai {0} dan dapat ditarik, masih kurang {1}"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawMission_AllMet",
+    "dict": [
+      [
+        "en-US",
+        "Congratulations, all conditions have been met"
+      ],
+      [
+        "pt-BR",
+        "Parabéns, todas as condições foram atendidas"
+      ],
+      [
+        "id-ID",
+        "Selamat, semua syarat telah terpenuhi"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawDanPanel_UnableClaim",
+    "dict": [
+      [
+        "en-US",
+        "Fail to meet the condition"
+      ],
+      [
+        "pt-BR",
+        "Não atende às condições"
+      ],
+      [
+        "id-ID",
+        "Gagal memenuhi syarat"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_WathADDesc",
+    "dict": [
+      [
+        "en-US",
+        "Watch {0} more videos"
+      ],
+      [
+        "pt-BR",
+        "Assista a mais {0} vídeos"
+      ],
+      [
+        "id-ID",
+        "Tonton {0} video lagi"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_RewardIncrease",
+    "dict": [
+      [
+        "en-US",
+        "Reward increase {0}%"
+      ],
+      [
+        "pt-BR",
+        "Aumento de recompensa {0}%"
+      ],
+      [
+        "id-ID",
+        "Peningkatan hadiah {0}%"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Info",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB><b>How can I withdraw cash?</b></color>\n<color=#A89338>There are cash rewards for each level you pass. The more levels you pass, the more rewards you get. You can withdraw cash once you meet the withdrawal requirements.</color>\n\n<color=#2563EB><b>How long does it take to withdraw money?</b></color>\n<color=#A89338>Generally, funds will be credited to your account within a few minutes. If the number of withdrawals or the withdrawal amount exceeds a certain limit, the system will review it. In this case, the funds will still be credited within <color=#5AAE32><b>24 hours</b></color>, so please don’t worry.</color>\n\n<color=#2563EB><b>Why did my withdrawal fail?</b></color>\n<color=#A89338>If a withdrawal fails, the system will provide the reason in English. Please modify your information according to the prompt. If the withdrawal fails, the withdrawal amount will be returned automatically. You can update your information and initiate the withdrawal again. Please make sure all the information you provide is correct. We are <color=#5AAE32><b>not responsible</b></color> for withdrawal failures caused by incorrect information.</color>\n\n<color=#2563EB><b>How many times can I withdraw?</b></color>\n<color=#A89338>Unlimited.</color>\n\n<color=#2563EB><b>How many times can I withdraw per day?</b></color>\n<color=#A89338>Up to <color=#5AAE32><b>5</b></color> times per day.</color>\n\n<color=#2563EB><b>Why can’t I withdraw funds using my withdrawal account?</b></color>\n<color=#A89338>The same withdrawal account can be bound to a maximum of <color=#5AAE32><b>two</b></color> app accounts. Please do not share your withdrawal account with others.</color>\n\n<color=#2563EB><b>Can I use a VPN?</b></color>\n<color=#A89338>The use of VPN is <color=#5AAE32><b>strictly prohibited</b></color>. Please do not use a VPN while using the app.</color>\n"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB><b>Como sacar dinheiro?</b></color>\n<color=#A89338>Há recompensas em dinheiro para cada nível concluído. Quanto mais níveis você passar, maiores serão as recompensas. Você poderá sacar após atender aos requisitos.</color>\n\n<color=#2563EB><b>Quanto tempo leva para sacar?</b></color>\n<color=#A89338>Normalmente, o valor é creditado em poucos minutos. Caso o número de saques ou o valor ultrapasse o limite, o sistema fará uma revisão. Nesse caso, o valor será creditado em até <color=#5AAE32><b>24 horas</b></color>.</color>\n\n<color=#2563EB><b>Por que meu saque falhou?</b></color>\n<color=#A89338>Se o saque falhar, o sistema informará o motivo em inglês. Corrija as informações conforme solicitado. O valor será devolvido automaticamente. Não nos responsabilizamos por falhas causadas por informações incorretas.</color>\n\n<color=#2563EB><b>Quantas vezes posso sacar?</b></color>\n<color=#A89338>Ilimitado.</color>\n\n<color=#2563EB><b>Quantas vezes posso sacar por dia?</b></color>\n<color=#A89338>Até <color=#5AAE32><b>5</b></color> vezes por dia.</color>\n\n<color=#2563EB><b>Por que não consigo sacar usando minha conta?</b></color>\n<color=#A89338>A mesma conta de saque pode ser vinculada a no máximo <color=#5AAE32><b>duas</b></color> contas do app.</color>\n\n<color=#2563EB><b>Posso usar VPN?</b></color>\n<color=#A89338>O uso de VPN é <color=#5AAE32><b>estritamente proibido</b></color>.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB><b>Bagaimana cara menarik uang?</b></color>\n<color=#A89338>Ada hadiah uang untuk setiap level yang Anda selesaikan. Semakin banyak level, semakin besar hadiahnya. Penarikan tersedia setelah memenuhi syarat.</color>\n\n<color=#2563EB><b>Berapa lama proses penarikan?</b></color>\n<color=#A89338>Biasanya dana masuk dalam beberapa menit. Jika jumlah atau nominal penarikan melebihi batas, sistem akan meninjau. Dana akan masuk dalam waktu <color=#5AAE32><b>24 jam</b></color>.</color>\n\n<color=#2563EB><b>Mengapa penarikan gagal?</b></color>\n<color=#A89338>Jika penarikan gagal, sistem akan menampilkan alasannya dalam bahasa Inggris. Perbarui informasi Anda. Dana akan dikembalikan otomatis. Kami tidak bertanggung jawab atas kesalahan informasi.</color>\n\n<color=#2563EB><b>Berapa kali bisa menarik?</b></color>\n<color=#A89338>Tidak terbatas.</color>\n\n<color=#2563EB><b>Berapa kali per hari?</b></color>\n<color=#A89338>Maksimal <color=#5AAE32><b>5</b></color> kali per hari.</color>\n\n<color=#2563EB><b>Mengapa akun penarikan tidak bisa digunakan?</b></color>\n<color=#A89338>Satu akun penarikan hanya dapat dihubungkan ke <color=#5AAE32><b>dua</b></color> akun aplikasi.</color>\n\n<color=#2563EB><b>Bolehkah menggunakan VPN?</b></color>\n<color=#A89338>Penggunaan VPN <color=#5AAE32><b>dilarang keras</b></color>.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Title",
+    "dict": [
+      [
+        "en-US",
+        "FAQ"
+      ],
+      [
+        "pt-BR",
+        "FAQ"
+      ],
+      [
+        "id-ID",
+        "FAQ"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHistory_Title",
+    "dict": [
+      [
+        "en-US",
+        "Transactions"
+      ],
+      [
+        "pt-BR",
+        "Transações"
+      ],
+      [
+        "id-ID",
+        "Transaksi"
+      ]
+    ]
+  },
+  {
+    "Id": "FakeWithdrawPanel_CashBalance",
+    "dict": [
+      [
+        "en-US",
+        "Cash Balance"
+      ],
+      [
+        "pt-BR",
+        "Saldo em Dinheiro"
+      ],
+      [
+        "id-ID",
+        "Saldo Tunai"
+      ]
+    ]
+  },
+  {
+    "Id": "FakeWithdrawPanel_SelectAmount",
+    "dict": [
+      [
+        "en-US",
+        "Select Amount"
+      ],
+      [
+        "pt-BR",
+        "Selecionar Valor"
+      ],
+      [
+        "id-ID",
+        "Pilih Jumlah"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPage_Hint_NotBlance",
+    "dict": [
+      [
+        "en-US",
+        "The minimum withdrawal amount is {0}. You need {1} more."
+      ],
+      [
+        "pt-BR",
+        "O valor mínimo de saque é {0}. Você ainda precisa de mais {1}."
+      ],
+      [
+        "id-ID",
+        "Jumlah penarikan minimum adalah {0}. Anda masih memerlukan {1} lagi."
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPage_Hint_HaveBlance",
+    "dict": [
+      [
+        "en-US",
+        "You can withdraw {0}."
+      ],
+      [
+        "pt-BR",
+        "Você pode sacar {0}."
+      ],
+      [
+        "id-ID",
+        "Anda dapat menarik {0}."
+      ]
+    ]
+  },
+  {
+    "Id": "FakeWithdrawPanel_Progress",
+    "dict": [
+      [
+        "en-US",
+        "Progress"
+      ],
+      [
+        "pt-BR",
+        "Progresso"
+      ],
+      [
+        "id-ID",
+        "Progres"
+      ]
+    ]
+  },
+  {
+    "Id": "FakeWithdrawPanel_Tittle",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw"
+      ],
+      [
+        "pt-BR",
+        "Sacar"
+      ],
+      [
+        "id-ID",
+        "Tarik"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_Tittle",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw"
+      ],
+      [
+        "pt-BR",
+        "Sacar"
+      ],
+      [
+        "id-ID",
+        "Tarik"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_WithdrawRate1",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw Rate:"
+      ],
+      [
+        "pt-BR",
+        "Taxa de Saque:"
+      ],
+      [
+        "id-ID",
+        "Tingkat Penarikan:"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_WithdrawRate2",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw Rate"
+      ],
+      [
+        "pt-BR",
+        "Taxa de Saque"
+      ],
+      [
+        "id-ID",
+        "Tingkat Penarikan"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_SelectMode",
+    "dict": [
+      [
+        "en-US",
+        "Select a Withdraw Method"
+      ],
+      [
+        "pt-BR",
+        "Selecionar forma de saque"
+      ],
+      [
+        "id-ID",
+        "Pilih metode penarikan"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_DailyBonus",
+    "dict": [
+      [
+        "en-US",
+        "Daily Bonus"
+      ],
+      [
+        "pt-BR",
+        "Bônus Diário"
+      ],
+      [
+        "id-ID",
+        "Bonus Harian"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_RefreshTime",
+    "dict": [
+      [
+        "en-US",
+        "Refresh after:{0}"
+      ],
+      [
+        "pt-BR",
+        "Atualiza após:{0}"
+      ],
+      [
+        "id-ID",
+        "Refresh setelah:{0}"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_GO",
+    "dict": [
+      [
+        "en-US",
+        "GO"
+      ],
+      [
+        "pt-BR",
+        "IR"
+      ],
+      [
+        "id-ID",
+        "GO"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_MyLevel",
+    "dict": [
+      [
+        "en-US",
+        "Pass Level"
+      ],
+      [
+        "pt-BR",
+        "Passar de fase"
+      ],
+      [
+        "id-ID",
+        "Lulus level"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Question1",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB>How can I withdraw cash?</color>\n<color=#A89338>There are cash rewards for each level you pass. The more levels you pass, the more rewards you get. You can withdraw cash once you meet the withdrawal requirements.</color>"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB>Como posso sacar dinheiro?</color>\n<color=#A89338>Há recompensas em dinheiro para cada nível concluído. Quanto mais níveis você passar, mais recompensas receberá. Você poderá sacar após atender aos requisitos de saque.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB>Bagaimana cara menarik uang?</color>\n<color=#A89338>Ada hadiah uang untuk setiap level yang Anda selesaikan. Semakin banyak level yang diselesaikan, semakin besar hadiahnya. Anda dapat menarik uang setelah memenuhi syarat penarikan.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Question2",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB>How long does it take to withdraw money?</color>\n<color=#A89338>Generally, funds will be credited to your account within a few minutes. If the number of withdrawals or the withdrawal amount exceeds a certain limit, the system will review it. In this case, the funds will still be credited within <color=#5AAE32>24 hours</color>, so please don’t worry.</color>"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB>Quanto tempo leva para sacar dinheiro?</color>\n<color=#A89338>Normalmente, os fundos são creditados na sua conta em poucos minutos. Se o número de saques ou o valor exceder um determinado limite, o sistema fará uma análise. Nesse caso, os fundos serão creditados em até <color=#5AAE32>24 horas</color>, então não se preocupe.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB>Berapa lama waktu penarikan?</color>\n<color=#A89338>Biasanya dana akan masuk ke akun Anda dalam beberapa menit. Jika jumlah atau nominal penarikan melebihi batas tertentu, sistem akan melakukan peninjauan. Dalam kasus ini, dana tetap akan masuk dalam waktu <color=#5AAE32>24 jam</color>, jadi jangan khawatir.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Question3",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB>Why did my withdrawal fail?</color>\n<color=#A89338>If a withdrawal fails, the system will provide the reason in English. Please modify your information according to the prompt. If the withdrawal fails, the withdrawal amount will be returned automatically. You can update your information and initiate the withdrawal again. Please make sure all the information you provide is correct. We are <color=#5AAE32>not responsible</color> for withdrawal failures caused by incorrect information.</color>"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB>Por que meu saque falhou?</color>\n<color=#A89338>Se o saque falhar, o sistema exibirá o motivo em inglês. Ajuste suas informações conforme a orientação. O valor será devolvido automaticamente. Você pode atualizar seus dados e tentar novamente. Certifique-se de que todas as informações fornecidas estejam corretas. Não somos <color=#5AAE32>responsáveis</color> por falhas causadas por informações incorretas.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB>Mengapa penarikan saya gagal?</color>\n<color=#A89338>Jika penarikan gagal, sistem akan menampilkan alasannya dalam bahasa Inggris. Silakan perbarui informasi sesuai petunjuk. Dana akan dikembalikan secara otomatis. Anda dapat memperbarui data dan mengajukan penarikan kembali. Pastikan semua informasi yang Anda berikan benar. Kami <color=#5AAE32>tidak bertanggung jawab</color> atas kegagalan akibat informasi yang salah.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Question4",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB>How many times can I withdraw?</color>\n<color=#A89338>Unlimited.</color>"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB>Quantas vezes posso sacar?</color>\n<color=#A89338>Ilimitado.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB>Berapa kali bisa menarik?</color>\n<color=#A89338>Tidak terbatas.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Question5",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB>How many times can I withdraw per day?</color>\n<color=#A89338>Up to <color=#5AAE32>5</color> times per day.</color>"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB>Quantas vezes posso sacar por dia?</color>\n<color=#A89338>Até <color=#5AAE32>5</color> vezes por dia.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB>Berapa kali bisa menarik per hari?</color>\n<color=#A89338>Hingga <color=#5AAE32>5</color> kali per hari.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Question6",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB>Why can’t I withdraw funds using my withdrawal account?</color>\n<color=#A89338>The same withdrawal account can be bound to a maximum of <color=#5AAE32>two</color> app accounts. Please do not share your withdrawal account with others.</color>"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB>Por que não posso sacar usando minha conta de saque?</color>\n<color=#A89338>A mesma conta de saque pode ser vinculada a no máximo <color=#5AAE32>duas</color> contas do aplicativo. Por favor, não compartilhe sua conta de saque com outras pessoas.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB>Mengapa saya tidak bisa menarik dana menggunakan akun penarikan?</color>\n<color=#A89338>Akun penarikan yang sama hanya dapat dihubungkan ke maksimal <color=#5AAE32>dua</color> akun aplikasi. Jangan bagikan akun penarikan Anda kepada orang lain.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "FAQPanel_Question7",
+    "dict": [
+      [
+        "en-US",
+        "<color=#2563EB>Can I use a VPN?</color>\n<color=#A89338>The use of VPN is <color=#5AAE32>strictly prohibited</color>. Please do not use a VPN while using the app.</color>"
+      ],
+      [
+        "pt-BR",
+        "<color=#2563EB>Posso usar VPN?</color>\n<color=#A89338>O uso de VPN é <color=#5AAE32>estritamente proibido</color>. Por favor, não utilize VPN enquanto estiver usando o aplicativo.</color>"
+      ],
+      [
+        "id-ID",
+        "<color=#2563EB>Apakah saya boleh menggunakan VPN?</color>\n<color=#A89338>Penggunaan VPN <color=#5AAE32>dilarang keras</color>. Harap jangan menggunakan VPN saat menggunakan aplikasi.</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "BroadCastBar_Tittle",
+    "dict": [
+      [
+        "en-US",
+        "Congratulations"
+      ],
+      [
+        "pt-BR",
+        "Parabéns"
+      ],
+      [
+        "id-ID",
+        "Selamat"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyMissionPanel_DailyBonus",
+    "dict": [
+      [
+        "en-US",
+        "Daily Bonus"
+      ],
+      [
+        "pt-BR",
+        "Bônus Diário"
+      ],
+      [
+        "id-ID",
+        "Bonus Harian"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyMissionPanel_RefreshTime",
+    "dict": [
+      [
+        "en-US",
+        "Next Refresh Time is {0}"
+      ],
+      [
+        "pt-BR",
+        "Próximo horário de atualização: {0}"
+      ],
+      [
+        "id-ID",
+        "Waktu Refresh Berikutnya {0}"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyMissionPanel_Hint",
+    "dict": [
+      [
+        "en-US",
+        "The video you watched in instant cash withdraw task is not counted here"
+      ],
+      [
+        "pt-BR",
+        "O vídeo assistido na tarefa de saque instantâneo não é contado aqui"
+      ],
+      [
+        "id-ID",
+        "Video yang ditonton pada tugas penarikan instan tidak dihitung di sini"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyWithdrawPanel_Hint",
+    "dict": [
+      [
+        "en-US",
+        "You can withdraw cash"
+      ],
+      [
+        "pt-BR",
+        "Você pode sacar dinheiro"
+      ],
+      [
+        "id-ID",
+        "Anda dapat menarik uang"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_Tittle",
+    "dict": [
+      [
+        "en-US",
+        "Account"
+      ],
+      [
+        "pt-BR",
+        "Conta"
+      ],
+      [
+        "id-ID",
+        "Akun"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_Account",
+    "dict": [
+      [
+        "en-US",
+        "Account"
+      ],
+      [
+        "pt-BR",
+        "Conta"
+      ],
+      [
+        "id-ID",
+        "Akun"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_Name",
+    "dict": [
+      [
+        "en-US",
+        "Name"
+      ],
+      [
+        "pt-BR",
+        "Nome"
+      ],
+      [
+        "id-ID",
+        "Nama"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_AccountNumber",
+    "dict": [
+      [
+        "en-US",
+        "Account Number(Email)"
+      ],
+      [
+        "pt-BR",
+        "Número da Conta(email)"
+      ],
+      [
+        "id-ID",
+        "Nomor Akun(email)"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_FillInfoError",
+    "dict": [
+      [
+        "en-US",
+        "The information you entered is incorrect. Please check."
+      ],
+      [
+        "pt-BR",
+        "As informações inseridas estão incorretas. Verifique."
+      ],
+      [
+        "id-ID",
+        "Informasi yang Anda masukkan salah. Silakan periksa."
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_EnterName",
+    "dict": [
+      [
+        "en-US",
+        "Enter your name"
+      ],
+      [
+        "pt-BR",
+        "Digite seu nome"
+      ],
+      [
+        "id-ID",
+        "Masukkan nama Anda"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_CPFInputFaild",
+    "dict": [
+      [
+        "en-US",
+        "Invalid CPF"
+      ],
+      [
+        "pt-BR",
+        "Erro ao preencher CPF"
+      ],
+      [
+        "id-ID",
+        "Kesalahan pengisian CPF"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_NameInputFaild",
+    "dict": [
+      [
+        "en-US",
+        "Invalid name"
+      ],
+      [
+        "pt-BR",
+        "Erro ao preencher nome"
+      ],
+      [
+        "id-ID",
+        "Kesalahan pengisian nama"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_ChoosePaymentMode",
+    "dict": [
+      [
+        "en-US",
+        "Choose your payment method"
+      ],
+      [
+        "pt-BR",
+        "Escolha o método de pagamento"
+      ],
+      [
+        "id-ID",
+        "Pilih metode pembayaran"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHintPanel_Hint",
+    "dict": [
+      [
+        "en-US",
+        "The minimum withdrawal amount is {0}, you need to get more {1}"
+      ],
+      [
+        "pt-BR",
+        "O valor mínimo para saque é {0}. Você precisa ganhar mais {1}"
+      ],
+      [
+        "id-ID",
+        "Jumlah penarikan minimum adalah {0}. Anda perlu mendapatkan {1} lagi"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHintPanel_Hint2B",
+    "dict": [
+      [
+        "en-US",
+        "Pass level  <color=#618d2a>{0}</color>, you can withdraw <color=#FF0000>{1}</color> at  <sprite={2}><color=#FFA500>100≈{3}</color>. which is still <color=#618d2a>{4}</color> levels shorts."
+      ],
+      [
+        "pt-BR",
+        "Passe de nível <color=#618d2a>{0}</color> para sacar <color=#FF0000>{1}</color>. Taxa: <sprite={2}><color=#FFA500>100≈{3}</color>. Faltam <color=#618d2a>{4}</color> níveis"
+      ],
+      [
+        "id-ID",
+        "Lewati Level <color=#618d2a>{0}</color> untuk menarik <color=#FF0000>{1}</color>. Kurs: <sprite={2}><color=#FFA500>100≈{3}</color>. Masih kurang <color=#618d2a>{4}</color> level"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHintPanel_Hint2I",
+    "dict": [
+      [
+        "en-US",
+        "Pass level  <color=#618d2a>{0}</color>, you can withdraw <color=#FF0000>{1}</color> at  <sprite={2}><color=#FFA500>1000≈{3}</color>. which is still <color=#618d2a>{4}</color> levels shorts."
+      ],
+      [
+        "pt-BR",
+        "Passe de nível <color=#618d2a>{0}</color> para sacar <color=#FF0000>{1}</color>. Taxa: <sprite={2}><color=#FFA500>1000≈{3}</color>. Faltam <color=#618d2a>{4}</color> níveis"
+      ],
+      [
+        "id-ID",
+        "Lewati Level <color=#618d2a>{0}</color> untuk menarik <color=#FF0000>{1}</color>. Kurs: <sprite={2}><color=#FFA500>1000≈{3}</color>. Masih kurang <color=#618d2a>{4}</color> level"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHintPanel_Hint2U",
+    "dict": [
+      [
+        "en-US",
+        "Pass level  <color=#618d2a>{0}</color>, you can withdraw <color=#FF0000>{1}</color> at  <sprite={2}><color=#FFA500>10000≈{3}</color>. which is still <color=#618d2a>{4}</color> levels shorts."
+      ],
+      [
+        "pt-BR",
+        "Passe de nível  <color=#618d2a>{0}</color> para sacar <color=#FF0000>{1}</color>. Taxa: <sprite={2}><color=#FFA500>10000≈{3}</color>. Faltam <color=#618d2a>{4}</color> níveis"
+      ],
+      [
+        "id-ID",
+        "Lewati Level <color=#618d2a>{0}</color> untuk menarik <color=#FF0000>{1}</color>. Kurs: <sprite={2}><color=#FFA500>10000≈{3}</color>. Masih kurang <color=#618d2a>{4}</color> level"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHintPanel_Hint3",
+    "dict": [
+      [
+        "en-US",
+        "Completed: amount receivable:<color=#618d2a>{0}</color>"
+      ],
+      [
+        "pt-BR",
+        "Concluído: Valor a Receber:<color=#618d2a>{0}</color>"
+      ],
+      [
+        "id-ID",
+        "Selesai: Jumlah yang Harus Diterima:<color=#618d2a>{0}</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHintPanel_Hint4",
+    "dict": [
+      [
+        "en-US",
+        "Clear Level {0} to unlock. {1} more levels to go."
+      ],
+      [
+        "pt-BR",
+        "Desbloqueia após concluir a fase {0}. Faltam {1} fases."
+      ],
+      [
+        "id-ID",
+        " Terbuka setelah menyelesaikan level {0}. Masih perlu {1} level lagi."
+      ]
+    ]
+  },
+  {
+    "Id": "NewbieGiftPage_Congratulations",
+    "dict": [
+      [
+        "en-US",
+        "Congratulations:{0}"
+      ],
+      [
+        "pt-BR",
+        "Parabéns:{0}"
+      ],
+      [
+        "id-ID",
+        "Selamat:{0}"
+      ]
+    ]
+  },
+  {
+    "Id": "AccountModule_NetWork",
+    "dict": [
+      [
+        "en-US",
+        "Failed to load information. Please check your network status."
+      ],
+      [
+        "pt-BR",
+        "Falha ao carregar informações. Verifique sua rede."
+      ],
+      [
+        "id-ID",
+        "Gagal memuat informasi. Periksa koneksi jaringan Anda."
+      ]
+    ]
+  },
+  {
+    "Id": "InfoConfirm_WithdrawSuccessful",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawal successful"
+      ],
+      [
+        "pt-BR",
+        "Saque realizado com sucesso"
+      ],
+      [
+        "id-ID",
+        "Penarikan berhasil"
+      ]
+    ]
+  },
+  {
+    "Id": "InfoConfirm_WithdrawFailed",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawal failed"
+      ],
+      [
+        "pt-BR",
+        "Falha no saque"
+      ],
+      [
+        "id-ID",
+        "Penarikan gagal"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawDanPanel_AlreadyObtained",
+    "dict": [
+      [
+        "en-US",
+        "Already claimed"
+      ],
+      [
+        "pt-BR",
+        "Já coletado"
+      ],
+      [
+        "id-ID",
+        "Sudah diklaim"
+      ]
+    ]
+  },
+  {
+    "Id": "RealWithdrawPanel_WithdrawRate",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw Rate:"
+      ],
+      [
+        "pt-BR",
+        "Taxa de Saque:"
+      ],
+      [
+        "id-ID",
+        "Tingkat Penarikan:"
+      ]
+    ]
+  },
+  {
+    "Id": "Withdraw_Btn",
+    "dict": [
+      [
+        "en-US",
+        "Withdraw"
+      ],
+      [
+        "pt-BR",
+        "Retirar"
+      ],
+      [
+        "id-ID",
+        "Tarik"
+      ]
+    ]
+  },
+  {
+    "Id": "Withdrawed_Btn",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawn"
+      ],
+      [
+        "pt-BR",
+        "Sacado"
+      ],
+      [
+        "id-ID",
+        "Sudah ditarik"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawDanPanel_TaskHint",
+    "dict": [
+      [
+        "en-US",
+        "Passed {0} levels in total"
+      ],
+      [
+        "pt-BR",
+        "Você completou um total de {0} fases"
+      ],
+      [
+        "id-ID",
+        "Total menyelesaikan {0} level"
+      ]
+    ]
+  },
+  {
+    "Id": "Tips_NetworkError",
+    "dict": [
+      [
+        "en-US",
+        "Network connection error, please check your network"
+      ],
+      [
+        "pt-BR",
+        "Erro de conexão de rede, verifique sua rede"
+      ],
+      [
+        "id-ID",
+        "Koneksi jaringan bermasalah, silakan periksa jaringan"
+      ]
+    ]
+  },
+  {
+    "Id": "ConfirmTips_Title",
+    "dict": [
+      [
+        "en-US",
+        "Notice"
+      ],
+      [
+        "pt-BR",
+        "Aviso"
+      ],
+      [
+        "id-ID",
+        "Pemberitahuan"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyMissionPanel_NoAd",
+    "dict": [
+      [
+        "en-US",
+        "The ad is not ready yet. Please try again in a few minutes"
+      ],
+      [
+        "pt-BR",
+        "O anúncio ainda não está pronto. Tente novamente em alguns minutos"
+      ],
+      [
+        "id-ID",
+        "Iklan belum siap. Silakan coba lagi dalam beberapa menit"
+      ]
+    ]
+  },
+  {
+    "Id": "ExchangeRatePanel_Before",
+    "dict": [
+      [
+        "en-US",
+        "Before:"
+      ],
+      [
+        "pt-BR",
+        "Antes:"
+      ],
+      [
+        "id-ID",
+        "Sebelumnya:"
+      ]
+    ]
+  },
+  {
+    "Id": "ExchangeRatePanel_Now",
+    "dict": [
+      [
+        "en-US",
+        "Now:"
+      ],
+      [
+        "pt-BR",
+        "Agora:"
+      ],
+      [
+        "id-ID",
+        "Sekarang:"
+      ]
+    ]
+  },
+  {
+    "Id": "FakeWithdrawPanel_NextStage",
+    "dict": [
+      [
+        "en-US",
+        "Enter next stage"
+      ],
+      [
+        "pt-BR",
+        "Entrar na próxima fase"
+      ],
+      [
+        "id-ID",
+        "Masuk ke tahap berikutnya"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawHistory_Empty",
+    "dict": [
+      [
+        "en-US",
+        "No orders"
+      ],
+      [
+        "pt-BR",
+        "Sem pedidos"
+      ],
+      [
+        "id-ID",
+        "Tidak ada pesanan"
+      ]
+    ]
+  },
+  {
+    "Id": "NewBieGiftPage_Title",
+    "dict": [
+      [
+        "en-US",
+        "New Player Reward"
+      ],
+      [
+        "pt-BR",
+        "Recompensa Nova"
+      ],
+      [
+        "id-ID",
+        "Hadiah Baru"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyMissionPage_Title",
+    "dict": [
+      [
+        "en-US",
+        "Daily Mission"
+      ],
+      [
+        "pt-BR",
+        "Missão diária"
+      ],
+      [
+        "id-ID",
+        "Tugas harian"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_Evp",
+    "dict": [
+      [
+        "en-US",
+        "Please fill in the information"
+      ],
+      [
+        "pt-BR",
+        "Por favor, preencha as informações"
+      ],
+      [
+        "id-ID",
+        "Silakan isi informasi"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_CpfCnpj",
+    "dict": [
+      [
+        "en-US",
+        "Please enter a valid CPF/CNPJ (CPF: 11 digits / CNPJ: 14 digits)"
+      ],
+      [
+        "pt-BR",
+        "Por favor, insira um CPF/CNPJ válido (CPF: 11 dígitos / CNPJ: 14 dígitos)"
+      ],
+      [
+        "id-ID",
+        "Silakan masukkan CPF/CNPJ yang valid (CPF 11 digit / CNPJ 14 digit)"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_Phone",
+    "dict": [
+      [
+        "en-US",
+        "Please enter the information correctly, e.g. 11912345678"
+      ],
+      [
+        "pt-BR",
+        "Por favor, insira as informações corretamente, por exemplo: 11912345678"
+      ],
+      [
+        "id-ID",
+        "Silakan masukkan informasi dengan benar, misalnya: 11912345678"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_Email",
+    "dict": [
+      [
+        "en-US",
+        "Must be an email address"
+      ],
+      [
+        "pt-BR",
+        "Deve ser um endereço de e-mail"
+      ],
+      [
+        "id-ID",
+        "Harus berupa alamat email"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_Title",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawal account"
+      ],
+      [
+        "pt-BR",
+        "Conta de saque"
+      ],
+      [
+        "id-ID",
+        "Akun penarikan"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_CPF",
+    "dict": [
+      [
+        "en-US",
+        "CPF/CNPJ"
+      ],
+      [
+        "pt-BR",
+        "CPF/CNPJ"
+      ],
+      [
+        "id-ID",
+        "CPF/CNPJ"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalInfoConfirm_Title",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawal confirmation"
+      ],
+      [
+        "pt-BR",
+        "Confirmação de saque"
+      ],
+      [
+        "id-ID",
+        "Konfirmasi penarikan"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalInfoConfirm_Submit",
+    "dict": [
+      [
+        "en-US",
+        "Confirm"
+      ],
+      [
+        "pt-BR",
+        "Confirmar"
+      ],
+      [
+        "id-ID",
+        "Konfirmasi"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalInfoConfirm_Hint",
+    "dict": [
+      [
+        "en-US",
+        "Please ensure the information is entered correctly"
+      ],
+      [
+        "pt-BR",
+        "Certifique-se de que as informações estejam corretas"
+      ],
+      [
+        "id-ID",
+        "Pastikan informasi diisi dengan benar"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyWithdrawMissionPanel_Hint",
+    "dict": [
+      [
+        "en-US",
+        "Watch <color=#13BB19>{0}</color> videos and withdraw <color=#13BB19>{1}</color>"
+      ],
+      [
+        "pt-BR",
+        "Assista a <color=#13BB19>{0}</color> vídeos e receba <color=#13BB19>{1}</color> recompensas"
+      ],
+      [
+        "id-ID",
+        "Tonton <color=#13BB19>{0}</color> video dan dapatkan <color=#13BB19>{1}</color> hadiah"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyWithdrawMissionPanel_ButtomHint",
+    "dict": [
+      [
+        "en-US",
+        "Today's withdrawal tasks are completed. More tasks will be available tomorrow."
+      ],
+      [
+        "pt-BR",
+        "As tarefas de saque de hoje foram concluídas. Amanhã haverá mais tarefas."
+      ],
+      [
+        "id-ID",
+        "Tugas penarikan hari ini telah selesai. Akan ada lebih banyak tugas besok."
+      ]
+    ]
+  },
+  {
+    "Id": "DailyWithdrawMissionPanel_TopHint",
+    "dict": [
+      [
+        "en-US",
+        "Watch videos & withdraw now"
+      ],
+      [
+        "pt-BR",
+        "Assista a vídeos e saque agora"
+      ],
+      [
+        "id-ID",
+        "Tonton video & tarik sekarang"
+      ]
+    ]
+  },
+  {
+    "Id": "UIWithdrawalConfirm_PhoneAccount",
+    "dict": [
+      [
+        "en-US",
+        "Please enter a valid 9–14 digit number"
+      ],
+      [
+        "pt-BR",
+        "Por favor, insira um número válido de 9 a 14 dígitos"
+      ],
+      [
+        "id-ID",
+        "Silakan masukkan nomor yang valid dengan 9–14 digit"
+      ]
+    ]
+  },
+  {
+    "Id": "GetReward_Extras",
+    "dict": [
+      [
+        "en-US",
+        "Extras"
+      ],
+      [
+        "pt-BR",
+        "Extras"
+      ],
+      [
+        "id-ID",
+        "Ekstra"
+      ]
+    ]
+  },
+  {
+    "Id": "GetReward_WatchAd_Hint_Full",
+    "dict": [
+      [
+        "en-US",
+        "You’ve already reached the maximum level!"
+      ],
+      [
+        "pt-BR",
+        "Você chegou ao nível máximo!"
+      ],
+      [
+        "id-ID",
+        "Kamu sudah mencapai level maksimum!"
+      ]
+    ]
+  },
+  {
+    "Id": "GetReward_WatchAd_Hint_NotFull",
+    "dict": [
+      [
+        "en-US",
+        "Watch videos to increase rewards"
+      ],
+      [
+        "pt-BR",
+        "Assista a vídeos para aumentar as recompensas"
+      ],
+      [
+        "id-ID",
+        "Tonton video untuk meningkatkan hadiah"
+      ]
+    ]
+  },
+  {
+    "Id": "RealPage_LevelHint",
+    "dict": [
+      [
+        "en-US",
+        "The higher the level, the more exchange amount!"
+      ],
+      [
+        "pt-BR",
+        "Quanto maior o nível, maior o valor de troca!"
+      ],
+      [
+        "id-ID",
+        "Semakin tinggi level, semakin besar jumlah penukaran!"
+      ]
+    ]
+  },
+  {
+    "Id": "RealPage_PassLevel",
+    "dict": [
+      [
+        "en-US",
+        "Pass Level {0}"
+      ],
+      [
+        "pt-BR",
+        "Passe do Nivel {0}"
+      ],
+      [
+        "id-ID",
+        "Lewati Level {0}"
+      ]
+    ]
+  },
+  {
+    "Id": "RealPage_MyBalance",
+    "dict": [
+      [
+        "en-US",
+        "My Balance"
+      ],
+      [
+        "pt-BR",
+        "Meu saldo"
+      ],
+      [
+        "id-ID",
+        "Saldo saya"
+      ]
+    ]
+  },
+  {
+    "Id": "RealPage_CurrentLevel",
+    "dict": [
+      [
+        "en-US",
+        "Level {0}"
+      ],
+      [
+        "pt-BR",
+        "Nível {0}"
+      ],
+      [
+        "id-ID",
+        "Level {0}"
+      ]
+    ]
+  },
+  {
+    "Id": "GetRewardPage_NoThanks",
+    "dict": [
+      [
+        "en-US",
+        "<u><color=white> <sprite={0}> {1}</color></u>"
+      ],
+      [
+        "pt-BR",
+        "<u><color=white> <sprite={0}> {1}</color></u>"
+      ],
+      [
+        "id-ID",
+        "<u><color=white> <sprite={0}> {1}</color></u>"
+      ]
+    ]
+  },
+  {
+    "Id": "StarRatingPopup_title",
+    "dict": [
+      [
+        "en-US",
+        "Please share your evaluation:"
+      ],
+      [
+        "pt-BR",
+        "Por favor, compartilhe sua avaliação:"
+      ],
+      [
+        "id-ID",
+        "Silakan bagikan penilaian Anda:"
+      ]
+    ]
+  },
+  {
+    "Id": "StarRatingPopup_content",
+    "dict": [
+      [
+        "en-US",
+        "Dear Player, do you like our game? We'd really appreciate a 5-star rating on the store. Thank you for your support!"
+      ],
+      [
+        "pt-BR",
+        "Caro jogador, você gosta do nosso jogo? Agradeceríamos muito se você pudesse nos dar uma avaliação de 5 estrelas na loja. Obrigado pelo seu apoio!"
+      ],
+      [
+        "id-ID",
+        "Pemain yang terhormat, apakah Anda menyukai permainan kami? Kami akan sangat menghargai jika Anda memberikan rating 5 bintang di toko. Terima kasih atas dukungan Anda!"
+      ]
+    ]
+  },
+  {
+    "Id": "StarRatingPopup_Btn",
+    "dict": [
+      [
+        "en-US",
+        "Confirm"
+      ],
+      [
+        "pt-BR",
+        "Confirmar"
+      ],
+      [
+        "id-ID",
+        "Konfirmasi"
+      ]
+    ]
+  },
+  {
+    "Id": "ExchangeRatePanel_Btn",
+    "dict": [
+      [
+        "en-US",
+        "Confirm"
+      ],
+      [
+        "pt-BR",
+        "Confirmar"
+      ],
+      [
+        "id-ID",
+        "Konfirmasi"
+      ]
+    ]
+  },
+  {
+    "Id": "ExchangeRatePanel_Title",
+    "dict": [
+      [
+        "en-US",
+        "Exchange Rate Increased!"
+      ],
+      [
+        "pt-BR",
+        "Taxa de câmbio aumentou!"
+      ],
+      [
+        "id-ID",
+        "Nilai tukar meningkat!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyWithdrawHint",
+    "dict": [
+      [
+        "en-US",
+        "Watch videos and withdraw instantly."
+      ],
+      [
+        "pt-BR",
+        "Assista a vídeos e saque instantaneamente"
+      ],
+      [
+        "id-ID",
+        "Tonton video dan tarik dana secara instan"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyMissionPage_Claimed",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawal completed today"
+      ],
+      [
+        "pt-BR",
+        "Saque concluído hoje"
+      ],
+      [
+        "id-ID",
+        "Penarikan hari ini telah selesai"
+      ]
+    ]
+  },
+  {
+    "Id": "WithdrawProgressHint",
+    "dict": [
+      [
+        "en-US",
+        "Earn <color=#FFFF00>{0}</color> more to withdraw <color=#FFFF00>{1}</color>"
+      ],
+      [
+        "pt-BR",
+        "Ganhe mais <color=#FFFF00>{0}</color> para sacar <color=#FFFF00>{1}</color>"
+      ],
+      [
+        "id-ID",
+        "Dapatkan <color=#FFFF00>{0}</color> lagi untuk menarik <color=#FFFF00>{1}</color>"
+      ]
+    ]
+  },
+  {
+    "Id": "ADShow_Hint",
+    "dict": [
+      [
+        "en-US",
+        "Rewards will be granted after the video finishes."
+      ],
+      [
+        "pt-BR",
+        "As recompensas serão concedidas após o término do vídeo."
+      ],
+      [
+        "id-ID",
+        "Hadiah akan diberikan setelah video selesai diputar."
+      ]
+    ]
+  },
+  {
+    "Id": "DanPanelTitle",
+    "dict": [
+      [
+        "en-US",
+        "My Tier"
+      ],
+      [
+        "pt-BR",
+        "Meu Nível"
+      ],
+      [
+        "id-ID",
+        "Peringkat Saya"
+      ]
+    ]
+  },
+  {
+    "Id": "DanPanelBalance",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawal Amount"
+      ],
+      [
+        "pt-BR",
+        "Valor do Saque"
+      ],
+      [
+        "id-ID",
+        "Jumlah Penarikan"
+      ]
+    ]
+  },
+  {
+    "Id": "DanPanelProgress",
+    "dict": [
+      [
+        "en-US",
+        "Withdrawal instructions"
+      ],
+      [
+        "pt-BR",
+        "Instruções de Saque"
+      ],
+      [
+        "id-ID",
+        "Petunjuk Penarikan"
+      ]
+    ]
+  },
+  {
+    "Id": "FakePanel_ItemTitle",
+    "dict": [
+      [
+        "en-US",
+        "New User Reward"
+      ],
+      [
+        "pt-BR",
+        "Recompensa para Novos Usuários"
+      ],
+      [
+        "id-ID",
+        "Hadiah Pengguna Baru"
+      ]
+    ]
+  },
+  {
+    "Id": "BusAway_ParkingFull",
+    "dict": [
+      [
+        "en-US",
+        "Parking slots are full"
+      ],
+      [
+        "pt-BR",
+        "As vagas de estacionamento estão cheias"
+      ],
+      [
+        "id-ID",
+        "Slot parkir sudah penuh"
+      ]
+    ]
+  },
+  {
+    "Id": "Limit_Tip",
+    "dict": [
+      [
+        "en-US",
+        "Redemption Limit: {0}/{1}"
+      ],
+      [
+        "pt-BR",
+        "Limite de Saque: {0}/{1}"
+      ],
+      [
+        "id-ID",
+        "Batas Penarikan: {0}/{1}"
+      ]
+    ]
+  },
+  {
+    "Id": "Real_WithdrawProgressHint",
+    "dict": [
+      [
+        "en-US",
+        "Watch <color=#FFFF00>{0}</color> more videos today to withdraw <color=#FFFF00>${1}</color>!"
+      ],
+      [
+        "pt-BR",
+        "Assista mais <color=#FFFF00>{0}</color> vídeos hoje para sacar <color=#FFFF00>R${1}</color>!"
+      ],
+      [
+        "id-ID",
+        "Tonton <color=#FFFF00>{0}</color> video lagi hari ini untuk tarik <color=#FFFF00>Rp{1}</color>!"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Q1",
+    "dict": [
+      [
+        "en-US",
+        "1、How can I withdraw cash?"
+      ],
+      [
+        "pt-BR",
+        "1、Como posso sacar dinheiro?"
+      ],
+      [
+        "id-ID",
+        "1、Bagaimana cara menarik uang?"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_A1",
+    "dict": [
+      [
+        "en-US",
+        "There are cash rewards for each level you pass. The more levels you pass, the more rewards you get. You can withdraw cash once you meet the withdrawal requirements."
+      ],
+      [
+        "pt-BR",
+        "Há recompensas em dinheiro para cada nível concluído. Quanto mais níveis você passar, mais recompensas receberá. Você poderá sacar após atender aos requisitos de saque."
+      ],
+      [
+        "id-ID",
+        "Ada hadiah uang untuk setiap level yang Anda selesaikan. Semakin banyak level yang diselesaikan, semakin besar hadiahnya. Anda dapat menarik uang setelah memenuhi syarat penarikan."
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Q2",
+    "dict": [
+      [
+        "en-US",
+        "2、How long does it take to withdraw money?"
+      ],
+      [
+        "pt-BR",
+        "2、Quanto tempo leva para sacar dinheiro?"
+      ],
+      [
+        "id-ID",
+        "2、Berapa lama waktu penarikan?"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_A2",
+    "dict": [
+      [
+        "en-US",
+        "Generally, funds will be credited to your account within a few minutes. If the number of withdrawals or the withdrawal amount exceeds a certain limit, the system will review it. In this case, the funds will still be credited within 24 hours, so please don’t worry."
+      ],
+      [
+        "pt-BR",
+        "Normalmente, os fundos são creditados na sua conta em poucos minutos. Se o número de saques ou o valor exceder um determinado limite, o sistema fará uma análise. Nesse caso, os fundos serão creditados em até 24 horas, então não se preocupe."
+      ],
+      [
+        "id-ID",
+        "Biasanya dana akan masuk ke akun Anda dalam beberapa menit. Jika jumlah atau nominal penarikan melebihi batas tertentu, sistem akan melakukan peninjauan. Dalam kasus ini, dana tetap akan masuk dalam waktu 24 jam, jadi jangan khawatir."
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Q3",
+    "dict": [
+      [
+        "en-US",
+        "3、Why did my withdrawal fail?"
+      ],
+      [
+        "pt-BR",
+        "3、Por que meu saque falhou?"
+      ],
+      [
+        "id-ID",
+        "3、Mengapa penarikan saya gagal?"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_A3",
+    "dict": [
+      [
+        "en-US",
+        "If a withdrawal fails, the system will provide the reason in English. Please modify your information according to the prompt. If the withdrawal fails, the withdrawal amount will be returned automatically. You can update your information and initiate the withdrawal again. Please make sure all the information you provide is correct. We are not responsible for withdrawal failures caused by incorrect information."
+      ],
+      [
+        "pt-BR",
+        "Se o saque falhar, o sistema exibirá o motivo em inglês. Ajuste suas informações conforme a orientação. O valor será devolvido automaticamente. Você pode atualizar seus dados e tentar novamente. Certifique-se de que todas as informações fornecidas estejam corretas. Não somos responsáveis por falhas causadas por informações incorretas."
+      ],
+      [
+        "id-ID",
+        "Jika penarikan gagal, sistem akan menampilkan alasannya dalam bahasa Inggris. Silakan perbarui informasi sesuai petunjuk. Dana akan dikembalikan secara otomatis. Anda dapat memperbarui data dan mengajukan penarikan kembali. Pastikan semua informasi yang Anda berikan benar. Kami tidak bertanggung jawab atas kegagalan akibat informasi yang salah."
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Q4",
+    "dict": [
+      [
+        "en-US",
+        "4、How many times can I withdraw?"
+      ],
+      [
+        "pt-BR",
+        "4、Quantas vezes posso sacar?"
+      ],
+      [
+        "id-ID",
+        "4、Berapa kali bisa menarik?"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_A4",
+    "dict": [
+      [
+        "en-US",
+        "Unlimited."
+      ],
+      [
+        "pt-BR",
+        "Ilimitado."
+      ],
+      [
+        "id-ID",
+        "Tidak terbatas."
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Q5",
+    "dict": [
+      [
+        "en-US",
+        "5、How many times can I withdraw per day?"
+      ],
+      [
+        "pt-BR",
+        "5、Quantas vezes posso sacar por dia?"
+      ],
+      [
+        "id-ID",
+        "5、Berapa kali bisa menarik per hari?"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_A5",
+    "dict": [
+      [
+        "en-US",
+        "Up to 5 times per day."
+      ],
+      [
+        "pt-BR",
+        "Até 5 vezes por dia."
+      ],
+      [
+        "id-ID",
+        "Hingga 5 kali per hari."
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Q6",
+    "dict": [
+      [
+        "en-US",
+        "6、Why can't I withdraw funds using my withdrawal account?"
+      ],
+      [
+        "pt-BR",
+        "6、Por que não consigo sacar usando minha conta de saque?"
+      ],
+      [
+        "id-ID",
+        "6、Mengapa saya tidak bisa menarik dana menggunakan akun penarikan saya?"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_A6",
+    "dict": [
+      [
+        "en-US",
+        "The same withdrawal account can only be bound to two app accounts at most. Please do not share account with others."
+      ],
+      [
+        "pt-BR",
+        "A mesma conta de saque só pode ser vinculada a no máximo duas contas do aplicativo. Por favor, não compartilhe a conta com outras pessoas."
+      ],
+      [
+        "id-ID",
+        "Akun penarikan yang sama hanya dapat ditautkan ke maksimal dua akun aplikasi. Mohon jangan membagikan akun kepada orang lain."
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Q7",
+    "dict": [
+      [
+        "en-US",
+        "7、Can I use a VPN?"
+      ],
+      [
+        "pt-BR",
+        "7、Posso usar VPN?"
+      ],
+      [
+        "id-ID",
+        "7、Apakah saya boleh menggunakan VPN?"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_A7",
+    "dict": [
+      [
+        "en-US",
+        "The use of VPN is strictly prohibited. Please do not use a VPN while using the app."
+      ],
+      [
+        "pt-BR",
+        "O uso de VPN é estritamente proibido. Por favor, não utilize VPN enquanto estiver usando o aplicativo."
+      ],
+      [
+        "id-ID",
+        "Penggunaan VPN dilarang keras. Harap jangan menggunakan VPN saat menggunakan aplikasi."
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Please",
+    "dict": [
+      [
+        "en-US",
+        "Please select a quick reply (Tap)"
+      ],
+      [
+        "pt-BR",
+        "Por favor, selecione uma resposta rápida (toque)"
+      ],
+      [
+        "id-ID",
+        "Silakan pilih balasan cepat (ketuk)"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Tittle",
+    "dict": [
+      [
+        "en-US",
+        "Feedback"
+      ],
+      [
+        "pt-BR",
+        "Feedback"
+      ],
+      [
+        "id-ID",
+        "Umpan Balik"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_PleaseFeedback",
+    "dict": [
+      [
+        "en-US",
+        "Please enter feedback"
+      ],
+      [
+        "pt-BR",
+        "Por favor, insira seu feedback"
+      ],
+      [
+        "id-ID",
+        "Silakan masukkan masukan Anda"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_Custom",
+    "dict": [
+      [
+        "en-US",
+        "Customer Service"
+      ],
+      [
+        "pt-BR",
+        "Atendimento ao Cliente"
+      ],
+      [
+        "id-ID",
+        "Layanan Pelanggan"
+      ]
+    ]
+  },
+  {
+    "Id": "ServicePanel_QuickReply",
+    "dict": [
+      [
+        "en-US",
+        "Quick Reply"
+      ],
+      [
+        "pt-BR",
+        "Resposta rápida"
+      ],
+      [
+        "id-ID",
+        "Balasan cepat"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameTitle1",
+    "dict": [
+      [
+        "en-US",
+        "⏰ Your daily exclusive rewards have arrived!"
+      ],
+      [
+        "pt-BR",
+        "⏰ Suas recompensas exclusivas de hoje chegaram!"
+      ],
+      [
+        "id-ID",
+        "⏰ Hadiah eksklusif harianmu sudah tiba!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameBody1",
+    "dict": [
+      [
+        "en-US",
+        "Tap in, play a bit, and easily earn your daily cash!"
+      ],
+      [
+        "pt-BR",
+        "Entre, jogue um pouco e ganhe seu dinheiro diário!"
+      ],
+      [
+        "id-ID",
+        "Masuk, mainkan sebentar, dan hasilkan uang harianmu!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameTitle2",
+    "dict": [
+      [
+        "en-US",
+        "\uD83E\uDDE9 Relieve stress and earn cash!"
+      ],
+      [
+        "pt-BR",
+        "\uD83E\uDDE9 Alivie o estresse e ganhe dinheiro!"
+      ],
+      [
+        "id-ID",
+        "\uD83E\uDDE9 Hilangkan stres dan hasilkan uang!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameBody2",
+    "dict": [
+      [
+        "en-US",
+        "New levels await! Sort and match your way to a fuller wallet!"
+      ],
+      [
+        "pt-BR",
+        "Novos níveis! Combine e organize para encher sua carteira!"
+      ],
+      [
+        "id-ID",
+        "Level baru menanti! Cocokkan dan sortir untuk mengisi dompetmu!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameTitle3",
+    "dict": [
+      [
+        "en-US",
+        "\uD83D\uDCB8 Playing games really pays!"
+      ],
+      [
+        "pt-BR",
+        "\uD83D\uDCB6 Jogar realmente dá dinheiro!"
+      ],
+      [
+        "id-ID",
+        "\uD83D\uDCB4 Main game benar-benar menghasilkan uang!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameBody3",
+    "dict": [
+      [
+        "en-US",
+        "Your cash balance is waiting to grow. Fast withdrawals supported!"
+      ],
+      [
+        "pt-BR",
+        "Seu saldo está esperando para crescer. Saques rápidos disponíveis!"
+      ],
+      [
+        "id-ID",
+        "Saldo uang tunaimu menunggu untuk bertambah. Penarikan cepat didukung! \uD83E\uDE99"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameTitle4",
+    "dict": [
+      [
+        "en-US",
+        "\uD83C\uDF89 More players just cashed out!"
+      ],
+      [
+        "pt-BR",
+        "\uD83C\uDF89 Mais jogadores acabaram de sacar!"
+      ],
+      [
+        "id-ID",
+        "\uD83C\uDF89 Lebih banyak pemain baru saja menarik dana!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameBody4",
+    "dict": [
+      [
+        "en-US",
+        "Will you be the next to take home real money? Play now and see!"
+      ],
+      [
+        "pt-BR",
+        "Você será o próximo a levar dinheiro real? Jogue agora para ver!"
+      ],
+      [
+        "id-ID",
+        "Apakah Anda yang berikutnya membawa pulang uang sungguhan? Mainkan sekarang!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameTitle5",
+    "dict": [
+      [
+        "en-US",
+        "⚠️ Your cash rewards are sleeping!"
+      ],
+      [
+        "pt-BR",
+        "⚠️ Suas recompensas em dinheiro estão dormindo!"
+      ],
+      [
+        "id-ID",
+        "⚠️ Hadiah uang tunaimu sedang tidur!"
+      ]
+    ]
+  },
+  {
+    "Id": "DailyPush_GameBody5",
+    "dict": [
+      [
+        "en-US",
+        "Don't miss out on daily earnings. Come back and continue your cash-out journey."
+      ],
+      [
+        "pt-BR",
+        "Não perca os ganhos diários. Volte e continue sua jornada de saque."
+      ],
+      [
+        "id-ID",
+        "Jangan lewatkan penghasilan harian. Kembali dan lanjutkan perjalanan penarikanmu."
+      ]
+    ]
+  },
+  {
+    "Id": "SlotFAQDes",
+    "dict": [
+      [
+        "en-US",
+        "You will get 1 lucky draw opportunity for every 5 levels you clear. The more ads you watch, the greater the reward will be."
+      ],
+      [
+        "pt-BR",
+        "Você ganhará 1 oportunidade de sorteio a cada 5 níveis que completar. Quanto mais anúncios assistir, maior será a recompensa."
+      ],
+      [
+        "id-ID",
+        "Anda akan mendapatkan 1 kesempatan undian setiap kali menyelesaikan 5 level. Semakin banyak iklan yang Anda tonton, semakin besar hadiahnya."
+      ]
+    ]
+  },
+  {
+    "Id": "SlotFAQSmallDes_1",
+    "dict": [
+      [
+        "en-US",
+        "A small amount"
+      ],
+      [
+        "pt-BR",
+        "Uma pequena quantidade"
+      ],
+      [
+        "id-ID",
+        "Jumlah kecil"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotFAQSmallDes_2",
+    "dict": [
+      [
+        "en-US",
+        "Lots of"
+      ],
+      [
+        "pt-BR",
+        "Muitos"
+      ],
+      [
+        "id-ID",
+        "Banyak"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotFAQSmallDes_3",
+    "dict": [
+      [
+        "en-US",
+        "Surprise"
+      ],
+      [
+        "pt-BR",
+        "Surpresa"
+      ],
+      [
+        "id-ID",
+        "Kejutan"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotFAQSmallDes_4",
+    "dict": [
+      [
+        "en-US",
+        "A small amount"
+      ],
+      [
+        "pt-BR",
+        "Uma pequena quantidade"
+      ],
+      [
+        "id-ID",
+        "Jumlah kecil"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotFAQSmallDes_5",
+    "dict": [
+      [
+        "en-US",
+        "Lots of"
+      ],
+      [
+        "pt-BR",
+        "Muitos"
+      ],
+      [
+        "id-ID",
+        "Banyak"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotFAQSmallDes_6",
+    "dict": [
+      [
+        "en-US",
+        "Double rewards"
+      ],
+      [
+        "pt-BR",
+        "Recompensas em dobro"
+      ],
+      [
+        "id-ID",
+        "Hadiah ganda"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotPanel_HaveSpin",
+    "dict": [
+      [
+        "en-US",
+        "1 spin remaining"
+      ],
+      [
+        "pt-BR",
+        "1 rodada restante"
+      ],
+      [
+        "id-ID",
+        "1 putaran tersisa"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotPanel_AdSpin",
+    "dict": [
+      [
+        "en-US",
+        "Watch Videos and get spins"
+      ],
+      [
+        "pt-BR",
+        "Assista a vídeos e ganhe rodadas"
+      ],
+      [
+        "id-ID",
+        "Tonton video dan dapatkan putaran"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotPanel_SpineClick",
+    "dict": [
+      [
+        "en-US",
+        "Spin"
+      ],
+      [
+        "pt-BR",
+        "Girar"
+      ],
+      [
+        "id-ID",
+        "Putar"
+      ]
+    ]
+  },
+  {
+    "Id": "SlotPanel_ClickAdClick",
+    "dict": [
+      [
+        "en-US",
+        "Spin"
+      ],
+      [
+        "pt-BR",
+        "Girar"
+      ],
+      [
+        "id-ID",
+        "Putar"
+      ]
+    ]
+  },
+  {
+    "Id": "Tutorial_1",
+    "dict": [
+      [
+        "en-US",
+        "Tap to complete the elimination"
+      ],
+      [
+        "pt-BR",
+        "Toque para completar a eliminação"
+      ],
+      [
+        "id-ID",
+        "Ketuk untuk menyelesaikan penghapusan"
+      ]
+    ]
+  },
+  {
+    "Id": "ItemName_RefreshProp",
+    "dict": []
+  },
+  {
+    "Id": "ItemName_ClearProp",
+    "dict": [
+      [
+        "en-US",
+        "Clear all elements of the same color"
+      ],
+      [
+        "pt-BR",
+        "Eliminar todos os elementos da mesma cor"
+      ],
+      [
+        "id-ID",
+        "Hapus semua elemen dengan warna yang sama"
+      ]
+    ]
+  },
+  {
+    "Id": "ItemName_BackProp",
+    "dict": [
+      [
+        "en-US",
+        "Regenerate Level"
+      ],
+      [
+        "pt-BR",
+        "Regenerar fase"
+      ],
+      [
+        "id-ID",
+        "Buat ulang level"
+      ]
+    ]
+  }
+]

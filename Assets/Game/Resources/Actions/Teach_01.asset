@@ -1,0 +1,3049 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8439e14978d0604087e46ea479d1f28, type: 3}
+  m_Name: Teach_01
+  m_EditorClassIdentifier: 
+  graph:
+    rid: 2724848817516052480
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2724848817516052480
+      type: {class: ActionGraph_Teach, ns: , asm: Assembly-CSharp}
+      data:
+        note: 
+        configData:
+          rid: 2724848817516052481
+        blackBoard:
+          _variables: []
+        root:
+          rid: 2724848817516052482
+        variableList:
+        - rid: 2724848817516052483
+        - rid: 2724848817516052484
+        - rid: 2724848817516052485
+        - rid: 2724848817516052486
+        - rid: 2724848817516052487
+        - rid: 2724848817516052488
+        - rid: 2724848817516052489
+        - rid: 2724848817516052490
+        - rid: 2724848817516052491
+        - rid: 2724848817516052492
+        - rid: 2724848817516052493
+        - rid: 2724848817516052494
+        - rid: 2724848817516052495
+        - rid: 2724848817516052496
+        - rid: 2724848817516052497
+        - rid: 2724848817516052498
+        - rid: 2724848817516052499
+        - rid: 2724848817516052500
+        - rid: 2724848817516052501
+        - rid: 2724848817516052502
+        - rid: 2724848817516052503
+        - rid: 2724848817516052504
+        - rid: 2724848817516052505
+        - rid: 2724848817516052506
+        - rid: 2724848817516052507
+        - rid: 2724848817516052508
+        - rid: 2724848817516052509
+        - rid: 2724848817516052510
+        - rid: 2724848817516052511
+        - rid: 2724848817516052512
+        - rid: 2724848817516052513
+        - rid: 2724848817516052514
+        - rid: 2724848817516052515
+        - rid: 2724848817516052516
+        - rid: 2724848817516052517
+        - rid: 2724848817516052518
+        - rid: 2724848817516052519
+        - rid: 2724848817516052520
+        - rid: 2724848817516052521
+        - rid: 2724848817516052522
+        - rid: 2724848817516052523
+        - rid: 2724848817516052524
+        - rid: 2724848817516052525
+        - rid: 2724848817516052526
+        - rid: 2724848817516052527
+        - rid: 2724848817516052528
+        - rid: 2724848817516052529
+        - rid: 2724848817516052530
+        - rid: 2724848817516052531
+        - rid: 2724848817516052532
+        - rid: 2724848817516052533
+        - rid: 2724848817516052534
+        - rid: 2724848817516052535
+        - rid: 2724848817516052536
+        - rid: 2724848817516052537
+        - rid: 2724848817516052538
+        - rid: 2724848817516052539
+        - rid: 2724848817516052540
+        - rid: 2724848817516052541
+        - rid: 2724848817516052542
+        - rid: 2724848817516052543
+        - rid: 2724848817516052544
+        - rid: 2724848817516052545
+        - rid: 2724848817516052546
+        - rid: 2724848817516052547
+        - rid: 2724848817516052548
+        - rid: 2724848817516052549
+        - rid: 2724848817516052550
+        - rid: 2724848817516052551
+        - rid: 2724848817516052552
+        - rid: 2724848817516052553
+        - rid: 2724848817516052554
+        - rid: 2724848817516052555
+        - rid: 2724848817516052556
+        - rid: 2724848817516052557
+        - rid: 2724848817516052558
+        - rid: 2724848817516052559
+        - rid: 2724848817516052560
+        - rid: 2724848817516052561
+        - rid: 2724848817516052562
+        - rid: 2724848817516052563
+        - rid: 2724848817516052564
+        - rid: 2724848817516052565
+        - rid: 2724848817516052566
+        - rid: 2724848817516052567
+        - rid: 2724848817516052568
+        - rid: 2724848817516052569
+        - rid: 2724848817516052570
+        - rid: 2724848817516052571
+        - rid: 2724848817516052572
+        - rid: 2724848817516052573
+        - rid: 2724848817516052574
+        - rid: 2724848817516052575
+        - rid: 2724848817516052576
+        - rid: 2724848817516052577
+        - rid: 2724848817516052578
+        - rid: 2724848817516052579
+        - rid: 2724848817516052580
+        - rid: 2724848817516052581
+        - rid: 2724848817516052582
+        - rid: 2724848817516052583
+        - rid: 2724848817516052584
+        - rid: 2724848817516052585
+        - rid: 2724848817516052586
+        - rid: 2724848817516052587
+        - rid: 2724848817516052588
+        - rid: 2724848817516052589
+        - rid: 2724848817516052590
+        unconnectedNodes:
+        - rid: 2724848817516052591
+        - rid: 2724848817516052592
+        - rid: 2724848817516052593
+        defaultVariableList: []
+    - rid: 2724848817516052481
+      type: {class: TeachConfigData, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 2724848817516052482
+      type: {class: RootNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 650, y: 2129}
+        children:
+        - rid: 2724848817516052594
+        titleNote: 
+        note: 
+    - rid: 2724848817516052483
+      type: {class: Variable_Bool_TeachIsNewUser, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 437, y: 1957}
+    - rid: 2724848817516052484
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2905, y: 194}
+        directValue: 1
+    - rid: 2724848817516052485
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3796, y: 3490}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_UI_TeachMask"
+    - rid: 2724848817516052486
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3268, y: 3880}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u7B49\u5F85\u771F\u63D0\u73B0\u754C\u9762"
+    - rid: 2724848817516052487
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2765, y: 4032}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052488
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3202, y: 4102}
+        b1:
+          internalValue:
+            rid: 2724848817516052595
+          idxInList: 6
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052489
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2972, y: 4014}
+        pageId:
+          internalValue:
+            rid: 2724848817516052596
+          idxInList: 4
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052490
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3772, y: 641}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u8FDB\u5165\u767D\u5305\u903B\u8F91"
+    - rid: 2724848817516052491
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3691, y: 712}
+        directValue: 0
+    - rid: 2724848817516052492
+      type: {class: Variable_Vector3_GetItemPos, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3707, y: 1246}
+        row:
+          internalValue:
+            rid: 2724848817516052597
+          idxInList: 93
+          nodeIdx: -1
+          nodeVarIdx: -1
+        col:
+          internalValue:
+            rid: 2724848817516052598
+          idxInList: 10
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052493
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3531, y: 1218}
+        directValue: 4
+    - rid: 2724848817516052494
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3550, y: 1318}
+        directValue: 3
+    - rid: 2724848817516052495
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3707, y: 1383}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5F15\u5BFC\u7B2C\u4E00\u6B65"
+    - rid: 2724848817516052496
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3620, y: 1792}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5F15\u5BFC\u7B2C\u4E00\u6B65\u72B6\u6001\u53D8\u6362"
+    - rid: 2724848817516052497
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3701, y: 1119}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u8981\u70B9\u51FB\u7684\u5143\u7D20\u4F4D\u7F6E"
+    - rid: 2724848817516052498
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3701, y: 799}
+        directValue: 0
+    - rid: 2724848817516052499
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3795, y: 1990}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6E38\u620F\u73A9\u6CD5\u70B9\u51FB\u5B8C\u6210"
+    - rid: 2724848817516052500
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3763, y: 2080}
+        directValue: 1.5
+    - rid: 2724848817516052501
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3763, y: 2187}
+        directValue: 1
+    - rid: 2724848817516052502
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3735, y: 2287}
+        directValue: 0
+    - rid: 2724848817516052503
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3116, y: 3257}
+        directValue: 5
+    - rid: 2724848817516052504
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3199, y: 3579}
+        b1:
+          internalValue:
+            rid: 2724848817516052599
+          idxInList: 23
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052505
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2787, y: 3587}
+        directValue: UI_TeachMask
+    - rid: 2724848817516052506
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2972, y: 3569}
+        pageId:
+          internalValue:
+            rid: 2724848817516052600
+          idxInList: 22
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052507
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3590, y: 2614}
+        directValue: 1
+    - rid: 2724848817516052508
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3590, y: 2716}
+        directValue: NewbieGiftPage
+    - rid: 2724848817516052509
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3606, y: 2795}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6253\u5F00\u4E86\u65B0\u624B\u793C\u5305\u754C\u9762"
+    - rid: 2724848817516052510
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2609, y: 4825}
+        directValue: 0
+    - rid: 2724848817516052511
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2609, y: 4891}
+        directValue: -1
+    - rid: 2724848817516052512
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2601, y: 4950}
+        directValue: -1
+    - rid: 2724848817516052513
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2623, y: 5066}
+        directValue: 1
+    - rid: 2724848817516052514
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2609, y: 5007}
+        directValue: 100
+    - rid: 2724848817516052515
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2830, y: 4664}
+        directValue: '[GameInstance]/GameCanvas/Content/PopupLayer/FakeWithdrawPanel(Clone)/Content/WithdrawBtn'
+    - rid: 2724848817516052516
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2830, y: 4723}
+        directValue: 1
+    - rid: 2724848817516052517
+      type: {class: Variable_Enum_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2830, y: 4783}
+        directValue: 0
+    - rid: 2724848817516052518
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3246, y: 2792}
+        directValue: '[GameInstance]/GameCanvas/Content/BaseLayer/RealGamePanel(Clone)/Content/CurrencyBar/CurrentGroup/GoldGroup/RealBtn'
+    - rid: 2724848817516052519
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3246, y: 2868}
+        directValue: 1
+    - rid: 2724848817516052520
+      type: {class: Variable_Enum_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3258, y: 2925}
+        directValue: 0
+    - rid: 2724848817516052521
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3258, y: 2985}
+        directValue: 0
+    - rid: 2724848817516052522
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3258, y: 3050}
+        directValue: -1
+    - rid: 2724848817516052523
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3258, y: 3120}
+        directValue: -1
+    - rid: 2724848817516052524
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3268, y: 3179}
+        directValue: 100
+    - rid: 2724848817516052525
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3265, y: 3252}
+        directValue: 1
+    - rid: 2724848817516052526
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2889, y: 5609}
+        directValue: '[GameInstance]/GameCanvas/Content/BaseLayer/RealGamePanel(Clone)/Content/CurrencyBar/CurrentGroup/GoldGroup/RealBtn'
+    - rid: 2724848817516052527
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2889, y: 5685}
+        directValue: 1
+    - rid: 2724848817516052528
+      type: {class: Variable_Enum_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2901, y: 5742}
+        directValue: 0
+    - rid: 2724848817516052529
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2901, y: 5802}
+        directValue: 0
+    - rid: 2724848817516052530
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2901, y: 5867}
+        directValue: -1
+    - rid: 2724848817516052531
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2901, y: 5937}
+        directValue: -1
+    - rid: 2724848817516052532
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2911, y: 5996}
+        directValue: 100
+    - rid: 2724848817516052533
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2911, y: 6064}
+        directValue: 1
+    - rid: 2724848817516052534
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2864, y: 5081}
+        directValue: Teach_Withdraw
+    - rid: 2724848817516052535
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2864, y: 5141}
+        directValue: 0
+    - rid: 2724848817516052536
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2864, y: 5200}
+        directValue: 0.2
+    - rid: 2724848817516052537
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2864, y: 5259}
+        directValue: 0
+    - rid: 2724848817516052538
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2395, y: 7264}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u771F\u63D0\u73B0\u754C\u9762\u6253\u5F00"
+    - rid: 2724848817516052539
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2911, y: 6123}
+        directValue: Teach_coin
+    - rid: 2724848817516052540
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2911, y: 6242}
+        directValue: 0.8
+    - rid: 2724848817516052541
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2911, y: 6301}
+        directValue: 0
+    - rid: 2724848817516052542
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2911, y: 6182}
+        directValue: 0
+    - rid: 2724848817516052543
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2663, y: 6442}
+        directValue: UI_TeachMask
+    - rid: 2724848817516052544
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2940, y: 6365}
+        b1:
+          internalValue:
+            rid: 2724848817516052601
+          idxInList: 83
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052545
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2769, y: 6660}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052546
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3034, y: 5636}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5F15\u5BFC\u771F\u63D0\u73B0\u6309\u94AE"
+    - rid: 2724848817516052547
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2940, y: 6660}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u8FDB\u5165\u771F\u63D0\u73B0\u754C\u9762"
+    - rid: 2724848817516052548
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2204, y: 3549}
+        b1:
+          internalValue:
+            rid: 2724848817516052602
+          idxInList: 73
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052549
+      type: {class: Variable_Bool_CanShowTeach, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3025, y: 659}
+    - rid: 2724848817516052550
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3025, y: 365}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6559\u7A0B\u5F00\u59CB\u7B49\u5F85\u767D\u5305\u6E38\u620F\u903B\u8F91\u52A0\u8F7D"
+    - rid: 2724848817516052551
+      type: {class: CustomFirstTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3372, y: 1532}
+    - rid: 2724848817516052552
+      type: {class: CustomFirstTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2655, y: 1395}
+    - rid: 2724848817516052553
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2775, y: 1385}
+        b1:
+          internalValue:
+            rid: 2724848817516052603
+          idxInList: 69
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052554
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2623, y: 4256}
+        directValue: FakeWithdrawPanel
+    - rid: 2724848817516052555
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2830, y: 4277}
+        pageId:
+          internalValue:
+            rid: 2724848817516052604
+          idxInList: 71
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052556
+      type: {class: Action_Bool_IsSingleCurrency, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2001, y: 3470}
+    - rid: 2724848817516052557
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2710, y: 4566}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5047\u63D0\u73B0\u9875\u9762\u6253\u5F00"
+    - rid: 2724848817516052558
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2765, y: 4197}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6DF7\u5408\u6A21\u5F0F"
+    - rid: 2724848817516052559
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2572, y: 5318}
+        directValue: UIWithdrawalPanel
+    - rid: 2724848817516052560
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2683, y: 5270}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052561
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2740, y: 5329}
+        pageId:
+          internalValue:
+            rid: 2724848817516052605
+          idxInList: 76
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052562
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2714, y: 5502}
+        pageId:
+          internalValue:
+            rid: 2724848817516052606
+          idxInList: 82
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052563
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2881, y: 5436}
+        b1:
+          internalValue:
+            rid: 2724848817516052607
+          idxInList: 78
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052564
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2896, y: 5532}
+        b1:
+          internalValue:
+            rid: 2724848817516052608
+          idxInList: 79
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052565
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2555, y: 5451}
+        directValue: FakeWithdrawPanel
+    - rid: 2724848817516052566
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2783, y: 6453}
+        pageId:
+          internalValue:
+            rid: 2724848817516052609
+          idxInList: 60
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052567
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2905, y: 6747}
+        pageId:
+          internalValue:
+            rid: 2724848817516052610
+          idxInList: 62
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052568
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2789, y: 4483}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052569
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2890, y: 6571}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052570
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2917, y: 6965}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052571
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2395, y: 7494}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6846\u67B6\u65B0\u624B\u5F15\u5BFC\u7ED3\u675F"
+    - rid: 2724848817516052572
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2395, y: 7131}
+        directValue: 1
+    - rid: 2724848817516052573
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2462, y: 7893}
+        directValue: 1
+    - rid: 2724848817516052574
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2395, y: 7660}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052575
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2415, y: 8069}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052576
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3550, y: 1138}
+        directValue: 4
+    - rid: 2724848817516052577
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3016, y: 1079}
+        directValue: 2
+    - rid: 2724848817516052578
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3025, y: 775}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u767D\u5305\u6E38\u620F\u8FDB\u5165"
+    - rid: 2724848817516052579
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2880, y: 834}
+        pageId:
+          internalValue:
+            rid: 2724848817516052611
+          idxInList: 97
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052580
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2715, y: 923}
+        directValue: RealGamePanel
+    - rid: 2724848817516052581
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3264, y: 3314}
+        directValue: Teach_AllMoney
+    - rid: 2724848817516052582
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3264, y: 3373}
+        directValue: 0
+    - rid: 2724848817516052583
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3264, y: 3438}
+        directValue: 0
+    - rid: 2724848817516052584
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3258, y: 3490}
+        directValue: 0
+    - rid: 2724848817516052585
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4158, y: 1288}
+        directValue: Tutorial_1
+    - rid: 2724848817516052586
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4158, y: 1347}
+        directValue: 0
+    - rid: 2724848817516052587
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4158, y: 1412}
+        directValue: 0.1
+    - rid: 2724848817516052588
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4158, y: 1530}
+        directValue: 0
+    - rid: 2724848817516052589
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3152, y: 3698}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052590
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3680, y: 1915}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052591
+      type: {class: EventAction_Teach_TeachStart, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 659, y: 1925}
+        children: []
+        titleNote: 
+        note: 
+        conditionOverride:
+          internalValue:
+            rid: 2724848817516052612
+          idxInList: 0
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052592
+      type: {class: Action_Common_Wait, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3230, y: 1031}
+        children: []
+        titleNote: 
+        note: 
+        duraitonVar:
+          internalValue:
+            rid: 2724848817516052613
+          idxInList: 94
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052593
+      type: {class: Action_Common_Wait, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4029, y: 2134}
+        children: []
+        titleNote: 
+        note: 
+        duraitonVar:
+          internalValue:
+            rid: 2724848817516052614
+          idxInList: 17
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052594
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 1094, y: 2049}
+        children:
+        - rid: 2724848817516052615
+        - rid: 2724848817516052616
+        - rid: 2724848817516052617
+        - rid: 2724848817516052618
+        - rid: 2724848817516052619
+        - rid: 2724848817516052620
+        - rid: 2724848817516052621
+        titleNote: 
+        note: 
+    - rid: 2724848817516052595
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052622
+          idxInList: 4
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052596
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052597
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052598
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052599
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052623
+          idxInList: 22
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052600
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachMask
+    - rid: 2724848817516052601
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052624
+          idxInList: 60
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052602
+      type: {class: Action_Bool_IsSingleCurrency, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052603
+      type: {class: CustomFirstTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052604
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: FakeWithdrawPanel
+    - rid: 2724848817516052605
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UIWithdrawalPanel
+    - rid: 2724848817516052606
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: FakeWithdrawPanel
+    - rid: 2724848817516052607
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052625
+          idxInList: 76
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052608
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052626
+          idxInList: 82
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052609
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachMask
+    - rid: 2724848817516052610
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052611
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealGamePanel
+    - rid: 2724848817516052612
+      type: {class: Variable_Bool_TeachIsNewUser, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052613
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 2
+    - rid: 2724848817516052614
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1.5
+    - rid: 2724848817516052615
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2600, y: 681}
+        children:
+        - rid: 2724848817516052627
+        - rid: 2724848817516052628
+        - rid: 2724848817516052629
+        - rid: 2724848817516052630
+        - rid: 2724848817516052631
+        titleNote: "\u7B49\u5F85\u8FDB\u5165\u6E38\u620F"
+        note: 
+    - rid: 2724848817516052616
+      type: {class: SuccessNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2703, y: 1277}
+        children:
+        - rid: 2724848817516052632
+        titleNote: 
+        note: 
+    - rid: 2724848817516052617
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3396, y: 2246}
+        children:
+        - rid: 2724848817516052633
+        - rid: 2724848817516052634
+        - rid: 2724848817516052635
+        - rid: 2724848817516052636
+        - rid: 2724848817516052637
+        titleNote: "\u5143\u7D20\u70B9\u51FB\u5B8C\u6210"
+        note: 
+    - rid: 2724848817516052618
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3378, y: 2493}
+        children:
+        - rid: 2724848817516052638
+        - rid: 2724848817516052639
+        - rid: 2724848817516052640
+        - rid: 2724848817516052641
+        titleNote: 
+        note: 
+    - rid: 2724848817516052619
+      type: {class: SuccessNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2123, y: 2541}
+        children:
+        - rid: 2724848817516052642
+        titleNote: 
+        note: 
+    - rid: 2724848817516052620
+      type: {class: SuccessNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 1774, y: 4173}
+        children:
+        - rid: 2724848817516052643
+        titleNote: 
+        note: 
+    - rid: 2724848817516052621
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2236, y: 7028}
+        children:
+        - rid: 2724848817516052644
+        - rid: 2724848817516052645
+        - rid: 2724848817516052646
+        - rid: 2724848817516052647
+        - rid: 2724848817516052648
+        - rid: 2724848817516052649
+        titleNote: 
+        note: 
+    - rid: 2724848817516052622
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052623
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachMask
+    - rid: 2724848817516052624
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachMask
+    - rid: 2724848817516052625
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UIWithdrawalPanel
+    - rid: 2724848817516052626
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: FakeWithdrawPanel
+    - rid: 2724848817516052627
+      type: {class: Action_Teach_SetTeachBlock, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3177, y: 140}
+        children: []
+        titleNote: 
+        note: 
+        isBlock:
+          internalValue:
+            rid: 2724848817516052650
+          idxInList: 1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052628
+      type: {class: Action_Common_Log, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3278, y: 287}
+        children: []
+        titleNote: 
+        note: 
+        text:
+          internalValue:
+            rid: 2724848817516052651
+          idxInList: 67
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052629
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3230, y: 534}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052652
+          idxInList: 66
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052630
+      type: {class: Action_Common_Log, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3217, y: 712}
+        children: []
+        titleNote: 
+        note: 
+        text:
+          internalValue:
+            rid: 2724848817516052653
+          idxInList: 95
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052631
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3217, y: 845}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052654
+          idxInList: 96
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052632
+      type: {class: Condition_BoolVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2945, y: 1277}
+        children:
+        - rid: 2724848817516052655
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: 2724848817516052656
+          idxInList: 70
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052633
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3901, y: 1728}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052657
+          idxInList: 107
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052634
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3943, y: 1851}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: 2724848817516052658
+          idxInList: 68
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052659
+          idxInList: 13
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052635
+      type: {class: Action_Common_Log, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4120, y: 2032}
+        children: []
+        titleNote: 
+        note: 
+        text:
+          internalValue:
+            rid: 2724848817516052660
+          idxInList: 16
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052636
+      type: {class: Action_Teach_SetUIInteractive, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4006, y: 2233}
+        children: []
+        titleNote: 
+        note: 
+        canInteractive:
+          internalValue:
+            rid: 2724848817516052661
+          idxInList: 18
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052637
+      type: {class: Action_Teach_SetTeachBlock, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4006, y: 2347}
+        children: []
+        titleNote: 
+        note: 
+        isBlock:
+          internalValue:
+            rid: 2724848817516052662
+          idxInList: 19
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052638
+      type: {class: Action_Teach_GetNewbieGift, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3755, y: 2396}
+        children: []
+        titleNote: 
+        note: 
+    - rid: 2724848817516052639
+      type: {class: OnCloseAllPopPanel, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3775, y: 2480}
+        children: []
+        titleNote: 
+        note: 
+    - rid: 2724848817516052640
+      type: {class: Action_UI_OpenPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3803, y: 2585}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052663
+          idxInList: 25
+          nodeIdx: -1
+          nodeVarIdx: -1
+        suspend:
+          internalValue:
+            rid: 2724848817516052664
+          idxInList: 24
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052641
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3783, y: 2752}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052665
+          idxInList: 26
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052642
+      type: {class: Condition_BoolVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2469, y: 2852}
+        children:
+        - rid: 2724848817516052666
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: 2724848817516052667
+          idxInList: 73
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052643
+      type: {class: Condition_BoolVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2072, y: 4354}
+        children:
+        - rid: 2724848817516052668
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: 2724848817516052669
+          idxInList: 65
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052644
+      type: {class: Action_Common_Wait, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2603, y: 7071}
+        children: []
+        titleNote: 
+        note: 
+        duraitonVar:
+          internalValue:
+            rid: 2724848817516052670
+          idxInList: 89
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052645
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2623, y: 7207}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052671
+          idxInList: 55
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052646
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2623, y: 7431}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052672
+          idxInList: 88
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052647
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2623, y: 7660}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052673
+          idxInList: 91
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052648
+      type: {class: Action_Common_Wait, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2670, y: 7832}
+        children: []
+        titleNote: 
+        note: 
+        duraitonVar:
+          internalValue:
+            rid: 2724848817516052674
+          idxInList: 90
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052649
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2643, y: 8069}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052675
+          idxInList: 92
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052650
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052651
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6559\u7A0B\u5F00\u59CB\u7B49\u5F85\u767D\u5305\u6E38\u620F\u903B\u8F91\u52A0\u8F7D"
+    - rid: 2724848817516052652
+      type: {class: Variable_Bool_CanShowTeach, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052653
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u767D\u5305\u6E38\u620F\u8FDB\u5165"
+    - rid: 2724848817516052654
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052676
+          idxInList: 97
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052655
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3296, y: 1270}
+        children:
+        - rid: 2724848817516052677
+        - rid: 2724848817516052678
+        - rid: 2724848817516052679
+        - rid: 2724848817516052680
+        - rid: 2724848817516052681
+        - rid: 2724848817516052682
+        - rid: 2724848817516052683
+        - rid: 2724848817516052684
+        - rid: 2724848817516052685
+        titleNote: "\u5143\u7D201\u70B9\u51FB"
+        note: 
+    - rid: 2724848817516052656
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        b1:
+          internalValue:
+            rid: 2724848817516052686
+          idxInList: 69
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052657
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052658
+      type: {class: CustomFirstTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052659
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5F15\u5BFC\u7B2C\u4E00\u6B65\u72B6\u6001\u53D8\u6362"
+    - rid: 2724848817516052660
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6E38\u620F\u73A9\u6CD5\u70B9\u51FB\u5B8C\u6210"
+    - rid: 2724848817516052661
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052662
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052663
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: NewbieGiftPage
+    - rid: 2724848817516052664
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052665
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6253\u5F00\u4E86\u65B0\u624B\u793C\u5305\u754C\u9762"
+    - rid: 2724848817516052666
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2846, y: 2871}
+        children:
+        - rid: 2724848817516052687
+        - rid: 2724848817516052688
+        - rid: 2724848817516052689
+        - rid: 2724848817516052690
+        - rid: 2724848817516052691
+        - rid: 2724848817516052692
+        - rid: 2724848817516052693
+        - rid: 2724848817516052694
+        - rid: 2724848817516052695
+        titleNote: 
+        note: 
+    - rid: 2724848817516052667
+      type: {class: Action_Bool_IsSingleCurrency, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052668
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2309, y: 5009}
+        children:
+        - rid: 2724848817516052696
+        - rid: 2724848817516052697
+        titleNote: 
+        note: 
+    - rid: 2724848817516052669
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        b1:
+          internalValue:
+            rid: 2724848817516052698
+          idxInList: 73
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052670
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052671
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u771F\u63D0\u73B0\u754C\u9762\u6253\u5F00"
+    - rid: 2724848817516052672
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6846\u67B6\u65B0\u624B\u5F15\u5BFC\u7ED3\u675F"
+    - rid: 2724848817516052673
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052674
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052675
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052676
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealGamePanel
+    - rid: 2724848817516052677
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3927, y: 508}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052699
+          idxInList: 7
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052678
+      type: {class: Action_Teach_SetTeachBlock, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3927, y: 721}
+        children: []
+        titleNote: 
+        note: 
+        isBlock:
+          internalValue:
+            rid: 2724848817516052700
+          idxInList: 8
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052679
+      type: {class: Action_Teach_SetUIInteractive, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3927, y: 834}
+        children: []
+        titleNote: 
+        note: 
+        canInteractive:
+          internalValue:
+            rid: 2724848817516052701
+          idxInList: 15
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052680
+      type: {class: EnterCustomTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3927, y: 942}
+        children: []
+        titleNote: 
+        note: 
+    - rid: 2724848817516052681
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3925, y: 1030}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: 2724848817516052702
+          idxInList: 9
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052703
+          idxInList: 14
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052682
+      type: {class: Action_Teach_ShowHandTips, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4308, y: 1138}
+        children: []
+        titleNote: 
+        note: 
+        startPos:
+          internalValue:
+            rid: 2724848817516052704
+          idxInList: 9
+          nodeIdx: -1
+          nodeVarIdx: -1
+        endPos:
+          internalValue:
+            rid: 2724848817516052705
+          idxInList: 9
+          nodeIdx: -1
+          nodeVarIdx: -1
+        duration:
+          internalValue:
+            rid: 2724848817516052706
+          idxInList: 11
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052683
+      type: {class: Action_Teach_ShowTip, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 4320, y: 1293}
+        children: []
+        titleNote: 
+        note: 
+        content:
+          internalValue:
+            rid: 2724848817516052707
+          idxInList: 102
+          nodeIdx: -1
+          nodeVarIdx: -1
+        block:
+          internalValue:
+            rid: 2724848817516052708
+          idxInList: 103
+          nodeIdx: -1
+          nodeVarIdx: -1
+        posIdx:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        height:
+          internalValue:
+            rid: 2724848817516052709
+          idxInList: 104
+          nodeIdx: -1
+          nodeVarIdx: -1
+        alpha:
+          internalValue:
+            rid: 2724848817516052710
+          idxInList: 105
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052684
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3927, y: 1394}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: 2724848817516052711
+          idxInList: 68
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052712
+          idxInList: 12
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052685
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3895, y: 1605}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052713
+          idxInList: 68
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052686
+      type: {class: CustomFirstTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052687
+      type: {class: Action_Teach_ShowMaskByPath, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3426, y: 2903}
+        children: []
+        titleNote: 
+        note: 
+        path:
+          internalValue:
+            rid: 2724848817516052714
+          idxInList: 35
+          nodeIdx: -1
+          nodeVarIdx: -1
+        worldPos:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        block:
+          internalValue:
+            rid: 2724848817516052715
+          idxInList: 36
+          nodeIdx: -1
+          nodeVarIdx: -1
+        shape:
+          internalValue:
+            rid: 2724848817516052716
+          idxInList: 37
+          nodeIdx: -1
+          nodeVarIdx: -1
+        bgBlock:
+          internalValue:
+            rid: 2724848817516052717
+          idxInList: 38
+          nodeIdx: -1
+          nodeVarIdx: -1
+        width:
+          internalValue:
+            rid: 2724848817516052718
+          idxInList: 39
+          nodeIdx: -1
+          nodeVarIdx: -1
+        height:
+          internalValue:
+            rid: 2724848817516052719
+          idxInList: 40
+          nodeIdx: -1
+          nodeVarIdx: -1
+        alpha:
+          internalValue:
+            rid: 2724848817516052720
+          idxInList: 41
+          nodeIdx: -1
+          nodeVarIdx: -1
+        showHand:
+          internalValue:
+            rid: 2724848817516052721
+          idxInList: 42
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052688
+      type: {class: Action_Teach_SetReportData, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3432, y: 3208}
+        children: []
+        titleNote: 
+        note: 
+        teachIndex:
+          internalValue:
+            rid: 2724848817516052722
+          idxInList: 20
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052689
+      type: {class: Action_Teach_ShowTip, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3438, y: 3316}
+        children: []
+        titleNote: 
+        note: 
+        content:
+          internalValue:
+            rid: 2724848817516052723
+          idxInList: 98
+          nodeIdx: -1
+          nodeVarIdx: -1
+        block:
+          internalValue:
+            rid: 2724848817516052724
+          idxInList: 99
+          nodeIdx: -1
+          nodeVarIdx: -1
+        posIdx:
+          internalValue:
+            rid: 2724848817516052725
+          idxInList: 100
+          nodeIdx: -1
+          nodeVarIdx: -1
+        height:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        alpha:
+          internalValue:
+            rid: 2724848817516052726
+          idxInList: 101
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052690
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3609, y: 3356}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052727
+          idxInList: 2
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052691
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3415, y: 3539}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052728
+          idxInList: 21
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052692
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3403, y: 3665}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052729
+          idxInList: 106
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052693
+      type: {class: Action_Common_LogVariable, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3403, y: 3773}
+        children: []
+        titleNote: 
+        note: 
+        boolVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        floatVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        vector3Var:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        stringVar:
+          internalValue:
+            rid: 2724848817516052730
+          idxInList: 3
+          nodeIdx: -1
+          nodeVarIdx: -1
+        actorVar:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052694
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3403, y: 3984}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052731
+          idxInList: 6
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052695
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3403, y: 4102}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052732
+          idxInList: 5
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052696
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2631, y: 4372}
+        children:
+        - rid: 2724848817516052733
+        - rid: 2724848817516052734
+        - rid: 2724848817516052735
+        - rid: 2724848817516052736
+        - rid: 2724848817516052737
+        - rid: 2724848817516052738
+        - rid: 2724848817516052739
+        - rid: 2724848817516052740
+        - rid: 2724848817516052741
+        - rid: 2724848817516052742
+        titleNote: "\u5047\u63D0\u73B0"
+        note: 
+    - rid: 2724848817516052697
+      type: {class: SequenceNode, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 2620, y: 5631}
+        children:
+        - rid: 2724848817516052743
+        - rid: 2724848817516052744
+        - rid: 2724848817516052745
+        - rid: 2724848817516052746
+        - rid: 2724848817516052747
+        - rid: 2724848817516052748
+        - rid: 2724848817516052749
+        - rid: 2724848817516052750
+        titleNote: "\u771F\u63D0\u73B0"
+        note: 
+    - rid: 2724848817516052698
+      type: {class: Action_Bool_IsSingleCurrency, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052699
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u8FDB\u5165\u767D\u5305\u903B\u8F91"
+    - rid: 2724848817516052700
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052701
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052702
+      type: {class: Variable_Vector3_GetItemPos, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        row:
+          internalValue:
+            rid: 2724848817516052751
+          idxInList: 93
+          nodeIdx: -1
+          nodeVarIdx: -1
+        col:
+          internalValue:
+            rid: 2724848817516052752
+          idxInList: 10
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052703
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u8981\u70B9\u51FB\u7684\u5143\u7D20\u4F4D\u7F6E"
+    - rid: 2724848817516052704
+      type: {class: Variable_Vector3_GetItemPos, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        row:
+          internalValue:
+            rid: 2724848817516052753
+          idxInList: 93
+          nodeIdx: -1
+          nodeVarIdx: -1
+        col:
+          internalValue:
+            rid: 2724848817516052754
+          idxInList: 10
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052705
+      type: {class: Variable_Vector3_GetItemPos, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        row:
+          internalValue:
+            rid: 2724848817516052755
+          idxInList: 93
+          nodeIdx: -1
+          nodeVarIdx: -1
+        col:
+          internalValue:
+            rid: 2724848817516052756
+          idxInList: 10
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052706
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 3
+    - rid: 2724848817516052707
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: Tutorial_1
+    - rid: 2724848817516052708
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052709
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0.1
+    - rid: 2724848817516052710
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052711
+      type: {class: CustomFirstTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052712
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5F15\u5BFC\u7B2C\u4E00\u6B65"
+    - rid: 2724848817516052713
+      type: {class: CustomFirstTutorial, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+    - rid: 2724848817516052714
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: '[GameInstance]/GameCanvas/Content/BaseLayer/RealGamePanel(Clone)/Content/CurrencyBar/CurrentGroup/GoldGroup/RealBtn'
+    - rid: 2724848817516052715
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052716
+      type: {class: Variable_Enum_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052717
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052718
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: -1
+    - rid: 2724848817516052719
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: -1
+    - rid: 2724848817516052720
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 100
+    - rid: 2724848817516052721
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052722
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 5
+    - rid: 2724848817516052723
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: Teach_AllMoney
+    - rid: 2724848817516052724
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052725
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052726
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052727
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_UI_TeachMask"
+    - rid: 2724848817516052728
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        b1:
+          internalValue:
+            rid: 2724848817516052757
+          idxInList: 23
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052729
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052730
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u7B49\u5F85\u771F\u63D0\u73B0\u754C\u9762"
+    - rid: 2724848817516052731
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052758
+          idxInList: 4
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052732
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        b1:
+          internalValue:
+            rid: 2724848817516052759
+          idxInList: 6
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052733
+      type: {class: Action_Common_Log, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3060, y: 4203}
+        children: []
+        titleNote: 
+        note: 
+        text:
+          internalValue:
+            rid: 2724848817516052760
+          idxInList: 75
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052734
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3060, y: 4351}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052761
+          idxInList: 72
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052735
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3060, y: 4458}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052762
+          idxInList: 85
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052736
+      type: {class: Action_Common_Log, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3060, y: 4566}
+        children: []
+        titleNote: 
+        note: 
+        text:
+          internalValue:
+            rid: 2724848817516052763
+          idxInList: 74
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052737
+      type: {class: Action_Teach_ShowMaskByPath, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3060, y: 4673}
+        children: []
+        titleNote: 
+        note: 
+        path:
+          internalValue:
+            rid: 2724848817516052764
+          idxInList: 32
+          nodeIdx: -1
+          nodeVarIdx: -1
+        worldPos:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        block:
+          internalValue:
+            rid: 2724848817516052765
+          idxInList: 33
+          nodeIdx: -1
+          nodeVarIdx: -1
+        shape:
+          internalValue:
+            rid: 2724848817516052766
+          idxInList: 34
+          nodeIdx: -1
+          nodeVarIdx: -1
+        bgBlock:
+          internalValue:
+            rid: 2724848817516052767
+          idxInList: 27
+          nodeIdx: -1
+          nodeVarIdx: -1
+        width:
+          internalValue:
+            rid: 2724848817516052768
+          idxInList: 28
+          nodeIdx: -1
+          nodeVarIdx: -1
+        height:
+          internalValue:
+            rid: 2724848817516052769
+          idxInList: 29
+          nodeIdx: -1
+          nodeVarIdx: -1
+        alpha:
+          internalValue:
+            rid: 2724848817516052770
+          idxInList: 31
+          nodeIdx: -1
+          nodeVarIdx: -1
+        showHand:
+          internalValue:
+            rid: 2724848817516052771
+          idxInList: 30
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052738
+      type: {class: Action_Teach_ShowTip, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3072, y: 4973}
+        children: []
+        titleNote: 
+        note: 
+        content:
+          internalValue:
+            rid: 2724848817516052772
+          idxInList: 51
+          nodeIdx: -1
+          nodeVarIdx: -1
+        block:
+          internalValue:
+            rid: 2724848817516052773
+          idxInList: 52
+          nodeIdx: -1
+          nodeVarIdx: -1
+        posIdx:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        height:
+          internalValue:
+            rid: 2724848817516052774
+          idxInList: 53
+          nodeIdx: -1
+          nodeVarIdx: -1
+        alpha:
+          internalValue:
+            rid: 2724848817516052775
+          idxInList: 54
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052739
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3060, y: 5176}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052776
+          idxInList: 78
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052740
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3056, y: 5283}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052777
+          idxInList: 77
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052741
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3056, y: 5406}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052778
+          idxInList: 80
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052742
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3056, y: 5502}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052779
+          idxInList: 81
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052743
+      type: {class: Action_Common_Log, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3214, y: 5636}
+        children: []
+        titleNote: 
+        note: 
+        text:
+          internalValue:
+            rid: 2724848817516052780
+          idxInList: 63
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052744
+      type: {class: Action_Teach_ShowMaskByPath, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3072, y: 5825}
+        children: []
+        titleNote: 
+        note: 
+        path:
+          internalValue:
+            rid: 2724848817516052781
+          idxInList: 43
+          nodeIdx: -1
+          nodeVarIdx: -1
+        worldPos:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        block:
+          internalValue:
+            rid: 2724848817516052782
+          idxInList: 44
+          nodeIdx: -1
+          nodeVarIdx: -1
+        shape:
+          internalValue:
+            rid: 2724848817516052783
+          idxInList: 45
+          nodeIdx: -1
+          nodeVarIdx: -1
+        bgBlock:
+          internalValue:
+            rid: 2724848817516052784
+          idxInList: 46
+          nodeIdx: -1
+          nodeVarIdx: -1
+        width:
+          internalValue:
+            rid: 2724848817516052785
+          idxInList: 47
+          nodeIdx: -1
+          nodeVarIdx: -1
+        height:
+          internalValue:
+            rid: 2724848817516052786
+          idxInList: 48
+          nodeIdx: -1
+          nodeVarIdx: -1
+        alpha:
+          internalValue:
+            rid: 2724848817516052787
+          idxInList: 49
+          nodeIdx: -1
+          nodeVarIdx: -1
+        showHand:
+          internalValue:
+            rid: 2724848817516052788
+          idxInList: 50
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052745
+      type: {class: Action_Teach_ShowTip, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3084, y: 6123}
+        children: []
+        titleNote: 
+        note: 
+        content:
+          internalValue:
+            rid: 2724848817516052789
+          idxInList: 56
+          nodeIdx: -1
+          nodeVarIdx: -1
+        block:
+          internalValue:
+            rid: 2724848817516052790
+          idxInList: 59
+          nodeIdx: -1
+          nodeVarIdx: -1
+        posIdx:
+          internalValue:
+            rid: -2
+          idxInList: -1
+          nodeIdx: -1
+          nodeVarIdx: -1
+        height:
+          internalValue:
+            rid: 2724848817516052791
+          idxInList: 57
+          nodeIdx: -1
+          nodeVarIdx: -1
+        alpha:
+          internalValue:
+            rid: 2724848817516052792
+          idxInList: 58
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052746
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3119, y: 6326}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052793
+          idxInList: 61
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052747
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3119, y: 6463}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052794
+          idxInList: 86
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052748
+      type: {class: Action_Common_Log, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3135, y: 6630}
+        children: []
+        titleNote: 
+        note: 
+        text:
+          internalValue:
+            rid: 2724848817516052795
+          idxInList: 64
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052749
+      type: {class: Action_Common_WaitUntil, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3119, y: 6747}
+        children: []
+        titleNote: 
+        note: 
+        condition:
+          internalValue:
+            rid: 2724848817516052796
+          idxInList: 84
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052750
+      type: {class: Action_UI_ClosePage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 3078, y: 6906}
+        children: []
+        titleNote: 
+        note: 
+        pageId:
+          internalValue:
+            rid: 2724848817516052797
+          idxInList: 87
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052751
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052752
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052753
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052754
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052755
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052756
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 4
+    - rid: 2724848817516052757
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052798
+          idxInList: 22
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052758
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052759
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052799
+          idxInList: 4
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052760
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u6DF7\u5408\u6A21\u5F0F"
+    - rid: 2724848817516052761
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052800
+          idxInList: 71
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052762
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052763
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5047\u63D0\u73B0\u9875\u9762\u6253\u5F00"
+    - rid: 2724848817516052764
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: '[GameInstance]/GameCanvas/Content/PopupLayer/FakeWithdrawPanel(Clone)/Content/WithdrawBtn'
+    - rid: 2724848817516052765
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052766
+      type: {class: Variable_Enum_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052767
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052768
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: -1
+    - rid: 2724848817516052769
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: -1
+    - rid: 2724848817516052770
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 100
+    - rid: 2724848817516052771
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052772
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: Teach_Withdraw
+    - rid: 2724848817516052773
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052774
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0.2
+    - rid: 2724848817516052775
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052776
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052801
+          idxInList: 76
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052777
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052778
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        b1:
+          internalValue:
+            rid: 2724848817516052802
+          idxInList: 78
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052779
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        b1:
+          internalValue:
+            rid: 2724848817516052803
+          idxInList: 79
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052780
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u5F15\u5BFC\u771F\u63D0\u73B0\u6309\u94AE"
+    - rid: 2724848817516052781
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: '[GameInstance]/GameCanvas/Content/BaseLayer/RealGamePanel(Clone)/Content/CurrencyBar/CurrentGroup/GoldGroup/RealBtn'
+    - rid: 2724848817516052782
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052783
+      type: {class: Variable_Enum_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052784
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052785
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: -1
+    - rid: 2724848817516052786
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: -1
+    - rid: 2724848817516052787
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 100
+    - rid: 2724848817516052788
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 1
+    - rid: 2724848817516052789
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: Teach_coin
+    - rid: 2724848817516052790
+      type: {class: Variable_Bool_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052791
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0.8
+    - rid: 2724848817516052792
+      type: {class: Variable_Float_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: 0
+    - rid: 2724848817516052793
+      type: {class: Variable_Bool_Not, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        b1:
+          internalValue:
+            rid: 2724848817516052804
+          idxInList: 83
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052794
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052795
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: "\u65B0\u624B\u5F15\u5BFC_\u8FDB\u5165\u771F\u63D0\u73B0\u754C\u9762"
+    - rid: 2724848817516052796
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052805
+          idxInList: 62
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052797
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachTip
+    - rid: 2724848817516052798
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachMask
+    - rid: 2724848817516052799
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052800
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: FakeWithdrawPanel
+    - rid: 2724848817516052801
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UIWithdrawalPanel
+    - rid: 2724848817516052802
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052806
+          idxInList: 76
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052803
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052807
+          idxInList: 82
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052804
+      type: {class: Variable_Bool_TeachNeedPage, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        pageId:
+          internalValue:
+            rid: 2724848817516052808
+          idxInList: 60
+          nodeIdx: -1
+          nodeVarIdx: -1
+    - rid: 2724848817516052805
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: RealWithdrawPanel
+    - rid: 2724848817516052806
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UIWithdrawalPanel
+    - rid: 2724848817516052807
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: FakeWithdrawPanel
+    - rid: 2724848817516052808
+      type: {class: Variable_String_Direct, ns: , asm: Assembly-CSharp}
+      data:
+        editorPos: {x: 0, y: 0}
+        directValue: UI_TeachMask

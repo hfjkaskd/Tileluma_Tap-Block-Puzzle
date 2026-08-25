@@ -1,0 +1,69 @@
+using Luban;
+using SimpleJSON;
+using UnityEngine;
+
+{{namespace_with_grace_begin __namespace}}
+public partial class {{__name}}
+{
+    internal interface ITable
+    {
+        bool Inited {get;}
+        void Init(JSONNode data);
+        void Clear();
+    }
+
+    public static {{__name}} Instance {get;} = new();
+
+    internal readonly System.Collections.Generic.Dictionary<string, ITable> itTables = new();
+
+    {{~for table in __tables ~}}
+{{~if table.comment != '' ~}}
+    /// <summary>
+    /// {{escape_comment table.comment}}
+    /// </summary>
+{{~end~}}
+    public {{table.full_name}} {{format_property_name __code_style table.name}} {get;}
+    {{~end~}}
+
+    private {{__name}}()
+    {
+        {{~for table in __tables ~}}
+        {{format_property_name __code_style table.name}} = new {{table.full_name}}();
+        itTables.Add("{{table.output_data_file}}", {{format_property_name __code_style table.name}});
+        {{~end~}}
+    }
+
+    public void InitTable(System.Collections.Generic.KeyValuePair<string, TextAsset> pair)
+    {
+        if (itTables.TryGetValue(pair.Key, out var table))
+        {
+            table.Init(JSON.Parse(pair.Value.text));
+        }
+    }
+
+    public void InitTables<TMap>(TMap map) where TMap : System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, TextAsset>>
+    {
+        foreach (var pair in map)
+        {
+            InitTable(pair);
+        }
+    }
+
+    public void ClearTable(string key)
+    {
+        if (itTables.TryGetValue(key, out var table))
+        {
+            table.Clear();
+        }
+    }
+
+    public void ClearTables<TKeys>(TKeys keys) where TKeys : System.Collections.Generic.IEnumerable<string>
+    {
+        foreach (var key in keys)
+        {
+            ClearTable(key);
+        }
+    }
+}
+
+{{namespace_with_grace_end __namespace}}

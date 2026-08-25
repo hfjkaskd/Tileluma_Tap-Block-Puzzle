@@ -1,0 +1,55 @@
+[
+  {
+    "ID": "QD_FirstDay",
+    "Items": [
+      {
+        "type": 3,
+        "count": 20
+      }
+    ]
+  },
+  {
+    "ID": "QD_SecondDay",
+    "Items": [
+      {
+        "type": 21,
+        "count": 2
+      }
+    ]
+  },
+  {
+    "ID": "QD_ThirdDay",
+    "Items": [
+      {
+        "type": 3,
+        "count": 100
+      }
+    ]
+  },
+  {
+    "ID": "QD_FourthDay",
+    "Items": [
+      {
+        "type": 21,
+        "count": 3
+      }
+    ]
+  },
+  {
+    "ID": "QD_FifthDay",
+    "Items": [
+      {
+        "type": 3,
+        "count": 150
+      },
+      {
+        "type": 22,
+        "count": 50
+      },
+      {
+        "type": 1,
+        "count": 50
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "TK1004",
+    "refreshDays": 1,
+    "description": "DailyTaskPage_desc1",
+    "completeConditions": 4,
+    "conditionValues": 10,
+    "rewardsList": [
+      {
+        "type": 3,
+        "count": 10
+      }
+    ],
+    "adsFinish": false
+  },
+  {
+    "id": "TK1005",
+    "refreshDays": 1,
+    "description": "DailyTaskPage_desc2",
+    "completeConditions": 4,
+    "conditionValues": 20,
+    "rewardsList": [
+      {
+        "type": 3,
+        "count": 10
+      }
+    ],
+    "adsFinish": false
+  },
+  {
+    "id": "TK1006",
+    "refreshDays": 1,
+    "description": "DailyTaskPage_desc3",
+    "completeConditions": 4,
+    "conditionValues": 40,
+    "rewardsList": [
+      {
+        "type": 3,
+        "count": 20
+      }
+    ],
+    "adsFinish": false
+  },
+  {
+    "id": "TK1007",
+    "refreshDays": 1,
+    "description": "DailyTaskPage_desc4",
+    "completeConditions": 4,
+    "conditionValues": 60,
+    "rewardsList": [
+      {
+        "type": 3,
+        "count": 20
+      }
+    ],
+    "adsFinish": false
+  },
+  {
+    "id": "TK1008",
+    "refreshDays": 1,
+    "description": "DailyTaskPage_desc5",
+    "completeConditions": 4,
+    "conditionValues": 90,
+    "rewardsList": [
+      {
+        "type": 3,
+        "count": 30
+      }
+    ],
+    "adsFinish": false
+  }
+]

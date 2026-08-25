@@ -1,0 +1,92 @@
+[
+  {
+    "languageInfos": [
+      {
+        "key": "en-US",
+        "floatVal": 1
+      },
+      {
+        "key": "pt-BR",
+        "floatVal": 1
+      },
+      {
+        "key": "id-ID",
+        "floatVal": 1
+      },
+      {
+        "key": "ru-RU",
+        "floatVal": 1
+      },
+      {
+        "key": "ja-JP",
+        "floatVal": 1
+      },
+      {
+        "key": "ko-KR",
+        "floatVal": 1
+      },
+      {
+        "key": "es-ES",
+        "floatVal": 1
+      },
+      {
+        "key": "es-MX",
+        "floatVal": 1
+      },
+      {
+        "key": "tr-TR",
+        "floatVal": 1
+      },
+      {
+        "key": "en-PH",
+        "floatVal": 1
+      },
+      {
+        "key": "vi-VN",
+        "floatVal": 1
+      }
+    ],
+    "comboTips": [
+      {
+        "x": 1,
+        "y": 3,
+        "id": "good"
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "id": "great"
+      },
+      {
+        "x": 7,
+        "y": 99999,
+        "id": "perfect"
+      }
+    ],
+    "comboCd": 3,
+    "flyToAreaSpeed": 8,
+    "moneyItemId": 1,
+    "defaultDollarNum": 5,
+    "adDollarNum": 5,
+    "adDollarPoss": 0,
+    "adDollarMinCd": 0,
+    "adDollarMaxTimes": 2,
+    "multDollarPoss": 10,
+    "multDollarRange": {
+      "x": 2,
+      "y": 3
+    },
+    "interAdPoss": 30,
+    "interAdMaxTimes": 2,
+    "flowDollarNum": 5,
+    "dollarRange": {
+      "x": 0.6,
+      "y": 1.4
+    },
+    "combineCoinNum": 1,
+    "adCoinNum": 30,
+    "fragmentDestroyDuration": 0.3,
+    "propUseMaxTimes": 3,
+    "reviveMaxTimes": 3
+  }
+]

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3854ee19e6cc3eb4789462c99f8d862b, type: 3}
+  m_Name: BlockTapPrefabConfig
+  m_EditorClassIdentifier: 
+  blockCellPrefab: {fileID: 7955944792173170812, guid: 260b73cb2878b4f41889f8d22964379c, type: 3}
+  goalItemPrefab: {fileID: 6261117889375187513, guid: 34fa1dd501fd02b41a850a5851432840, type: 3}
+  flyingBlockPrefab: {fileID: 6602514308119677343, guid: 72f522a4adeede245818a9c9ebf4d6f5, type: 3}
+  bombEffectPrefab: {fileID: 8768853461171258058, guid: 759c3b37fb006dd419a8fb6df8189135, type: 3}

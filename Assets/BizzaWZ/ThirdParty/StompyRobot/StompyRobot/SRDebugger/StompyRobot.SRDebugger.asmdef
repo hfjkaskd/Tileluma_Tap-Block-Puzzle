@@ -1,0 +1,21 @@
+{
+    "name": "StompyRobot.SRDebugger",
+    "rootNamespace": "",
+    "references": [
+        "StompyRobot.SRF",
+        "Unity.InputSystem",
+        "Unity.Addressables",
+        "Unity.ResourceManager"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "!DISABLE_SRDEBUGGER"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

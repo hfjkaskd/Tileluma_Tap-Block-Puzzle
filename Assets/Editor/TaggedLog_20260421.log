@@ -1,0 +1,203 @@
+﻿========== Save Time: 2026-04-21 22:09:05 ==========
+Count: 200
+
+[2026-04-21 22:08:51.301] [Log] [BusAway] Parking slot reserved. slot=HoldingPoint, isOccupied=True, currentVehicle=null
+[2026-04-21 22:08:51.302] [Log] [BusAway] Vehicle MoveCarStraight reserved slot and started moving. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange], slot=HoldingPoint
+[2026-04-21 22:08:51.565] [Log] [BusAway] Vehicle MoveToSlot started. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange], targetSlot=HoldingPoint
+[2026-04-21 22:08:51.567] [Log] [BusAway] Fallback lose check delayed for 2 seconds. reasons=free parking slot available, matching color vehicle parked. gameOver=False, pendingBoarding=False, parkedVehicles=0, totalSlots=4, fullParkedVehicles=0, activePlayers=24, firstActiveColor=Pink, freeSlot=HoldingPoint_1
+[2026-04-21 22:08:51.733] [Log] [BusAway] Parking slot reserved. slot=HoldingPoint_1, isOccupied=True, currentVehicle=null
+[2026-04-21 22:08:51.734] [Log] [BusAway] Vehicle MoveCarStraight reserved slot and started moving. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (3)[Orange], slot=HoldingPoint_1
+[2026-04-21 22:08:52.033] [Log] [BusAway] Vehicle MoveToSlot started. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (3)[Orange], targetSlot=HoldingPoint_1
+[2026-04-21 22:08:52.035] [Log] [BusAway] Parking slot assigned vehicle. slot=HoldingPoint, vehicle=cpi_2 2 Bus_TenSeater (16)_18 (2), isOccupied=True
+[2026-04-21 22:08:52.036] [Log] [BusAway] Vehicle MoveToSlot completed. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange], slot=HoldingPoint, parkedVehicles=1, isColormatched=False
+[2026-04-21 22:08:52.036] [Log] [BusAway] AnyCarColorMatched found no available color match. firstActivePlayer=Passenger(Clone)Pink[Pink], parkedVehicles=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange, full=False]
+[2026-04-21 22:08:52.037] [Log] [BusAway] AnyCarColorMatched started CheckIfGameOver coroutine because no available match was found.
+[2026-04-21 22:08:52.102] [Log] [BusAway] CheckIfGameOver finished without lose. slotFull=False, sameColorVehicleParked=False. gameOver=False, pendingBoarding=False, parkedVehicles=1, totalSlots=4, fullParkedVehicles=0, activePlayers=24, firstActiveColor=Pink, freeSlot=HoldingPoint_2
+[2026-04-21 22:08:52.327] [Log] [BusAway] Parking slot reserved. slot=HoldingPoint_2, isOccupied=True, currentVehicle=null
+[2026-04-21 22:08:52.327] [Log] [BusAway] Vehicle MoveCarStraight reserved slot and started moving. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (7)[Brown], slot=HoldingPoint_2
+[2026-04-21 22:08:52.498] [Log] [BusAway] Parking slot assigned vehicle. slot=HoldingPoint_1, vehicle=cpi_2 2 Bus_TenSeater (16)_18 (3), isOccupied=True
+[2026-04-21 22:08:52.499] [Log] [BusAway] Vehicle MoveToSlot completed. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (3)[Orange], slot=HoldingPoint_1, parkedVehicles=2, isColormatched=False
+[2026-04-21 22:08:52.500] [Log] [BusAway] AnyCarColorMatched found no available color match. firstActivePlayer=Passenger(Clone)Pink[Pink], parkedVehicles=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange, full=False], cpi_2 2 Bus_TenSeater (16)_18 (3)[Orange, full=False]
+[2026-04-21 22:08:52.501] [Log] [BusAway] AnyCarColorMatched stopped previous CheckIfGameOver coroutine before starting a fresh one.
+[2026-04-21 22:08:52.502] [Log] [BusAway] AnyCarColorMatched started CheckIfGameOver coroutine because no available match was found.
+[2026-04-21 22:08:52.556] [Log] [BusAway] CheckIfGameOver finished without lose. slotFull=False, sameColorVehicleParked=False. gameOver=False, pendingBoarding=False, parkedVehicles=2, totalSlots=4, fullParkedVehicles=0, activePlayers=24, firstActiveColor=Pink, freeSlot=HoldingPoint_3
+[2026-04-21 22:08:52.800] [Log] [BusAway] Vehicle MoveToSlot started. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (7)[Brown], targetSlot=HoldingPoint_2
+[2026-04-21 22:08:53.330] [Log] [BusAway] Parking slot assigned vehicle. slot=HoldingPoint_2, vehicle=cpi_2 2 Bus_TenSeater (16)_18 (7), isOccupied=True
+[2026-04-21 22:08:53.331] [Log] [BusAway] Vehicle MoveToSlot completed. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (7)[Brown], slot=HoldingPoint_2, parkedVehicles=3, isColormatched=False
+[2026-04-21 22:08:53.332] [Log] [BusAway] AnyCarColorMatched found no available color match. firstActivePlayer=Passenger(Clone)Pink[Pink], parkedVehicles=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange, full=False], cpi_2 2 Bus_TenSeater (16)_18 (3)[Orange, full=False], cpi_2 2 Bus_TenSeater (16)_18 (7)[Brown, full=False]
+[2026-04-21 22:08:53.333] [Log] [BusAway] AnyCarColorMatched stopped previous CheckIfGameOver coroutine before starting a fresh one.
+[2026-04-21 22:08:53.334] [Log] [BusAway] AnyCarColorMatched started CheckIfGameOver coroutine because no available match was found.
+[2026-04-21 22:08:53.391] [Log] [BusAway] Only one parking slot left. parkedVehicles=3, totalSlots=4
+[2026-04-21 22:08:53.392] [Log] [BusAway] CheckIfGameOver finished without lose. slotFull=False, sameColorVehicleParked=False. gameOver=False, pendingBoarding=False, parkedVehicles=3, totalSlots=4, fullParkedVehicles=0, activePlayers=24, firstActiveColor=Pink, freeSlot=HoldingPoint_3
+[2026-04-21 22:08:53.428] [Log] [BusAway] Parking slot reserved. slot=HoldingPoint_3, isOccupied=True, currentVehicle=null
+[2026-04-21 22:08:53.429] [Log] [BusAway] Vehicle MoveCarStraight reserved slot and started moving. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], slot=HoldingPoint_3
+[2026-04-21 22:08:53.900] [Log] [BusAway] Vehicle MoveToSlot started. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], targetSlot=HoldingPoint_3
+[2026-04-21 22:08:54.399] [Log] [BusAway] Parking slot assigned vehicle. slot=HoldingPoint_3, vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), isOccupied=True
+[2026-04-21 22:08:54.401] [Log] [BusAway] Vehicle MoveToSlot completed. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], slot=HoldingPoint_3, parkedVehicles=4, isColormatched=False
+[2026-04-21 22:08:54.402] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:54.403] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=368
+[2026-04-21 22:08:54.404] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.405] [Log] [BusAway] NotifyBoardingStarted stopped pending CheckIfGameOver coroutine because a boarding flow began.
+[2026-04-21 22:08:54.406] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 1, playersInSeat=1/10, isFull=False
+[2026-04-21 22:08:54.525] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=367
+[2026-04-21 22:08:54.527] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:54.528] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=367
+[2026-04-21 22:08:54.529] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.530] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 2, playersInSeat=2/10, isFull=False
+[2026-04-21 22:08:54.531] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.532] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 1
+[2026-04-21 22:08:54.597] [Log] [BusAway] Fallback lose check delayed for 2 seconds. reasons=pending boarding, matching color vehicle parked. gameOver=False, pendingBoarding=True, parkedVehicles=4, totalSlots=4, fullParkedVehicles=0, activePlayers=24, firstActiveColor=Pink, freeSlot=none
+[2026-04-21 22:08:54.669] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=366
+[2026-04-21 22:08:54.670] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:54.671] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=366
+[2026-04-21 22:08:54.672] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.673] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 3, playersInSeat=3/10, isFull=False
+[2026-04-21 22:08:54.674] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.675] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 2
+[2026-04-21 22:08:54.770] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=365
+[2026-04-21 22:08:54.772] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:54.773] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=365
+[2026-04-21 22:08:54.774] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.775] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 4, playersInSeat=4/10, isFull=False
+[2026-04-21 22:08:54.776] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.777] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 3
+[2026-04-21 22:08:54.820] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 1
+[2026-04-21 22:08:54.898] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 1
+[2026-04-21 22:08:54.899] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=1/10, isFull=False, slot=HoldingPoint_3
+[2026-04-21 22:08:54.900] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=364
+[2026-04-21 22:08:54.901] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:54.902] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=364
+[2026-04-21 22:08:54.903] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.905] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 5, playersInSeat=5/10, isFull=False
+[2026-04-21 22:08:54.906] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:54.907] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 4
+[2026-04-21 22:08:54.957] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 2
+[2026-04-21 22:08:55.024] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 2
+[2026-04-21 22:08:55.025] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=2/10, isFull=False, slot=HoldingPoint_3
+[2026-04-21 22:08:55.026] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=363
+[2026-04-21 22:08:55.027] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:55.029] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=363
+[2026-04-21 22:08:55.030] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.031] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 6, playersInSeat=6/10, isFull=False
+[2026-04-21 22:08:55.032] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.032] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 5
+[2026-04-21 22:08:55.093] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 3
+[2026-04-21 22:08:55.132] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=362
+[2026-04-21 22:08:55.134] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:55.135] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=362
+[2026-04-21 22:08:55.136] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.137] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 7, playersInSeat=7/10, isFull=False
+[2026-04-21 22:08:55.138] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.139] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 6
+[2026-04-21 22:08:55.156] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 3
+[2026-04-21 22:08:55.157] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=3/10, isFull=False, slot=HoldingPoint_3
+[2026-04-21 22:08:55.200] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 4
+[2026-04-21 22:08:55.263] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 4
+[2026-04-21 22:08:55.263] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=4/10, isFull=False, slot=HoldingPoint_3
+[2026-04-21 22:08:55.264] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=361
+[2026-04-21 22:08:55.266] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:55.267] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=361
+[2026-04-21 22:08:55.268] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.269] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 8, playersInSeat=8/10, isFull=False
+[2026-04-21 22:08:55.270] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.271] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 7
+[2026-04-21 22:08:55.322] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 5
+[2026-04-21 22:08:55.371] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=360
+[2026-04-21 22:08:55.374] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:55.375] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=360
+[2026-04-21 22:08:55.376] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.378] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 9, playersInSeat=9/10, isFull=False
+[2026-04-21 22:08:55.379] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.379] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 8
+[2026-04-21 22:08:55.395] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 5
+[2026-04-21 22:08:55.397] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=5/10, isFull=False, slot=HoldingPoint_3
+[2026-04-21 22:08:55.475] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 6
+[2026-04-21 22:08:55.477] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Pink[Pink], activeCount=24, totalRemaining=359
+[2026-04-21 22:08:55.479] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=False]
+[2026-04-21 22:08:55.480] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], activePlayers=24, totalRemaining=359
+[2026-04-21 22:08:55.482] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.483] [Log] [BusAway] Vehicle marked full in IsVehicleFull. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], playersInSeat=10/10, slot=HoldingPoint_3
+[2026-04-21 22:08:55.484] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seat=Seat 10, playersInSeat=10/10, isFull=True
+[2026-04-21 22:08:55.484] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Pink[Pink]
+[2026-04-21 22:08:55.485] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 9
+[2026-04-21 22:08:55.534] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 7
+[2026-04-21 22:08:55.535] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 6
+[2026-04-21 22:08:55.536] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=6/10, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:08:55.600] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 7
+[2026-04-21 22:08:55.601] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=7/10, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:08:55.602] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Pink[Pink], newFirst=Passenger(Clone)Yellow[Yellow], activeCount=24, totalRemaining=358
+[2026-04-21 22:08:55.603] [Log] [BusAway] AnyCarColorMatched found no available color match. firstActivePlayer=Passenger(Clone)Yellow[Yellow], parkedVehicles=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange, full=False], cpi_2 2 Bus_TenSeater (16)_18 (3)[Orange, full=False], cpi_2 2 Bus_TenSeater (16)_18 (7)[Brown, full=False], cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink, full=True]
+[2026-04-21 22:08:55.604] [Log] [BusAway] AnyCarColorMatched started CheckIfGameOver coroutine because no available match was found.
+[2026-04-21 22:08:55.605] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=0, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:08:55.606] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Pink[Pink], tweenActive=True, targetVehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), targetSeat=Seat 10
+[2026-04-21 22:08:55.670] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 8
+[2026-04-21 22:08:55.671] [Log] [BusAway] CheckIfGameOver skipped because HasPendingDepartureVehicle returned true. gameOver=False, pendingBoarding=False, parkedVehicles=4, totalSlots=4, fullParkedVehicles=1, activePlayers=24, firstActiveColor=Yellow, freeSlot=none
+[2026-04-21 22:08:55.740] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 8
+[2026-04-21 22:08:55.741] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=8/10, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:08:55.802] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 9
+[2026-04-21 22:08:55.855] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 9
+[2026-04-21 22:08:55.856] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=9/10, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:08:55.895] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 10
+[2026-04-21 22:08:55.968] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Pink[Pink], vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9), seat=Seat 10
+[2026-04-21 22:08:55.969] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], seatedPlayersCount=10/10, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:08:55.970] [Log] [BusAway] Vehicle NotifyPassengerSeated reached full seated count. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink] will schedule departure.
+[2026-04-21 22:08:56.234] [Log] [BusAway] VehicleGoing started. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], slot=HoldingPoint_3, parkedVehiclesBefore=4
+[2026-04-21 22:08:56.463] [Log] [BusAway] Parking slot released vehicle. slot=HoldingPoint_3, isOccupied=False, currentVehicle=null
+[2026-04-21 22:08:56.464] [Log] [BusAway] VehicleGoing released parking slot. vehicle=cpi_2 2 Bus_TenSeater (16)_18 (9)[Pink], slot=HoldingPoint_3, parkedVehiclesAfter=3
+[2026-04-21 22:08:57.603] [Log] [BusAway] Fallback lose check delayed for 2 seconds. reasons=free parking slot available. gameOver=False, pendingBoarding=False, parkedVehicles=3, totalSlots=4, fullParkedVehicles=0, activePlayers=24, firstActiveColor=Yellow, freeSlot=HoldingPoint_3
+[2026-04-21 22:09:00.217] [Log] [BusAway] Parking slot reserved. slot=HoldingPoint_3, isOccupied=True, currentVehicle=null
+[2026-04-21 22:09:00.217] [Log] [BusAway] Vehicle MoveCarStraight reserved slot and started moving. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], slot=HoldingPoint_3
+[2026-04-21 22:09:00.627] [Log] [BusAway] Vehicle MoveToSlot started. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], targetSlot=HoldingPoint_3
+[2026-04-21 22:09:00.627] [Log] [BusAway] Fallback lose check triggered lose state. gameOver=False, pendingBoarding=False, parkedVehicles=3, totalSlots=4, fullParkedVehicles=0, activePlayers=24, firstActiveColor=Yellow, freeSlot=none
+[2026-04-21 22:09:00.628] [Log] [BusAway] Fallback lose check routed lose flow through BusAwayGameFlowBridge.
+[2026-04-21 22:09:01.149] [Log] [BusAway] Parking slot assigned vehicle. slot=HoldingPoint_3, vehicle=0 Car_FourSeater (7)_3 (12), isOccupied=True
+[2026-04-21 22:09:01.150] [Log] [BusAway] Vehicle MoveToSlot completed. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], slot=HoldingPoint_3, parkedVehicles=4, isColormatched=False
+[2026-04-21 22:09:01.151] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow, full=False]
+[2026-04-21 22:09:01.152] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], activePlayers=24, totalRemaining=358
+[2026-04-21 22:09:01.153] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.154] [Log] [BusAway] NotifyBoardingStarted stopped pending CheckIfGameOver coroutine because a boarding flow began.
+[2026-04-21 22:09:01.155] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seat=Seat 1, playersInSeat=1/4, isFull=False
+[2026-04-21 22:09:01.289] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Yellow[Yellow], newFirst=Passenger(Clone)Yellow[Yellow], activeCount=24, totalRemaining=357
+[2026-04-21 22:09:01.290] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow, full=False]
+[2026-04-21 22:09:01.292] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], activePlayers=24, totalRemaining=357
+[2026-04-21 22:09:01.293] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.294] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seat=Seat 2, playersInSeat=2/4, isFull=False
+[2026-04-21 22:09:01.295] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.296] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Yellow[Yellow], tweenActive=True, targetVehicle=0 Car_FourSeater (7)_3 (12), targetSeat=Seat 1
+[2026-04-21 22:09:01.422] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Yellow[Yellow], newFirst=Passenger(Clone)Yellow[Yellow], activeCount=24, totalRemaining=356
+[2026-04-21 22:09:01.423] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow, full=False]
+[2026-04-21 22:09:01.424] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], activePlayers=24, totalRemaining=356
+[2026-04-21 22:09:01.426] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.427] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seat=Seat 3, playersInSeat=3/4, isFull=False
+[2026-04-21 22:09:01.427] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.428] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Yellow[Yellow], tweenActive=True, targetVehicle=0 Car_FourSeater (7)_3 (12), targetSeat=Seat 2
+[2026-04-21 22:09:01.553] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 1
+[2026-04-21 22:09:01.555] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Yellow[Yellow], newFirst=Passenger(Clone)Yellow[Yellow], activeCount=24, totalRemaining=355
+[2026-04-21 22:09:01.557] [Log] [BusAway] AnyCarColorMatched found a match. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow, full=False]
+[2026-04-21 22:09:01.558] [Log] [BusAway] Player MoveToTruck started. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], activePlayers=24, totalRemaining=355
+[2026-04-21 22:09:01.559] [Log] [BusAway] NotifyBoardingStarted. activeBoardingCount=2, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.560] [Log] [BusAway] Vehicle marked full in IsVehicleFull. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], playersInSeat=4/4, slot=HoldingPoint_3
+[2026-04-21 22:09:01.561] [Log] [BusAway] Vehicle GetFreeSeat assigned seat. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seat=Seat 4, playersInSeat=4/4, isFull=True
+[2026-04-21 22:09:01.562] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=1, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.563] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Yellow[Yellow], tweenActive=True, targetVehicle=0 Car_FourSeater (7)_3 (12), targetSeat=Seat 3
+[2026-04-21 22:09:01.613] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 1
+[2026-04-21 22:09:01.613] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seatedPlayersCount=1/4, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:09:01.686] [Log] [BusAway] RepositionPlayers updated queue. removedHead=Passenger(Clone)Yellow[Yellow], newFirst=Passenger(Clone)Yellow[Yellow], activeCount=24, totalRemaining=354
+[2026-04-21 22:09:01.688] [Log] [BusAway] AnyCarColorMatched found no available color match. firstActivePlayer=Passenger(Clone)Yellow[Yellow], parkedVehicles=cpi_2 2 Bus_TenSeater (16)_18 (2)[Orange, full=False], cpi_2 2 Bus_TenSeater (16)_18 (3)[Orange, full=False], cpi_2 2 Bus_TenSeater (16)_18 (7)[Brown, full=False], 0 Car_FourSeater (7)_3 (12)[Yellow, full=True]
+[2026-04-21 22:09:01.689] [Log] [BusAway] AnyCarColorMatched started CheckIfGameOver coroutine because no available match was found.
+[2026-04-21 22:09:01.689] [Log] [BusAway] NotifyBoardingFinished. activeBoardingCount=0, firstActivePlayer=Passenger(Clone)Yellow[Yellow]
+[2026-04-21 22:09:01.690] [Log] [BusAway] Player MoveToTruck bookkeeping finished. player=Passenger(Clone)Yellow[Yellow], tweenActive=True, targetVehicle=0 Car_FourSeater (7)_3 (12), targetSeat=Seat 4
+[2026-04-21 22:09:01.723] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 2
+[2026-04-21 22:09:01.753] [Log] [BusAway] CheckIfGameOver skipped because HasPendingDepartureVehicle returned true. gameOver=True, pendingBoarding=False, parkedVehicles=4, totalSlots=4, fullParkedVehicles=1, activePlayers=24, firstActiveColor=Yellow, freeSlot=none
+[2026-04-21 22:09:01.791] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 2
+[2026-04-21 22:09:01.792] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seatedPlayersCount=2/4, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:09:01.852] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 3
+[2026-04-21 22:09:01.926] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 3
+[2026-04-21 22:09:01.927] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seatedPlayersCount=3/4, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:09:01.956] [Log] [BusAway] Player OnBoardingApproachComplete reached vehicle. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 4
+[2026-04-21 22:09:02.017] [Log] [BusAway] Player OnBoardingSeatReached. player=Passenger(Clone)Yellow[Yellow], vehicle=0 Car_FourSeater (7)_3 (12), seat=Seat 4
+[2026-04-21 22:09:02.017] [Log] [BusAway] Vehicle NotifyPassengerSeated. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], seatedPlayersCount=4/4, isFull=True, slot=HoldingPoint_3
+[2026-04-21 22:09:02.018] [Log] [BusAway] Vehicle NotifyPassengerSeated reached full seated count. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow] will schedule departure.
+[2026-04-21 22:09:02.304] [Log] [BusAway] VehicleGoing started. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], slot=HoldingPoint_3, parkedVehiclesBefore=4
+[2026-04-21 22:09:02.539] [Log] [BusAway] Parking slot released vehicle. slot=HoldingPoint_3, isOccupied=False, currentVehicle=null
+[2026-04-21 22:09:02.541] [Log] [BusAway] VehicleGoing released parking slot. vehicle=0 Car_FourSeater (7)_3 (12)[Yellow], slot=HoldingPoint_3, parkedVehiclesAfter=3

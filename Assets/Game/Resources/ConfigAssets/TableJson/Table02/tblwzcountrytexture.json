@@ -1,0 +1,68 @@
+[
+  {
+    "name": "PieceMoney",
+    "BRPath": "PieceMoney_BR",
+    "IDPath": "PieceMoney_ID",
+    "USPath": "PieceMoney_US"
+  },
+  {
+    "name": "StackMoney",
+    "BRPath": "StackMoney_BR",
+    "IDPath": "StackMoney_ID",
+    "USPath": "StackMoney_US"
+  },
+  {
+    "name": "PileMoney",
+    "BRPath": "PileMoney_BR",
+    "IDPath": "PileMoney_ID",
+    "USPath": "PileMoney_US"
+  },
+  {
+    "name": "PileWealth",
+    "BRPath": "PileWealth_BR",
+    "IDPath": "PileWealth_ID",
+    "USPath": "PileWealth_US"
+  },
+  {
+    "name": "PileGold",
+    "BRPath": "PileGold_BR",
+    "IDPath": "PileGold_ID",
+    "USPath": "PileGold_US"
+  },
+  {
+    "name": "HundredMoney",
+    "BRPath": "HundredMoney_BR",
+    "IDPath": "HundredMoney_ID",
+    "USPath": "HundredMoney_US"
+  },
+  {
+    "name": "AbundanceWealth",
+    "BRPath": "AbundanceWealth_BR",
+    "IDPath": "AbundanceWealth_ID",
+    "USPath": "AbundanceWealth_US"
+  },
+  {
+    "name": "MoneyEnhancement",
+    "BRPath": "MoneyEnhancement_BR",
+    "IDPath": "MoneyEnhancement_ID",
+    "USPath": "MoneyEnhancement_US"
+  },
+  {
+    "name": "GoldCoin",
+    "BRPath": "GoldCoin_BR",
+    "IDPath": "GoldCoin_ID",
+    "USPath": "GoldCoin_US"
+  },
+  {
+    "name": "BubbleCoin",
+    "BRPath": "BubbleCoin_BR",
+    "IDPath": "BubbleCoin_ID",
+    "USPath": "BubbleCoin_US"
+  },
+  {
+    "name": "BubbleMoney",
+    "BRPath": "BubbleMoney_BR",
+    "IDPath": "BubbleMoney_ID",
+    "USPath": "BubbleMoney_US"
+  }
+]
