@@ -24,12 +24,14 @@ public class ChatElement : MonoBehaviour
     [SerializeField] private float outerHorizontalPadding = 24f;
     [SerializeField] private float bubbleHorizontalPadding = 32f;
     [SerializeField] private float bubbleVerticalPadding = 20f;
+    [SerializeField] private float playerMinBubbleWidth = 773f;
+    [SerializeField] private float playerMinBubbleHeight = 140f;
     [SerializeField] private float bubbleTimeSpacing = 12f;
 
     [Header("Style")]
     [SerializeField] private Color issueBubbleColor = new Color32(232, 70, 255, 255);
     [SerializeField] private Color playerBubbleColor = new Color32(248, 243, 224, 255);
-    [SerializeField] private Color issueTextColor = Color.white;
+    [SerializeField] private Color issueTextColor = new Color32(43, 94, 163, 255);
     [SerializeField] private Color playerTextColor = new Color32(55, 42, 18, 255);
     [SerializeField] private Color timeTextColor = Color.white;
 
@@ -165,9 +167,17 @@ public class ChatElement : MonoBehaviour
 
         Vector2 preferredTextSize = chatTxt.GetPreferredValues(chatTxt.text, maxTextWidth, 0f);
         float bubbleWidth = Mathf.Min(effectiveMaxBubbleWidth, preferredTextSize.x + horizontalPadding);
+        if (chatInfo.spokesperson == Spokesperson.Player)
+        {
+            bubbleWidth = Mathf.Min(effectiveMaxBubbleWidth, Mathf.Max(playerMinBubbleWidth, bubbleWidth));
+        }
         float finalTextWidth = Mathf.Max(1f, bubbleWidth - horizontalPadding);
         float finalTextHeight = chatTxt.GetPreferredValues(chatTxt.text, finalTextWidth, 0f).y;
         float bubbleHeight = finalTextHeight + verticalPadding;
+        if (chatInfo.spokesperson == Spokesperson.Player)
+        {
+            bubbleHeight = Mathf.Max(playerMinBubbleHeight, bubbleHeight);
+        }
 
         chatInfoRoot.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, bubbleWidth);
         chatInfoRoot.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, bubbleHeight);

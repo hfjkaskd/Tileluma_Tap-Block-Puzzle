@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Bizza;
+using Bizza.GameAnalytics;
 using Bizza.Sdk;
 using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
@@ -67,6 +68,7 @@ public class RealWithdrawPanel : UIPageBase
     }
     private List<WithdrawWay> _withdrawWayItems = new();
     private List<WithdrawLevelItem> _withdrawLevelItems = new();
+    private int lastAnalyticsWithdrawalStage = int.MinValue;
 
     public WithdrawLevelItem CurrentWithdrawLevelItem;
     private WithdrawLevelItem NowWithdrawLevelItem;
@@ -218,6 +220,7 @@ public class RealWithdrawPanel : UIPageBase
                 _withdrawLevelItems[i].Init(this, i, (float)AccountModule.Instance.Os_Current_Uso.GetBalance(), response.data.Os_Wr[i], isMax, SetRatio);
             }
 
+            UpdateAnalyticsEconomyContext(response.data);
             switch (AccountModule.CountryType)
             {
                 case AccountModule.E_CountryType.ID:
@@ -271,6 +274,52 @@ public class RealWithdrawPanel : UIPageBase
 
 
      
+    private void UpdateAnalyticsEconomyContext(AccountModule.OceanShineWithdrawalPageResponse data)
+    {
+        var userInfo = AccountModule.Instance.Os_Current_Uso;
+        if (data == null || userInfo == null || data.Os_Wwf == null || data.Os_Wr == null ||
+            string.IsNullOrWhiteSpace(userInfo.Os_Crc))
+        {
+            return;
+        }
+
+        var firstThreshold = double.MaxValue;
+        for (var i = 0; i < data.Os_Wwf.Count; i++)
+        {
+            var threshold = data.Os_Wwf[i].Os_Mlt;
+            if (threshold > 0 && threshold < firstThreshold)
+            {
+                firstThreshold = threshold;
+            }
+        }
+
+        if (firstThreshold == double.MaxValue)
+        {
+            return;
+        }
+
+        var stage = 0;
+        var currentLevel = SaveDataUtils.GameData.playerSelectedLv;
+        for (var i = 0; i < data.Os_Wr.Count; i++)
+        {
+            if (currentLevel >= data.Os_Wr[i].Os_Ben)
+            {
+                stage = i;
+            }
+        }
+
+        if (!BizzaGameAnalytics.SetEconomyContext(userInfo.Os_Ewl, firstThreshold, stage, userInfo.Os_Crc) ||
+            stage == lastAnalyticsWithdrawalStage)
+        {
+            return;
+        }
+
+        if (BizzaGameAnalytics.TrackWithdrawalStageEnter(stage, firstThreshold))
+        {
+            lastAnalyticsWithdrawalStage = stage;
+        }
+    }
+
     private void RefreshForWithdraw(FailHttpResponse<AccountModule.OceanShineUserInfoResponse> response)
     {
         isUpdateUserInfo = false;

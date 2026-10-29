@@ -15,10 +15,15 @@ namespace BlockTap.Gameplay
 
         public List<int> BuildDropColorPool(IList<int> targetColors)
         {
-            var pool = new List<int>(gameplayConfig.totalColors);
-            for (var colorIndex = 0; colorIndex < gameplayConfig.totalColors; colorIndex++)
+            var pool = new List<int>(targetColors);
+            var poolSize = Mathf.Min(targetColors.Count + 1, gameplayConfig.totalColors);
+            while (pool.Count < poolSize)
             {
-                pool.Add(colorIndex);
+                var candidate = Random.Range(0, gameplayConfig.totalColors);
+                if (!pool.Contains(candidate))
+                {
+                    pool.Add(candidate);
+                }
             }
 
             return pool;

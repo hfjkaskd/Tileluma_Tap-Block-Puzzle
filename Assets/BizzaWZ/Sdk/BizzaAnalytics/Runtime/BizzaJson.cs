@@ -317,18 +317,59 @@ internal static class BizzaJson
 
   private sealed class Serializer
   {
+    private const int InitialBuilderCapacity = 256;
+    private const int MaxCachedBuilderCapacity = 8192;
+    [ThreadStatic] private static StringBuilder _cachedBuilder;
+
     private readonly StringBuilder _builder;
 
-    private Serializer()
+    private Serializer(StringBuilder builder)
     {
-      _builder = new StringBuilder();
+      _builder = builder;
     }
 
     public static string Serialize(object obj)
     {
-      var instance = new Serializer();
-      instance.SerializeValue(obj);
-      return instance._builder.ToString();
+      var builder = AcquireBuilder();
+      try
+      {
+        var instance = new Serializer(builder);
+        instance.SerializeValue(obj);
+        return builder.ToString();
+      }
+      finally
+      {
+        ReleaseBuilder(builder);
+      }
+    }
+
+    private static StringBuilder AcquireBuilder()
+    {
+      var builder = _cachedBuilder;
+      if (builder != null)
+      {
+        _cachedBuilder = null;
+        builder.Length = 0;
+        return builder;
+      }
+
+      return new StringBuilder(InitialBuilderCapacity);
+    }
+
+    private static void ReleaseBuilder(StringBuilder builder)
+    {
+      if (builder == null)
+      {
+        return;
+      }
+
+      if (builder.Capacity > MaxCachedBuilderCapacity)
+      {
+        return;
+      }
+
+      builder.Length = 0;
+      _cachedBuilder = builder;
     }
 
     private void SerializeValue(object value)

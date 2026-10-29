@@ -15,4 +15,4 @@ MonoBehaviour:
   blockCellPrefab: {fileID: 7955944792173170812, guid: 260b73cb2878b4f41889f8d22964379c, type: 3}
   goalItemPrefab: {fileID: 6261117889375187513, guid: 34fa1dd501fd02b41a850a5851432840, type: 3}
   flyingBlockPrefab: {fileID: 6602514308119677343, guid: 72f522a4adeede245818a9c9ebf4d6f5, type: 3}
-  bombEffectPrefab: {fileID: 8768853461171258058, guid: 759c3b37fb006dd419a8fb6df8189135, type: 3}
+  bombEffectPrefab: {fileID: 0}

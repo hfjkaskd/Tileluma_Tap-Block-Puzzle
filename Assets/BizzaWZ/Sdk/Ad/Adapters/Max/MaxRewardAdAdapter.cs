@@ -1,6 +1,8 @@
 #if BIZZA_ENABLE_MAX
 using Bizza.Sdk;
 using System;
+using System.Globalization;
+using Bizza.GameAnalytics;
 using System.Collections.Generic;
 using LitMotion;
 using UnityEngine;
@@ -20,6 +22,8 @@ namespace Bizza.Sdk
         double ecpm;
         private string m_curPlacement;
         private bool m_loadingAds = false;
+        private string m_analyticsPlacement;
+        private float m_loadStartedAt;
         /// <summary> 当前广告位/场景，如 "DailyMission"，由调用方在 ShowAds 前设置，用于上报。 </summary>
 
         public override double ECPM
@@ -108,7 +112,14 @@ namespace Bizza.Sdk
 #endif
             LogLogger.LogAdInfo($" ==== 激励广告加载: ");
             Debug.Log($"[测试日志][广告加载] 加载MAX Reward ");
+            m_loadStartedAt = Time.realtimeSinceStartup;
             MaxSdk.LoadRewardedAd(_adUnitId);
+        }
+
+        public override void ShowAds(Action onSuccess, Action onFailed, ShowAdArgs args)
+        {
+            m_analyticsPlacement = args.adPos;
+            base.ShowAds(onSuccess, onFailed, args);
         }
 
         protected override void ProtectedShowRewardAds()
@@ -137,6 +148,9 @@ namespace Bizza.Sdk
 
         private void OnRewardedAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
+            BizzaGameAnalytics.TrackAdLoad(adUnitId, BizzaAdType.Rewarded, "AppLovin MAX",
+                BizzaAdLoadResult.Success,
+                (long)Math.Max(0f, (Time.realtimeSinceStartup - m_loadStartedAt) * 1000f));
             m_loadingAds = false;
             double _ecpm = EcpmUtils.NormalizeEcpm(adInfo.Revenue);
             ecpm = _ecpm;
@@ -151,6 +165,10 @@ namespace Bizza.Sdk
 
         private void OnRewardedAdLoadFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
         {
+            BizzaGameAnalytics.TrackAdLoad(adUnitId, BizzaAdType.Rewarded, "AppLovin MAX",
+                BizzaAdLoadResult.Failed,
+                (long)Math.Max(0f, (Time.realtimeSinceStartup - m_loadStartedAt) * 1000f),
+                errorInfo == null ? null : ((int)errorInfo.Code).ToString(CultureInfo.InvariantCulture));
             m_loadingAds = false;
             retryAttempt++;
             LogLogger.LogInfo(LogTag.ADReportFlow, "加载广告 retryAttempt ：" + retryAttempt);
@@ -165,6 +183,8 @@ namespace Bizza.Sdk
 
         private void OnRewardedAdDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
         {
+            BizzaGameAnalytics.TrackAdShow(m_analyticsPlacement, BizzaAdType.Rewarded,
+                adInfo == null ? "AppLovin MAX" : adInfo.NetworkName);
             LogLogger.LogInfo(LogTag.ADReportFlow, "激励显示");
             LogLogger.LogAdInfo($" ==== 广告 展示 : ");
         }

@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   channel: Android
   platformType: 2
-  AppId: starblastpuzzle
+  AppId: "meadowmatchbs"
   editorPlatformType: 1
   defaultLanguage: en-US
   GM: 0
   debugMode: 0
   httpConfig:
-    domain: https://busstopmaster.top
+    domain: "https://pharaoh.xin"
     doc_version: 
     bundle_name: 
-    aes_key: Shining2624Puzzle
+    aes_key: "Match@dow20Bs"
     salt: 
   real_CustomConfig:
     singleCurrencyMode: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     GenerateFakeAndroidId: Assets/BizzaWZ/Real/Tools/GenereatedInfo
     enterNewbieGuide: 0
     failOpenAd: 0
-    versionLog: 08211553_1.0.3
+    versionLog: "09072307_1.0.1"
     interAdNotReady: 0
     rewardAdNotReady: 0
   real_PageTestConfig:
@@ -49,7 +49,7 @@ MonoBehaviour:
     ShowGetRewardCount: 7
     ShowDollarCount: 2
   attributeConfig: 1
-  adjustKey: g4ekxmbpp2ps
+  adjustKey: "6h4g1qqzjvr4"
   tenjinKey: MDHQTZIGZYRTV7DSQQWX3HNDZKEKX1QX
   analysisSdkType: 2
   tkConfig:
@@ -59,8 +59,8 @@ MonoBehaviour:
     debug: 1
   sourceAds:
   - AdsSource: 1
-    rewardAdId: 80e5e41c402c48e5
-    interAdId: 07083f8f33ae059f
+    rewardAdId: "640bf1f1254fd6db"
+    interAdId: "f23ee1b5f1c50b39"
     bannerAdId: 
     openAdId: 
   useInterReplenishReward: 1

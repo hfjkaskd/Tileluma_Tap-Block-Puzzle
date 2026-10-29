@@ -1,3 +1,4 @@
+using Bizza.GameAnalytics;
 using Sirenix.OdinInspector;
 using System.Collections;
 using Obfuz;
@@ -130,6 +131,7 @@ public abstract class UIPageBase : MonoBehaviour, IPoolElement
         {
             OnHide();
             HidePage();
+            BizzaGameAnalytics.TrackPageClose(PageId.ToString());
         }
         catch (System.Exception e)
         {
@@ -140,6 +142,7 @@ public abstract class UIPageBase : MonoBehaviour, IPoolElement
     protected virtual void AfterShow()
     {
         Bizza.Channel.Analytics.Manager.ShowViewEvent(PageId.ToString());
+        BizzaGameAnalytics.TrackPageOpen(PageId.ToString());
     }
 
     protected void ShowPage()

@@ -34,9 +34,6 @@ public static class RealWzAnalytics
 
     public static void AddDict(string key, object info)
     {
-        #if BIZZA_REAL_WITHDRAW && !BIZZA_ENABLE_MAX
-        return;
-        #endif
         if (string.IsNullOrWhiteSpace(key))
             return;
 
@@ -50,9 +47,6 @@ public static class RealWzAnalytics
 
     private static void TrackBiz(string eventName)
     {
-        #if BIZZA_REAL_WITHDRAW && !BIZZA_ENABLE_MAX
-        return;
-        #endif
         if (string.IsNullOrWhiteSpace(eventName) || props.Count == 0)
         {
             props.Clear();

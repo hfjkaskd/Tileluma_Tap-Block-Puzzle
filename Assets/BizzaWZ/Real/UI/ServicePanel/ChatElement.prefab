@@ -65,8 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 63bcb9d246c3a044cb2b5bbec61a0c94, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 0cca302d34ef4a70886b31f184a58b7c, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -165,16 +165,18 @@ MonoBehaviour:
   rootLayoutGroup: {fileID: 5060728160981704942}
   IssueImage: {fileID: 2674124809262146890}
   PlayerImage: {fileID: 8497605061582415721}
-  maxBubbleWidth: 760
-  outerHorizontalPadding: 24
-  bubbleHorizontalPadding: 60
-  bubbleVerticalPadding: 20
-  bubbleTimeSpacing: 12
-  issueBubbleColor: {r: 0.9098039, g: 0.27450982, b: 1, a: 1}
-  playerBubbleColor: {r: 0.972549, g: 0.9529412, b: 0.8784314, a: 1}
-  issueTextColor: {r: 1, g: 1, b: 1, a: 1}
-  playerTextColor: {r: 0.21568628, g: 0.16470589, b: 0.07058824, a: 1}
-  timeTextColor: {r: 1, g: 1, b: 1, a: 1}
+  maxBubbleWidth: 773.0
+  outerHorizontalPadding: 24.0
+  bubbleHorizontalPadding: 60.0
+  bubbleVerticalPadding: 20.0
+  bubbleTimeSpacing: 12.0
+  issueBubbleColor: {r: 0.9098039269447327, g: 0.27450981736183167, b: 1.0, a: 1.0}
+  playerBubbleColor: {r: 0.9725490212440491, g: 0.9529411792755127, b: 0.8784313797950745, a: 1.0}
+  issueTextColor: {r: 0.16862745583057404, g: 0.3686274588108063, b: 0.6392157077789307, a: 1.0}
+  playerTextColor: {r: 0.21568627655506134, g: 0.16470588743686676, b: 0.07058823853731155, a: 1.0}
+  timeTextColor: {r: 1.0, g: 1.0, b: 1.0, a: 1.0}
+  playerMinBubbleWidth: 773.0
+  playerMinBubbleHeight: 140.0
 --- !u!1 &2359880559850296174
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +549,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: f082fd961259bdf44924284fca123ff1, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

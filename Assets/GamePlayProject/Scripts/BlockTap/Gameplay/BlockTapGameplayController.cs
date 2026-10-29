@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using Bizza.GameAnalytics;
 using BlockTap.Config;
 using BlockTap.Importing;
 using DG.Tweening;
@@ -47,6 +49,10 @@ namespace BlockTap.Gameplay
         private Coroutine initialBoardReadyRoutine;
         private Coroutine levelCompleteRoutine;
         private RectTransform activeBombIcon;
+        private static bool analyticsGameReadyTracked;
+        private readonly Dictionary<string, int> analyticsAttemptsByLevel = new Dictionary<string, int>();
+        private string analyticsAttemptId;
+        private string analyticsLevelId;
         public static BlockTapGameplayController Instance { get; private set; }
 
         public void Initialize(
@@ -244,6 +250,7 @@ namespace BlockTap.Gameplay
                 yield return new WaitForSeconds(delay);
             }
 
+            OnBoardReadyForPlayer();
             BridgingUtil.CanShowGuide();
             inputLocked = false;
             levelTransitioning = false;
@@ -257,6 +264,7 @@ namespace BlockTap.Gameplay
             BuildBoard(false);
             yield return animationPlayer.AnimateBoardShiftIn().WaitForCompletion();
             
+            OnBoardReadyForPlayer();
             inputLocked = false;
             levelTransitioning = false;
             reloadBoardRoutine = null;
@@ -460,6 +468,7 @@ namespace BlockTap.Gameplay
 
             if (goalTracker.IsComplete())
             {
+                EndAnalyticsAttempt("win");
                 if (levelCompleteRoutine != null)
                 {
                     StopCoroutine(levelCompleteRoutine);
@@ -876,6 +885,7 @@ namespace BlockTap.Gameplay
             }
 
             hudView.SetMessage("Level restarted");
+            EndAnalyticsAttempt("quit", "restart");
             LoadLevel(false);
         }
 
@@ -886,8 +896,70 @@ namespace BlockTap.Gameplay
                 return;
             }
 
+            EndAnalyticsAttempt("quit", "skip");
             progressionController.Advance();
             LoadLevel(true);
+        }
+
+        private void OnBoardReadyForPlayer()
+        {
+            if (!analyticsGameReadyTracked)
+            {
+                analyticsGameReadyTracked = true;
+                BizzaGameAnalytics.TrackGameLoadComplete();
+                BizzaGameAnalytics.TrackActivation();
+            }
+
+            BeginAnalyticsAttempt();
+        }
+
+        private void BeginAnalyticsAttempt()
+        {
+            if (progressionController == null || !string.IsNullOrEmpty(analyticsAttemptId))
+            {
+                return;
+            }
+
+            var levelId = progressionController.CurrentLevelNumber.ToString(CultureInfo.InvariantCulture);
+            analyticsAttemptsByLevel.TryGetValue(levelId, out var previousAttempts);
+            var attempt = previousAttempts + 1;
+            var attemptId = BizzaGameAnalytics.TrackLevelStart(levelId, attempt);
+            if (string.IsNullOrEmpty(attemptId))
+            {
+                return;
+            }
+
+            analyticsAttemptsByLevel[levelId] = attempt;
+            analyticsLevelId = levelId;
+            analyticsAttemptId = attemptId;
+        }
+
+        private void EndAnalyticsAttempt(string result, string reason = null)
+        {
+            if (string.IsNullOrEmpty(analyticsAttemptId) || string.IsNullOrEmpty(analyticsLevelId))
+            {
+                return;
+            }
+
+            var tracked = result == "win"
+                ? BizzaGameAnalytics.TrackLevelWin(analyticsLevelId, analyticsAttemptId)
+                : BizzaGameAnalytics.TrackLevelQuit(analyticsLevelId, analyticsAttemptId, reason);
+            if (!tracked)
+            {
+                return;
+            }
+
+            analyticsAttemptId = null;
+            analyticsLevelId = null;
+        }
+
+        private void OnDestroy()
+        {
+            EndAnalyticsAttempt("quit", "scene_unload");
+            if (Instance == this)
+            {
+                Instance = null;
+            }
         }
 
         private static void PlayGameSfx(string soundName)

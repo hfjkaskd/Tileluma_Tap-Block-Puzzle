@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bizza.GameAnalytics;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -43,6 +44,8 @@ public class UIWithdrawalConfirmPanel : UIPageBase<WithDrawInfo>
     private E_PayeeAccountType payType;
     private E_WithdrawType withdrawType;
     private Action callback = null;
+    private double analyticsWithdrawalAmount;
+    private string analyticsWithdrawalCurrency;
 
     [Header("按钮")]
     [SerializeField] private BizzaButton withdrawalBtn;
@@ -71,6 +74,8 @@ public class UIWithdrawalConfirmPanel : UIPageBase<WithDrawInfo>
         this.Name = info.Name;
         this.CPF_CNPJ = info.CPF_CNPJ;
         this.payType = info.payType;
+        analyticsWithdrawalAmount = 0;
+        analyticsWithdrawalCurrency = AccountModule.Instance.Os_Current_Uso?.Os_Crc ?? string.Empty;
 
         paymentImage.sprite = paymentList.GetSpriteByType(payType);
         gameObject.SetActive(true);
@@ -83,6 +88,7 @@ public class UIWithdrawalConfirmPanel : UIPageBase<WithDrawInfo>
         }
         if (withdrawType == E_WithdrawType.DailyMission)
         {
+            analyticsWithdrawalAmount = 0.2;
             PaymentValueText.text = $"{LanguageUtils.GetText("CurrencyToken")}0,2";
         }
         else if (withdrawType == E_WithdrawType.Fake)
@@ -101,10 +107,12 @@ public class UIWithdrawalConfirmPanel : UIPageBase<WithDrawInfo>
                     break;
             }
 
+            analyticsWithdrawalAmount = value;
             PaymentValueText.text = $"{LanguageUtils.GetText("CurrencyToken")}{WithdrawalUtil.GetCustomizedValueByCountryType(value)}";
         }
         else if (withdrawType == E_WithdrawType.Real)
         {
+            analyticsWithdrawalAmount = AccountModule.Instance.Os_Current_Uso.Os_Ewl;
             PaymentValueText.text =
                 $"{LanguageUtils.GetText("CurrencyToken")}{AccountModule.Instance.Get_S_Ewl()}";
         }
@@ -187,6 +195,7 @@ public class UIWithdrawalConfirmPanel : UIPageBase<WithDrawInfo>
 
     public void InfoResult(FailHttpResponse<AccountModule.OceanShineApplyWithdrawalResponse> response)
     {
+        TrackWithdrawalResponse(response);
         CloseSelf();
         UIModule.Instance.ClosePage(UIPageIds.UIWithdrawalPanel);
         if (response.success)
@@ -227,6 +236,24 @@ public class UIWithdrawalConfirmPanel : UIPageBase<WithDrawInfo>
             SaveDataUtils.gameStrategy.SaveData();
             UIModule.Instance.OpenPage(UIPageIds.StarRatingPopup).Forget();
         }
+    }
+    private void TrackWithdrawalResponse(FailHttpResponse<AccountModule.OceanShineApplyWithdrawalResponse> response)
+    {
+        var requestId = response.data?.Os_Odr;
+        if (string.IsNullOrWhiteSpace(requestId) || analyticsWithdrawalAmount <= 0 ||
+            string.IsNullOrWhiteSpace(analyticsWithdrawalCurrency))
+        {
+            return;
+        }
+
+        if (!BizzaGameAnalytics.TrackWithdrawalRequest(requestId, analyticsWithdrawalAmount, analyticsWithdrawalCurrency))
+        {
+            return;
+        }
+
+        var success = response.success && string.Equals(response.errorCode, "200", StringComparison.Ordinal);
+        BizzaGameAnalytics.TrackWithdrawalResult(requestId, analyticsWithdrawalAmount, analyticsWithdrawalCurrency,
+            success, success ? null : response.errorCode);
     }
 }
 

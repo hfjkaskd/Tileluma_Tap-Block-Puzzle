@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.CompilerServices;
+using Bizza.GameAnalytics;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -486,11 +488,55 @@ public class ItemUtils
         if (GetItemCount(itemType) >= count)
         {
             AddItem(itemType, -count);
+            if (count > 0)
+            {
+                BizzaGameAnalytics.TrackItemUse(GetAnalyticsItemId(itemType), "inventory", count, "TryReduceItem");
+            }
             return true;
         }
 
         return false;
     }
+    private static string GetAnalyticsItemId(E_ItemType itemType)
+    {
+        // 显式协议值与原 APK 一致，不依赖混淆后的枚举名称。
+        return itemType switch
+        {
+            E_ItemType.None => "None",
+            E_ItemType.AmazonCoin => "AmazonCoin",
+            E_ItemType.Gold => "Gold",
+            E_ItemType.Dollar => "Dollar",
+            E_ItemType.Fragment_0 => "Fragment_0",
+            E_ItemType.Fragment_1 => "Fragment_1",
+            E_ItemType.Fragment_2 => "Fragment_2",
+            E_ItemType.Fragment_3 => "Fragment_3",
+            E_ItemType.Fragment_4 => "Fragment_4",
+            E_ItemType.Fragment_5 => "Fragment_5",
+            E_ItemType.Fragment_6 => "Fragment_6",
+            E_ItemType.Fragment_7 => "Fragment_7",
+            E_ItemType.Activity => "Activity",
+            E_ItemType.WeekActivity => "WeekActivity",
+            E_ItemType.Card_1 => "Card_1",
+            E_ItemType.Card_2 => "Card_2",
+            E_ItemType.Card_3 => "Card_3",
+            E_ItemType.Card_4 => "Card_4",
+            E_ItemType.Card_5 => "Card_5",
+            E_ItemType.Card_6 => "Card_6",
+            E_ItemType.Card_7 => "Card_7",
+            E_ItemType.Card_8 => "Card_8",
+            E_ItemType.Card_9 => "Card_9",
+            E_ItemType.VipCard => "VipCard",
+            E_ItemType.Diamond => "Diamond",
+            E_ItemType.GameProp_Back => "GameProp_Back",
+            E_ItemType.GameProp_ClearArea => "GameProp_ClearArea",
+            E_ItemType.GameProp_Refresh => "GameProp_Refresh",
+            E_ItemType.WithDrawDanDollar => "WithDrawDanDollar",
+            E_ItemType.CarChange => "CarChange",
+            E_ItemType.CharacterChange => "CharacterChange",
+            _ => ((int)itemType).ToString(CultureInfo.InvariantCulture)
+        };
+    }
+
     public static bool TryReduceItemFloat(E_ItemType itemType, float count = 1)
     {
         if (GetItemCount(itemType) >= count)

@@ -315,12 +315,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 68
+  m_fontSizeBase: 68
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
-  m_fontSizeMax: 60
+  m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
+  m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1037,7 +1037,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 537.9631, y: -248.2677}
-  m_SizeDelta: {x: 840, y: 150}
+  m_SizeDelta: {x: 896.72101, y: 177.80499}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3490324455171992723
 GameObject:
@@ -1315,7 +1315,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 840, y: 150}
+  m_SizeDelta: {x: 900, y: 170.50781}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2616005816172706468
 CanvasRenderer:
@@ -1339,14 +1339,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f796e5999255fdc449ca97dde2caa621, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8428b216e4535e641a006c4f98bd0792, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e04693e97e9fe36408acb1404504b889, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6621a7d21c37ccb47b0dc5c39f61864c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6621a7d21c37ccb47b0dc5c39f61864c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e04693e97e9fe36408acb1404504b889, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1

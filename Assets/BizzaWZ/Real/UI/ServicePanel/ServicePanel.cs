@@ -1,6 +1,7 @@
 #if BIZZA_REAL_WITHDRAW
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
@@ -20,6 +21,13 @@ public class ServicePanel : UIPageBase
     public ChatElement chatElementPrefab; // 聊天预制件
     public Transform contentRoot; // 聊天内容根节点
     public ScrollRect scrollRect; // 滚动容器
+
+    [Header("Presentation")]
+    [SerializeField] private TMP_Text titleText;
+    [SerializeField, TextArea] private string[] supportIntroMessages;
+
+    private static readonly Regex QuickReplyPrefixRegex = new Regex(@"^\s*\d+\s*[、,\.\):：-]\s*", RegexOptions.Compiled);
+    private static readonly Regex ChatTimeRegex = new Regex(@"(?<!\d)(\d{1,2}):(\d{2})(?::\d{2})?(?!\d)", RegexOptions.Compiled);
 
     [Header("Input")]
     public AdvancedInputField inputText; // 输入框
@@ -110,6 +118,8 @@ public class ServicePanel : UIPageBase
         chatElements.Clear();
         RefreshSendState(false);
         SwitchDefaultInputState(true);
+        ApplyPresentationText();
+        CreateSupportIntroMessages();
         var request = AccountModule.Instance.CreateOceanShineFeedbackListV2Request();
         AccountModule.Instance.Request_FeedbackListV2Request(request, OnRefreshPanle);// 这里进行HTTP请求
     }
@@ -181,12 +191,21 @@ public class ServicePanel : UIPageBase
             });
         }
 
+        var displayedMessages = new HashSet<string>();
         foreach (var record in records)
         {
-            CreateElements(record, 0, false);
+            string content = record.spokesperson == Spokesperson.Player
+                ? StripQuickReplyPrefix(record.chatcontent)
+                : record.chatcontent;
+            string key = ((int)record.spokesperson).ToString() + "|" + content;
+            if (!displayedMessages.Add(key))
+            {
+                continue;
+            }
+
+            CreateElements(record, 0, false, false);
         }
-
-
+        ScrollToConversationStart().Forget();
     }
 
     private float gapTime = 0.5f; private float currentTime = 0f;
@@ -200,8 +219,19 @@ public class ServicePanel : UIPageBase
 
     private void SwitchDefaultInputState(bool defaultState)
     {
-        selectQuestionButton.gameObject.SetActive(defaultState);
-        inputText.gameObject.SetActive(!defaultState);
+        if (selectQuestionButton != null)
+        {
+            selectQuestionButton.gameObject.SetActive(defaultState);
+        }
+        if (selectQuestionText != null)
+        {
+            selectQuestionText.gameObject.SetActive(defaultState);
+        }
+        if (inputText != null)
+        {
+            inputText.gameObject.SetActive(!defaultState);
+            inputText.PlaceHolderText = LanguageUtils.GetText("ServicePanel_Please");
+        }
     }
 
     private void RefreshSendState(bool canSend)
@@ -232,6 +262,7 @@ public class ServicePanel : UIPageBase
     private void ClearInputContent() // 清空输入框内容
     {
         inputText.Text = "";
+        inputText.PlaceHolderText = LanguageUtils.GetText("ServicePanel_Please");
         selectQuestionText.text = LanguageUtils.GetText("ServicePanel_Please");
     }
 
@@ -260,6 +291,7 @@ public class ServicePanel : UIPageBase
     private int customIndex = -2;
     public void FillDefaultQuent(string info, int index) // 二级界面选择的信息填充到输入框
     {
+        info = StripQuickReplyPrefix(info);
         selectQuestionText.text = info;
         inputText.Text = info;
         selectIndex = index;
@@ -322,7 +354,7 @@ public class ServicePanel : UIPageBase
     }
 
     [Button("CreateElements")]
-    public async UniTaskVoid CreateElements(ChatInfo chatInfo, int delay = 0, bool isRecord = true)
+    public async UniTaskVoid CreateElements(ChatInfo chatInfo, int delay = 0, bool isRecord = true, bool scrollToLatest = true)
     {
         if (isRecord) RecordServiceMessage(chatInfo);
         if (delay > 0)
@@ -331,11 +363,89 @@ public class ServicePanel : UIPageBase
         }
         if (this == null) return;
         var ele = GameObject.Instantiate(chatElementPrefab, contentRoot, false);
-        ele.Init(
-            chatInfo
-        );
+        // Keep the full timestamp and original message in storage; normalize only the displayed copy.
+        ChatInfo displayedInfo = chatInfo;
+        if (displayedInfo.spokesperson == Spokesperson.Player)
+        {
+            displayedInfo.chatcontent = StripQuickReplyPrefix(displayedInfo.chatcontent);
+        }
+        displayedInfo.time = FormatChatTime(displayedInfo.time);
+        ele.Init(displayedInfo);
         chatElements.Add(ele);
-        ScrollToLatestMessage().Forget();
+        if (scrollToLatest)
+        {
+            ScrollToLatestMessage().Forget();
+        }
+    }
+
+    private static string StripQuickReplyPrefix(string value)
+    {
+        return string.IsNullOrWhiteSpace(value) ? value : QuickReplyPrefixRegex.Replace(value, string.Empty);
+    }
+
+    private static string FormatChatTime(string value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return string.Empty;
+        }
+
+        Match match = ChatTimeRegex.Match(value);
+        return match.Success
+            ? match.Groups[1].Value.PadLeft(2, '0') + ":" + match.Groups[2].Value
+            : value;
+    }
+
+    private void ApplyPresentationText()
+    {
+        if (titleText != null)
+        {
+            titleText.text = LanguageUtils.GetText("ServicePanel_Tittle");
+        }
+        if (inputText != null)
+        {
+            inputText.PlaceHolderText = LanguageUtils.GetText("ServicePanel_Please");
+        }
+        if (selectQuestionText != null)
+        {
+            selectQuestionText.text = LanguageUtils.GetText("ServicePanel_Please");
+        }
+    }
+
+    private void CreateSupportIntroMessages()
+    {
+        if (supportIntroMessages == null)
+        {
+            return;
+        }
+
+        System.DateTime startTime = System.DateTime.Now.AddMinutes(-supportIntroMessages.Length);
+        for (int i = 0; i < supportIntroMessages.Length; i++)
+        {
+            CreateElements(new ChatInfo
+            {
+                time = startTime.AddMinutes(i).ToString("HH:mm"),
+                spokesperson = Spokesperson.Issue,
+                chatcontent = supportIntroMessages[i]
+            }, 0, false, false);
+        }
+    }
+
+    private async UniTaskVoid ScrollToConversationStart()
+    {
+        await UniTask.Yield(PlayerLoopTiming.LastPostLateUpdate);
+        if (scrollRect == null)
+        {
+            return;
+        }
+
+        Canvas.ForceUpdateCanvases();
+        if (scrollRect.content != null)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
+        }
+        scrollRect.StopMovement();
+        scrollRect.verticalNormalizedPosition = 1f;
     }
 
     private async UniTaskVoid ScrollToLatestMessage()

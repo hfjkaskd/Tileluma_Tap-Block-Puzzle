@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -94,31 +96,105 @@ internal sealed class BizzaCrypto
     var tag = new byte[TagBytes];
     EncryptAesGcm(iv, plainBytes, ciphertext, tag);
 
-    var encPayload = new Dictionary<string, object>
-    {
-      { "v", EnvelopeVersion },
-      { "alg", EnvelopeAlgorithm },
-      { "kid", _kid },
-      { "iv", Convert.ToBase64String(iv) },
-      { "ct", Convert.ToBase64String(ciphertext) },
-      { "tag", Convert.ToBase64String(tag) },
-    };
+    var encPayload = new Dictionary<string, object>(6);
+    encPayload["v"] = EnvelopeVersion;
+    encPayload["alg"] = EnvelopeAlgorithm;
+    encPayload["kid"] = _kid;
+    encPayload["iv"] = Convert.ToBase64String(iv);
+    encPayload["ct"] = Convert.ToBase64String(ciphertext);
+    encPayload["tag"] = Convert.ToBase64String(tag);
 
-    return new Dictionary<string, object>
+    var wrappedPayload = new Dictionary<string, object>(1);
+    wrappedPayload["__enc__"] = encPayload;
+    return wrappedPayload;
+  }
+
+  public object DecryptValue(object wrappedValue)
+  {
+    IDictionary wrapper = wrappedValue as IDictionary;
+    if (wrapper == null || !wrapper.Contains("__enc__"))
     {
-      { "__enc__", encPayload },
-    };
+      throw new InvalidDataException("加密信封缺少 __enc__ 字段。");
+    }
+
+    IDictionary encryptedPayload = wrapper["__enc__"] as IDictionary;
+    if (encryptedPayload == null)
+    {
+      throw new InvalidDataException("加密信封格式无效。");
+    }
+
+    string version = ReadEnvelopeString(encryptedPayload, "v");
+    string algorithm = ReadEnvelopeString(encryptedPayload, "alg");
+    string kid = ReadEnvelopeString(encryptedPayload, "kid");
+    if (!string.Equals(version, EnvelopeVersion, StringComparison.Ordinal)
+      || !string.Equals(algorithm, EnvelopeAlgorithm, StringComparison.Ordinal)
+      || !string.Equals(kid, _kid, StringComparison.Ordinal))
+    {
+      throw new InvalidDataException("加密信封版本、算法或 kid 不匹配。");
+    }
+
+    byte[] iv = ReadEnvelopeBytes(encryptedPayload, "iv");
+    byte[] ciphertext = ReadEnvelopeBytes(encryptedPayload, "ct");
+    byte[] tag = ReadEnvelopeBytes(encryptedPayload, "tag");
+    if (iv.Length != IvBytes || tag.Length != TagBytes)
+    {
+      throw new InvalidDataException("加密信封 IV 或 tag 长度无效。");
+    }
+
+    byte[] expectedTag = new byte[TagBytes];
+    byte[] j0 = BuildJ0(iv);
+    ComputeTag(j0, ciphertext, expectedTag);
+    if (!FixedTimeEquals(expectedTag, tag))
+    {
+      throw new InvalidDataException("加密配置完整性校验失败。");
+    }
+
+    byte[] plaintext = new byte[ciphertext.Length];
+    DecryptAesGcm(iv, ciphertext, plaintext);
+    string json = Encoding.UTF8.GetString(plaintext);
+    object value = BizzaJson.Deserialize(json);
+    if (value == null)
+    {
+      throw new InvalidDataException("解密后的 JSON 为空或格式无效。");
+    }
+
+    return value;
+  }
+
+  private static string ReadEnvelopeString(IDictionary payload, string key)
+  {
+    if (!payload.Contains(key) || payload[key] == null)
+    {
+      throw new InvalidDataException("加密信封缺少字段：" + key + "。");
+    }
+
+    string value = payload[key] as string ?? Convert.ToString(payload[key]);
+    if (string.IsNullOrWhiteSpace(value))
+    {
+      throw new InvalidDataException("加密信封字段为空：" + key + "。");
+    }
+    return value;
+  }
+
+  private static byte[] ReadEnvelopeBytes(IDictionary payload, string key)
+  {
+    string value = ReadEnvelopeString(payload, key);
+    try
+    {
+      return Convert.FromBase64String(value);
+    }
+    catch (Exception exception)
+    {
+      throw new InvalidDataException("加密信封字段不是有效 Base64：" + key + "。", exception);
+    }
   }
 
   private void EncryptAesGcm(byte[] iv, byte[] plaintext, byte[] ciphertext, byte[] tag)
   {
+    var j0 = BuildJ0(iv);
     var counterBlock = new byte[BlockBytes];
-    var streamBlock = new byte[BlockBytes];
-    var j0 = new byte[BlockBytes];
-
-    Buffer.BlockCopy(iv, 0, j0, 0, IvBytes);
-    j0[BlockBytes - 1] = 1;
     Buffer.BlockCopy(j0, 0, counterBlock, 0, BlockBytes);
+    var streamBlock = new byte[BlockBytes];
 
     var offset = 0;
     while (offset < plaintext.Length)
@@ -136,6 +212,50 @@ internal sealed class BizzaCrypto
     }
 
     ComputeTag(j0, ciphertext, tag);
+  }
+
+  private void DecryptAesGcm(byte[] iv, byte[] ciphertext, byte[] plaintext)
+  {
+    var counterBlock = BuildJ0(iv);
+    var streamBlock = new byte[BlockBytes];
+
+    var offset = 0;
+    while (offset < ciphertext.Length)
+    {
+      IncrementCounter(counterBlock);
+      EncryptBlock(counterBlock, 0, streamBlock, 0);
+
+      var blockLength = Math.Min(BlockBytes, ciphertext.Length - offset);
+      for (var i = 0; i < blockLength; i++)
+      {
+        plaintext[offset + i] = (byte)(ciphertext[offset + i] ^ streamBlock[i]);
+      }
+
+      offset += blockLength;
+    }
+  }
+
+  private static byte[] BuildJ0(byte[] iv)
+  {
+    var j0 = new byte[BlockBytes];
+    Buffer.BlockCopy(iv, 0, j0, 0, IvBytes);
+    j0[BlockBytes - 1] = 1;
+    return j0;
+  }
+
+  private static bool FixedTimeEquals(byte[] left, byte[] right)
+  {
+    if (left == null || right == null || left.Length != right.Length)
+    {
+      return false;
+    }
+
+    var difference = 0;
+    for (var i = 0; i < left.Length; i++)
+    {
+      difference |= left[i] ^ right[i];
+    }
+    return difference == 0;
   }
 
   private void ComputeTag(byte[] j0, byte[] ciphertext, byte[] tag)

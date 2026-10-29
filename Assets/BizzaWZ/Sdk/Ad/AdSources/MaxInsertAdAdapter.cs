@@ -1,5 +1,7 @@
 #if BIZZA_ENABLE_MAX
 using System;
+using System.Globalization;
+using Bizza.GameAnalytics;
 using Bizza.Sdk;
 using LitMotion;
 using UnityEngine;
@@ -12,6 +14,8 @@ public class MaxInsertAdAdapter : InsertAdAdapter
     private bool m_IsReward;
     public string m_curPlacement;
     private bool m_loadingAds = false;
+    private string m_analyticsPlacement;
+    private float m_loadStartedAt;
     private int retryAttempt = 0;
 
     public override double ECPM
@@ -74,6 +78,7 @@ public class MaxInsertAdAdapter : InsertAdAdapter
 
     public override void ShowAds(Action success, Action fail, ShowAdArgs args)
     {
+        m_analyticsPlacement = args.adPos;
         LogLogger.LogAdInfo($"进入到MAX 的插屏播放器中： ");
         onSuccess = success;
         onFail = fail;
@@ -154,11 +159,15 @@ public class MaxInsertAdAdapter : InsertAdAdapter
         _adUnitId = ChannelConfig.Instance.GetAdsConfig(E_AdsSource.Max).interAdId;
 #endif
         LogLogger.LogAdInfo($" ==== 插屏广告加载: ");
+        m_loadStartedAt = Time.realtimeSinceStartup;
         MaxSdk.LoadInterstitial(_adUnitId);
     }
 
     private void OnInterstitialLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
+        BizzaGameAnalytics.TrackAdLoad(adUnitId, BizzaAdType.Interstitial, "AppLovin MAX",
+            BizzaAdLoadResult.Success,
+            (long)Math.Max(0f, (Time.realtimeSinceStartup - m_loadStartedAt) * 1000f));
         m_loadingAds = false;
         double _ecpm = EcpmUtils.NormalizeEcpm(adInfo.Revenue);
         ecpm = _ecpm;
@@ -172,6 +181,10 @@ public class MaxInsertAdAdapter : InsertAdAdapter
 
     private void OnInterstitialLoadFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
     {
+        BizzaGameAnalytics.TrackAdLoad(adUnitId, BizzaAdType.Interstitial, "AppLovin MAX",
+            BizzaAdLoadResult.Failed,
+            (long)Math.Max(0f, (Time.realtimeSinceStartup - m_loadStartedAt) * 1000f),
+            errorInfo == null ? null : ((int)errorInfo.Code).ToString(CultureInfo.InvariantCulture));
         LogLogger.LogVerbose(LogTag.ADReportFlow, $" ==== 插屏广告加载失败: ");
         m_loadingAds = false;
         retryAttempt++;
@@ -185,6 +198,8 @@ public class MaxInsertAdAdapter : InsertAdAdapter
 
     private void OnInterstitialDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
+        BizzaGameAnalytics.TrackAdShow(m_analyticsPlacement, BizzaAdType.Interstitial,
+            adInfo == null ? "AppLovin MAX" : adInfo.NetworkName);
         LogLogger.LogAdInfo($" ==== 插屏广告显示 DIsplay ");
         LogLogger.LogInfo(LogTag.ADReportFlow, $" 广告显示: revenue:{adInfo.Revenue}");
     }

@@ -2660,7 +2660,7 @@
       ],
       [
         "pt-BR",
-        "Recompensa para Novos Usuários"
+        "Bônus inicial"
       ],
       [
         "id-ID",
@@ -2962,15 +2962,15 @@
     "dict": [
       [
         "en-US",
-        "Please select a quick reply (Tap)"
+        "Type your message..."
       ],
       [
         "pt-BR",
-        "Por favor, selecione uma resposta rápida (toque)"
+        "Type your message..."
       ],
       [
         "id-ID",
-        "Silakan pilih balasan cepat (ketuk)"
+        "Type your message..."
       ]
     ]
   },
@@ -2979,15 +2979,15 @@
     "dict": [
       [
         "en-US",
-        "Feedback"
+        "SUPPORT"
       ],
       [
         "pt-BR",
-        "Feedback"
+        "SUPPORT"
       ],
       [
         "id-ID",
-        "Umpan Balik"
+        "SUPPORT"
       ]
     ]
   },
@@ -2996,15 +2996,15 @@
     "dict": [
       [
         "en-US",
-        "Please enter feedback"
+        "Type your message..."
       ],
       [
         "pt-BR",
-        "Por favor, insira seu feedback"
+        "Type your message..."
       ],
       [
         "id-ID",
-        "Silakan masukkan masukan Anda"
+        "Type your message..."
       ]
     ]
   },

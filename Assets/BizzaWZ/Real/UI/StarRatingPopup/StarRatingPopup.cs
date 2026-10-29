@@ -64,10 +64,8 @@ public class StarRatingPopup : UIPageBase
 
     protected override void OnOpen()
     {
-        // 初始化：建议用无动画或短动画都行
-        // SetRatingInstant(5);
-        SetRating(5, true);
-        // 或者想开场也弹一下：SetRating(5, true);
+        // 每次打开都同步为未评分，立即刷新星星，避免沿用预制体或上次选择的亮星。
+        SetRating(0, false);
     }
 
     protected override void OnClose()

@@ -1,6 +1,7 @@
-#if BIZZA_ENABLE_ADJUST
+﻿#if BIZZA_ENABLE_ADJUST
 
 using System;
+using Bizza.GameAnalytics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -102,6 +103,7 @@ namespace Bizza.Sdk
             var network = attribution?.Network ?? "";
             var campaign = attribution?.Campaign ?? "";
             var adgroup = attribution?.Adgroup ?? "";
+            BizzaGameAnalytics.SetAttribution(network, campaign);
 
             LogLogger.LogAttribute($"Adjust数据发生变化 ::: networkKey {network} campaignKey {campaign} adgroupkKey {adgroup}");
             PlayerPrefs.SetString(networkKey, network);
@@ -110,58 +112,58 @@ namespace Bizza.Sdk
 
             var _oceanShineUserAttrs = new Dictionary<string, object>
             {
-                { "bsm_adgp", attribution.Adgroup },
+                { "PbSadgp", attribution.Adgroup },
                 // 设备当前归因广告组的名称
 
-                { "bsm_aid", PlayerPrefs.GetString(adJustAdidKey, "") },
+                { "PbSaid", PlayerPrefs.GetString(adJustAdidKey, "") },
                 // 设备的唯一 Adjust ID
 
-                { "bsm_apid", DeviceInfoUtil.GetDeviceInfoDataForCloud().Os_Apid },
+                { "PbSapid", DeviceInfoUtil.GetDeviceInfoDataForCloud().Os_Apid },
                 // 应用 ID
 
-                { "bsm_cat", attribution.CostAmount ?? 0 },
+                { "PbScat", attribution.CostAmount ?? 0 },
                 // 安装成本 - costAmount
 
-                { "bsm_ccy", attribution.CostCurrency },
+                { "PbSccy", attribution.CostCurrency },
                 // 成本相关的货币代码 - costCurrency
 
-                { "bsm_ckl", "" },
+                { "PbSckl", "" },
                 // 安装被标记的点击标签 - clickLabel
 
-                { "bsm_cam", attribution.Campaign },
+                { "PbScam", attribution.Campaign },
                 // 设备当前归因 - campaign
 
-                { "bsm_ctv", attribution.Creative },
+                { "PbSctv", attribution.Creative },
                 // 设备当前归因素材的名称 - creative
 
-                { "bsm_ctm", DateTimeOffset.UtcNow.ToUnixTimeSeconds() },
+                { "PbSctm", DateTimeOffset.UtcNow.ToUnixTimeSeconds() },
                 // 客户端收到回调的时间 - clientTime
 
-                { "bsm_cty", attribution.CostType },
+                { "PbScty", attribution.CostType },
                 // 推广活动定价模型 - costType
 
-                { "bsm_dbu", "" },
+                { "PbSdbu", "" },
                 // 投放参数 - deepLinkUrl
 
-                { "bsm_evt", eventName },
+                { "PbSevt", eventName },
                 // 触发归因的事件 - event
 
-                { "bsm_fbr", attribution.FbInstallReferrer },
+                { "PbSfbr", attribution.FbInstallReferrer },
                 // 回调原始值 - fbInstallReferrer
 
-                { "bsm_gbt", "" },
+                { "PbSgbt", "" },
                 // Google 点击时间 - ggClickTime
 
-                { "bsm_nbt", attribution.Network },
+                { "PbSnbt", attribution.Network },
                 // 归因渠道名称 - network
 
-                { "bsm_tra", attribution.TrackerName },
+                { "PbStra", attribution.TrackerName },
                 // 归因跟踪码 - trackerName
 
-                { "bsm_trt", attribution.TrackerToken },
+                { "PbStrt", attribution.TrackerToken },
                 // 归因跟踪名称 - trackerToken
 
-                { "bsm_usid", PlayerPrefs.GetString(AccountModule.m_userIdKey) },
+                { "PbSusid", PlayerPrefs.GetString(AccountModule.m_userIdKey) },
                 // 用户 ID
 
                 { "vn", Application.version }

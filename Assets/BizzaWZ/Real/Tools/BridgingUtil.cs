@@ -1,6 +1,7 @@
 #if BIZZA_REAL_WITHDRAW
 using System.Collections;
 using System.Collections.Generic;
+using Bizza.GameAnalytics;
 using UnityEngine;
 
 public static class BridgingUtil
@@ -86,6 +87,7 @@ public static class BridgingUtil
     {
 #if BIZZA_REAL_WITHDRAW
         GameMode_GamePlay.Instance.OnSetCustomTutorialState(true);
+        BizzaGameAnalytics.TrackTutorialComplete("main");
 #endif
     }
     #endregion

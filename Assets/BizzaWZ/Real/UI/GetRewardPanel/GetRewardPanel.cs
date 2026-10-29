@@ -188,11 +188,6 @@ public class GetRewardPanel : UIPageBase<ItemEntry, ItemEntry, DoubleGetRewardPa
         bool win = _useScene == DoubleGetRewardPanel.E_UseScene.WinPanel;
         if (win)
         {
-            Transform secondReward = transform.Find("BG/Content/Rewards/Reward_2");
-            if (secondReward != null)
-            {
-                secondReward.gameObject.SetActive(false);
-            }
 #if BIZZA_REAL_WITHDRAW && BIZZA_ENABLE_MAX
             if (!ChannelConfig.Instance.real_CustomConfig.singleCurrencyMode)
             {

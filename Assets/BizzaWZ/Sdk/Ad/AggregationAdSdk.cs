@@ -1,3 +1,4 @@
+using Bizza.GameAnalytics;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -142,6 +143,9 @@ namespace Bizza.Sdk
                                      _checkInterAdReady;
             LogLogger.LogAdInfo($"是否可以播放插屏替代：{useInterReplenish} + {canShowRealReward} + {_useInterReplenishReward} + {_checkInterAdReady}");
             var biddingType = useInterReplenish ? E_AdType.InsertAd : E_AdType.RewardAd;
+            BizzaGameAnalytics.TrackAdShowRequest(args.adPos,
+                useInterReplenish ? BizzaAdType.Interstitial : BizzaAdType.Rewarded,
+                "AppLovin MAX", canShowRealReward || useInterReplenish);
             LogLogger.LogAdInfo($"激励视频开始竞价：本次竞价类型={GetAdTypeDesc(biddingType)}，真实激励可播={canShowRealReward}，插屏补量启用={_useInterReplenishReward}，插屏补量可播={_checkInterAdReady}");
 
             VideoAdAdapterBase adapter = OnSDKAdBidding(biddingType, checkArgs);
@@ -266,6 +270,9 @@ namespace Bizza.Sdk
             bool useRewardReplenish = !canShowRealInter && _useRewardReplenishInter &&
                                       canUseRewardReplenish;
             var biddingType = useRewardReplenish ? E_AdType.RewardAd : E_AdType.InsertAd;
+            BizzaGameAnalytics.TrackAdShowRequest(args.adPos,
+                useRewardReplenish ? BizzaAdType.Rewarded : BizzaAdType.Interstitial,
+                "AppLovin MAX", canShowRealInter || useRewardReplenish);
             LogLogger.LogAdInfo($"插屏广告开始竞价：真实插屏可播={canShowRealInter}，激励补量启用={_useRewardReplenishInter}，激励补量可播={canUseRewardReplenish}，本次竞价类型={GetAdTypeDesc(biddingType)}");
 
             void OnAdsRewardSuccess()

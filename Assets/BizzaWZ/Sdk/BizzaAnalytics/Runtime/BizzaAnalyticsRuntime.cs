@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -13,12 +14,14 @@ public enum BizzaMessageFrequency
   High = 1,
 }
 
-internal sealed class BizzaAnalyticsConfig
+public sealed class BizzaAnalyticsConfig
 {
   public string appId = "";
   public string ingestUrl = "";
   public string ingestToken = "";
   public BizzaMessageFrequency messageFrequency = BizzaMessageFrequency.Default;
+  public float reportingRatio = 1f;
+  public bool formalPackageReportingEnabled = true;
   public bool encryptionEnabled = true;
   public string encryptionKeyBase64 = "";
   public string encryptionKid = "";
@@ -37,23 +40,30 @@ internal sealed class BizzaAnalyticsRuntime
   private const int NormalRealtimeCap = 120;
   private const int OverloadRealtimeCap = 100;
   private const float HeartbeatIntervalSeconds = 30f;
+  private const float UserProfileFlushSeconds = 60f;
   private const float FirstPhaseSeconds = 300f;
   private const float FirstPhaseFlushSeconds = 60f;
   private const float FallbackFlushSeconds = 240f;
   private const int MaxRetryCount = 8;
+  private const string ReportingBucketPlayerPrefsKeyPrefix = "bizza_analytics_reporting_bucket_v1_";
   private static readonly Regex IdPattern = new Regex("^[A-Za-z0-9._-]{1,128}$");
+  private static readonly Regex CountryCodePattern = new Regex("^[A-Za-z]{2}$");
 
   private readonly BizzaAnalyticsAgent _host;
   private readonly BizzaAnalyticsConfig _config;
   private readonly BizzaStateStore _stateStore;
   private readonly BizzaState _state;
+  private readonly string _ingestEndpoint;
+  private readonly string _authorizationHeaderValue;
   private BizzaCrypto _crypto;
 
   private float _timeSinceHeartbeat;
   private bool _isSending;
   private Coroutine _sendCoroutine;
+  private float _reportingBucket = -1f;
 
   public bool IsReady { get; private set; }
+  public bool IsReportingEnabled { get; private set; }
   public string LastError { get; private set; }
 
   public BizzaAnalyticsRuntime(BizzaAnalyticsAgent host, BizzaAnalyticsConfig config)
@@ -68,20 +78,31 @@ internal sealed class BizzaAnalyticsRuntime
       return;
     }
 
+    IsReportingEnabled = ResolveReportingEligibility();
+    if (!IsReportingEnabled)
+    {
+      IsReady = true;
+      LogReportingSamplingSnapshot();
+      return;
+    }
+
     _stateStore = new BizzaStateStore(Application.persistentDataPath, _config.verboseLog);
     _state = _stateStore.Load();
+    _ingestEndpoint = _config.ingestUrl + "/v1/ingest";
+    _authorizationHeaderValue = "Bearer " + _config.ingestToken;
     EnsureStableIds();
     BootstrapAutoSignals();
     SaveState();
 
     IsReady = true;
+    LogReportingSamplingSnapshot();
     LogStartupSnapshot();
     FlushNow("bootstrap");
   }
 
   public void Tick(float deltaTime)
   {
-    if (!IsReady)
+    if (!IsReady || !IsReportingEnabled)
     {
       return;
     }
@@ -101,6 +122,20 @@ internal sealed class BizzaAnalyticsRuntime
     {
       _timeSinceHeartbeat -= HeartbeatIntervalSeconds;
       OnHeartbeatTick();
+    }
+
+    if (_state.userProfileBuffer.Count > 0)
+    {
+      _state.userProfileFlushElapsedSeconds += deltaTime;
+      if (_state.userProfileFlushElapsedSeconds >= UserProfileFlushSeconds)
+      {
+        FlushUserProfileNow("user_profile_minute_interval");
+      }
+    }
+    else if (_state.userProfileFlushElapsedSeconds > 0d)
+    {
+      _state.userProfileFlushElapsedSeconds = 0d;
+      SaveState();
     }
 
     if (GetDailyElapsed(today) <= FirstPhaseSeconds)
@@ -128,7 +163,7 @@ internal sealed class BizzaAnalyticsRuntime
 
   public void Track(string eventName, Dictionary<string, object> data)
   {
-    if (!IsReady)
+    if (!IsReady || !IsReportingEnabled)
     {
       return;
     }
@@ -142,14 +177,14 @@ internal sealed class BizzaAnalyticsRuntime
     var payload = BizzaValueUtil.NormalizeDictionary(data ?? new Dictionary<string, object>());
     LogVerbose("track(user) event=" + eventName.Trim() + " payload=" + SerializeForLog(payload));
     var record = BizzaRecord.NewEvent(eventName.Trim(), payload);
-    EnqueueRealtimeRecord(record);
+    EnqueueEventRealtimeRecord(record);
     IncrementDailyRecordCount(UtcDateToday());
-    OnRecordEnqueued();
+    OnEventRecordEnqueued();
   }
 
   public void UpdateUserProperties(Dictionary<string, object> data)
   {
-    if (!IsReady || data == null || data.Count == 0)
+    if (!IsReady || !IsReportingEnabled || data == null || data.Count == 0)
     {
       return;
     }
@@ -161,7 +196,7 @@ internal sealed class BizzaAnalyticsRuntime
       {
         continue;
       }
-      if (ApplyUserProperty(kv.Key.Trim(), kv.Value, true, "user"))
+      if (ApplyUserProperty(kv.Key.Trim(), kv.Value, false, "user"))
       {
         changed += 1;
       }
@@ -169,13 +204,13 @@ internal sealed class BizzaAnalyticsRuntime
 
     if (changed > 0)
     {
-      OnRecordEnqueued();
+      OnUserProfileRecordEnqueued();
     }
   }
 
   public void FlushNow(string reason)
   {
-    if (!IsReady)
+    if (!IsReady || !IsReportingEnabled)
     {
       return;
     }
@@ -189,16 +224,29 @@ internal sealed class BizzaAnalyticsRuntime
         " player_id=" + _state.playerId +
         " today_records=" + GetDailyRecordCount(today) +
         " today_active_seconds=" + Math.Floor(GetDailyElapsed(today)) +
-        " realtime_records=" + _state.realtimeBuffer.Count +
+        " event_realtime_records=" + _state.realtimeBuffer.Count +
+        " user_profile_records=" + _state.userProfileBuffer.Count +
         " pending_batches=" + _state.pendingBatches.Count +
         " pending_records=" + CountQueuedRecords(_state.pendingBatches) +
         " delayed_batches=" + _state.delayedQueue.Count +
         " delayed_records=" + CountQueuedRecords(_state.delayedQueue));
     }
 
-    MoveRealtimeToPendingBatches(true);
+    MoveEventRealtimeToPendingBatches(true);
     PromoteDelayedQueue(UtcDateToday());
     EnsureSenderRunning();
+  }
+
+  public void FlushLifecycleNow(string reason)
+  {
+    if (!IsReady || !IsReportingEnabled)
+    {
+      return;
+    }
+
+    FinalizePendingGameDurationBeforeLifecycleFlush();
+    FlushNow(reason);
+    FlushUserProfileNow(reason + "_user_profile");
   }
 
   private bool ValidateConfig()
@@ -237,6 +285,20 @@ internal sealed class BizzaAnalyticsRuntime
     _config.encryptionKeyBase64 = (_config.encryptionKeyBase64 ?? string.Empty).Trim();
     _config.encryptionKid = (_config.encryptionKid ?? string.Empty).Trim();
 
+    if (float.IsNaN(_config.reportingRatio) || float.IsInfinity(_config.reportingRatio))
+    {
+      LogWarn("reporting_ratio_is_invalid, defaulted_to_1");
+      _config.reportingRatio = 1f;
+    }
+    else if (_config.reportingRatio < 0f)
+    {
+      _config.reportingRatio = 0f;
+    }
+    else if (_config.reportingRatio > 1f)
+    {
+      _config.reportingRatio = 1f;
+    }
+
     if (_config.encryptionEnabled)
     {
       string cryptoError;
@@ -253,6 +315,51 @@ internal sealed class BizzaAnalyticsRuntime
     }
 
     return true;
+  }
+
+  private bool ResolveReportingEligibility()
+  {
+    if (!_config.formalPackageReportingEnabled)
+    {
+      _reportingBucket = -1f;
+      return false;
+    }
+
+    var playerPrefsKey = ReportingBucketPlayerPrefsKeyPrefix + _config.appId;
+    try
+    {
+      if (PlayerPrefs.HasKey(playerPrefsKey))
+      {
+        _reportingBucket = PlayerPrefs.GetFloat(playerPrefsKey, -1f);
+      }
+
+      if (!IsValidReportingBucket(_reportingBucket))
+      {
+        _reportingBucket = GenerateReportingBucket();
+        PlayerPrefs.SetFloat(playerPrefsKey, _reportingBucket);
+        PlayerPrefs.Save();
+      }
+    }
+    catch (Exception ex)
+    {
+      _reportingBucket = -1f;
+      LogWarn("reporting_sampling(player_prefs_failed) error=" + ex.Message);
+      return _config.reportingRatio >= 1f;
+    }
+
+    return _reportingBucket < _config.reportingRatio;
+  }
+
+  private static bool IsValidReportingBucket(float value)
+  {
+    return !float.IsNaN(value) && !float.IsInfinity(value) && value >= 0f && value < 1f;
+  }
+
+  private static float GenerateReportingBucket()
+  {
+    var bytes = Guid.NewGuid().ToByteArray();
+    var raw24 = BitConverter.ToUInt32(bytes, 0) & 0x00FFFFFFu;
+    return raw24 / 16777216f;
   }
 
   private void EnsureStableIds()
@@ -272,21 +379,71 @@ internal sealed class BizzaAnalyticsRuntime
   {
     if (!_state.registerSent)
     {
-      EnqueueRealtimeRecord(BizzaRecord.NewEvent("register", new Dictionary<string, object>()));
+      EnqueueEventRealtimeRecord(BizzaRecord.NewEvent("register", new Dictionary<string, object>()));
       LogVerbose("track(auto_event) event=register payload={}");
       _state.registerSent = true;
       IncrementDailyRecordCount(UtcDateToday());
     }
 
-    EnqueueRealtimeRecord(BizzaRecord.NewEvent("login", new Dictionary<string, object>()));
+    EnqueueEventRealtimeRecord(BizzaRecord.NewEvent("login", new Dictionary<string, object>()));
     LogVerbose("track(auto_event) event=login payload={}");
     IncrementDailyRecordCount(UtcDateToday());
 
-    ApplyUserProperty("playerID", _state.playerId, true, "auto_bootstrap");
-    ApplyUserProperty("device_model", string.IsNullOrEmpty(SystemInfo.deviceModel) ? "unknown" : SystemInfo.deviceModel, true, "auto_bootstrap");
+    ApplyUserProperty("playerID", _state.playerId, false, "auto_bootstrap");
+    ApplyUserProperty("device_model", string.IsNullOrEmpty(SystemInfo.deviceModel) ? "unknown" : SystemInfo.deviceModel, false, "auto_bootstrap");
+
+    var countryCode = ResolveDeviceCountryCode();
+    if (!string.IsNullOrEmpty(countryCode))
+    {
+      ApplyUserProperty("country_code", countryCode, false, "auto_bootstrap");
+    }
+
+    var gameVersion = string.IsNullOrWhiteSpace(Application.version) ? "unknown" : Application.version.Trim();
+    ApplyUserProperty("game_version", gameVersion, false, "auto_bootstrap");
 
     var duration = (long)Math.Floor(_state.gameDurationSeconds);
-    ApplyUserProperty("game_duration", duration, true, "auto_bootstrap");
+    ApplyUserProperty("game_duration", duration, false, "auto_bootstrap");
+  }
+
+  private static string ResolveDeviceCountryCode()
+  {
+#if UNITY_ANDROID && !UNITY_EDITOR
+    try
+    {
+      using (var localeClass = new AndroidJavaClass("java.util.Locale"))
+      using (var locale = localeClass.CallStatic<AndroidJavaObject>("getDefault"))
+      {
+        var androidCountry = NormalizeCountryCode(locale.Call<string>("getCountry"));
+        if (!string.IsNullOrEmpty(androidCountry))
+        {
+          return androidCountry;
+        }
+      }
+    }
+    catch
+    {
+      // Fall through to the managed locale path.
+    }
+#endif
+
+    try
+    {
+      return NormalizeCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
+    }
+    catch
+    {
+      return string.Empty;
+    }
+  }
+
+  private static string NormalizeCountryCode(string value)
+  {
+    var code = (value ?? string.Empty).Trim().ToUpperInvariant();
+    if (!CountryCodePattern.IsMatch(code) || code == "IV")
+    {
+      return string.Empty;
+    }
+    return code;
   }
 
   private bool ApplyUserProperty(string key, object value, bool countAsDailyRecord, string source)
@@ -306,11 +463,11 @@ internal sealed class BizzaAnalyticsRuntime
       normalizedValue,
       DateTime.UtcNow.ToString("o")
     );
-    EnqueueRealtimeRecord(record);
+    EnqueueUserProfileRecord(record);
     LogVerbose(
       "user_prop(" + source + ") key=" + key +
-      " old=" + SerializeForLog(exists ? oldValue : null) +
-      " new=" + SerializeForLog(normalizedValue));
+      " old=" + SerializeForLog(SanitizeUserPropertyValueForLog(key, exists ? oldValue : null)) +
+      " new=" + SerializeForLog(SanitizeUserPropertyValueForLog(key, normalizedValue)));
 
     if (countAsDailyRecord)
     {
@@ -318,6 +475,27 @@ internal sealed class BizzaAnalyticsRuntime
     }
 
     return true;
+  }
+
+  private void FinalizePendingGameDurationBeforeLifecycleFlush()
+  {
+    var pendingWholeSeconds = (long)Math.Floor(_timeSinceHeartbeat);
+    if (pendingWholeSeconds <= 0L)
+    {
+      return;
+    }
+
+    var oldDuration = (long)Math.Floor(_state.gameDurationSeconds);
+    _state.gameDurationSeconds += pendingWholeSeconds;
+    _timeSinceHeartbeat = Mathf.Max(0f, _timeSinceHeartbeat - (float)pendingWholeSeconds);
+
+    var newDuration = (long)Math.Floor(_state.gameDurationSeconds);
+    if (newDuration != oldDuration)
+    {
+      ApplyUserProperty("game_duration", newDuration, false, "lifecycle_flush");
+    }
+
+    SaveState();
   }
 
   private void OnHeartbeatTick()
@@ -328,12 +506,12 @@ internal sealed class BizzaAnalyticsRuntime
 
     if (newDuration != oldDuration)
     {
-      ApplyUserProperty("game_duration", newDuration, true, "auto_heartbeat");
-      OnRecordEnqueued();
+      ApplyUserProperty("game_duration", newDuration, false, "auto_heartbeat");
+      OnUserProfileRecordEnqueued();
     }
   }
 
-  private void OnRecordEnqueued()
+  private void OnEventRecordEnqueued()
   {
     SaveState();
 
@@ -358,12 +536,23 @@ internal sealed class BizzaAnalyticsRuntime
     }
   }
 
-  private void EnqueueRealtimeRecord(BizzaRecord record)
+  private void OnUserProfileRecordEnqueued()
+  {
+    SaveState();
+
+  }
+
+  private void EnqueueEventRealtimeRecord(BizzaRecord record)
   {
     _state.realtimeBuffer.Add(record);
   }
 
-  private void MoveRealtimeToPendingBatches(bool flushAll)
+  private void EnqueueUserProfileRecord(BizzaRecord record)
+  {
+    _state.userProfileBuffer.Add(record);
+  }
+
+  private void MoveEventRealtimeToPendingBatches(bool flushAll)
   {
     if (_state.realtimeBuffer.Count == 0)
     {
@@ -379,30 +568,77 @@ internal sealed class BizzaAnalyticsRuntime
 
     while (_state.realtimeBuffer.Count >= batchSize)
     {
-      CreatePendingRealtimeBatch(batchSize);
+      CreatePendingBatch(_state.realtimeBuffer, "realtime", batchSize);
     }
 
     if (flushAll && _state.realtimeBuffer.Count > 0)
     {
-      CreatePendingRealtimeBatch(_state.realtimeBuffer.Count);
+      CreatePendingBatch(_state.realtimeBuffer, "realtime", _state.realtimeBuffer.Count);
     }
 
     SaveState();
   }
 
-  private void CreatePendingRealtimeBatch(int takeCount)
+  private void FlushUserProfileNow(string reason)
   {
-    var records = new List<BizzaRecord>();
+    if (!IsReady)
+    {
+      return;
+    }
+
+    if (_config.verboseLog)
+    {
+      LogInfo(
+        "FlushUserProfileNow reason=" + reason +
+        " uid=" + _state.uid +
+        " player_id=" + _state.playerId +
+        " user_profile_records=" + _state.userProfileBuffer.Count +
+        " pending_batches=" + _state.pendingBatches.Count +
+        " pending_records=" + CountQueuedRecords(_state.pendingBatches) +
+        " delayed_batches=" + _state.delayedQueue.Count +
+        " delayed_records=" + CountQueuedRecords(_state.delayedQueue));
+    }
+
+    MoveUserProfileToPendingBatches();
+    PromoteDelayedQueue(UtcDateToday());
+    EnsureSenderRunning();
+  }
+
+  private void MoveUserProfileToPendingBatches()
+  {
+    if (_state.userProfileBuffer.Count == 0)
+    {
+      if (_state.userProfileFlushElapsedSeconds != 0d)
+      {
+        _state.userProfileFlushElapsedSeconds = 0d;
+      }
+      SaveState();
+      return;
+    }
+
+    CreatePendingBatch(_state.userProfileBuffer, "user_profile_realtime", _state.userProfileBuffer.Count);
+    _state.userProfileFlushElapsedSeconds = 0d;
+    SaveState();
+  }
+
+  private void CreatePendingBatch(List<BizzaRecord> sourceBuffer, string channel, int takeCount)
+  {
+    if (sourceBuffer == null || takeCount <= 0)
+    {
+      return;
+    }
+
+    var records = new List<BizzaRecord>(takeCount);
     for (var i = 0; i < takeCount; i++)
     {
-      records.Add(_state.realtimeBuffer[i]);
+      records.Add(sourceBuffer[i]);
     }
-    _state.realtimeBuffer.RemoveRange(0, takeCount);
+    sourceBuffer.RemoveRange(0, takeCount);
 
     _state.pendingBatches.Add(new BizzaBatch
     {
       batchId = GenerateId("b"),
-      channel = "realtime",
+      channel = channel,
       dt = UtcDateToday(),
       originDt = "",
       earliestSendDt = UtcDateToday(),
@@ -453,9 +689,6 @@ internal sealed class BizzaAnalyticsRuntime
 
   private void PromoteDelayedQueue(string today)
   {
-#if BIZZA_REAL_WITHDRAW && !BIZZA_ENABLE_MAX
-    return;
-#endif
     if (_state.delayedQueue.Count == 0)
     {
       _state.delayedQueueNonEmptySince = "";
@@ -501,9 +734,6 @@ internal sealed class BizzaAnalyticsRuntime
 
   private void EnsureSenderRunning()
   {
-#if BIZZA_REAL_WITHDRAW && !BIZZA_ENABLE_MAX
-return;
-#endif
     if (_isSending || !IsReady)
     {
       return;
@@ -629,12 +859,12 @@ return;
       yield break;
     }
 
-    using (var request = new UnityWebRequest(_config.ingestUrl + "/v1/ingest", "POST"))
+    using (var request = new UnityWebRequest(_ingestEndpoint, "POST"))
     {
       if (_config.verboseLog)
       {
         LogInfo(
-          "send(start) url=" + _config.ingestUrl + "/v1/ingest" +
+          "send(start) url=" + _ingestEndpoint +
           " batch=" + batch.batchId +
           " uid=" + _state.uid +
           " part=" + batch.part +
@@ -645,7 +875,7 @@ return;
 
       request.uploadHandler = new UploadHandlerRaw(bodyRaw);
       request.downloadHandler = new DownloadHandlerBuffer();
-      request.SetRequestHeader("Authorization", "Bearer " + _config.ingestToken);
+      request.SetRequestHeader("Authorization", _authorizationHeaderValue);
       request.SetRequestHeader("Content-Type", "application/json; charset=utf-8");
 
       yield return request.SendWebRequest();
@@ -654,8 +884,14 @@ return;
       var responseText = request.downloadHandler != null ? request.downloadHandler.text : "";
       var error = ok ? "" : (!string.IsNullOrEmpty(request.error) ? request.error : responseText);
 
+      if (ok)
+      {
+        ApplyServerContextFromResponse(responseText);
+      }
+
       if (_config.verboseLog)
       {
+        var responseTextForLog = ok ? SanitizeSuccessResponseForLog(responseText) : responseText;
         var resultText =
           "send(result) batch=" + batch.batchId +
           " uid=" + _state.uid +
@@ -664,7 +900,7 @@ return;
           " ok=" + ok +
           " status=" + request.responseCode +
           " err=" + LimitForLog(error) +
-          " resp=" + LimitForLog(responseText);
+          " resp=" + LimitForLog(responseTextForLog);
         if (ok)
         {
           LogSuccess(resultText);
@@ -679,22 +915,90 @@ return;
     }
   }
 
+  private void ApplyServerContextFromResponse(string responseText)
+  {
+    if (string.IsNullOrWhiteSpace(responseText))
+    {
+      return;
+    }
+
+    try
+    {
+      var response = BizzaValueUtil.AsStringObjectDictionary(BizzaJson.Deserialize(responseText));
+      object rawClientContext;
+      if (!response.TryGetValue("client_context", out rawClientContext))
+      {
+        return;
+      }
+
+      var clientContext = BizzaValueUtil.AsStringObjectDictionary(rawClientContext);
+      object rawIpAddress;
+      if (!clientContext.TryGetValue("ip_address", out rawIpAddress))
+      {
+        return;
+      }
+
+      var ipAddress = NormalizeIpAddress(BizzaValueUtil.AsString(rawIpAddress, ""));
+      if (string.IsNullOrEmpty(ipAddress))
+      {
+        return;
+      }
+
+      if (ApplyUserProperty("ip_address", ipAddress, false, "server_context"))
+      {
+        OnUserProfileRecordEnqueued();
+      }
+    }
+    catch (Exception ex)
+    {
+      LogVerbose("server_context(parse_failed) error=" + ex.Message);
+    }
+  }
+
+  private static string NormalizeIpAddress(string value)
+  {
+    var text = (value ?? string.Empty).Trim();
+    IPAddress parsed;
+    return IPAddress.TryParse(text, out parsed) ? parsed.ToString() : string.Empty;
+  }
+
+  private string SanitizeSuccessResponseForLog(string responseText)
+  {
+    if (string.IsNullOrWhiteSpace(responseText))
+    {
+      return "";
+    }
+
+    try
+    {
+      var response = BizzaValueUtil.AsStringObjectDictionary(BizzaJson.Deserialize(responseText));
+      object rawClientContext;
+      if (response.TryGetValue("client_context", out rawClientContext))
+      {
+        var clientContext = BizzaValueUtil.AsStringObjectDictionary(rawClientContext);
+        if (clientContext.ContainsKey("ip_address"))
+        {
+          clientContext["ip_address"] = "[redacted]";
+        }
+        response["client_context"] = clientContext;
+      }
+      return SerializeForLog(response);
+    }
+    catch
+    {
+      return "[unparseable_success_response]";
+    }
+  }
+
   private Dictionary<string, object> BuildRequestPayload(BizzaBatch batch)
   {
-    if (_config.encryptionEnabled && _crypto != null)
+    if (_config.encryptionEnabled)
     {
-      try
+      if (_crypto == null)
       {
-        return BuildRequestPayload(batch, true);
+        throw new InvalidOperationException("encryption_enabled_but_crypto_is_unavailable");
       }
-      catch (PlatformNotSupportedException ex)
-      {
-        DisableEncryptionFallback(ex);
-      }
-      catch (NotSupportedException ex)
-      {
-        DisableEncryptionFallback(ex);
-      }
+      return BuildRequestPayload(batch, true);
     }
 
     return BuildRequestPayload(batch, false);
@@ -702,10 +1006,11 @@ return;
 
   private Dictionary<string, object> BuildRequestPayload(BizzaBatch batch, bool encryptRecords)
   {
-    var records = new List<object>();
+    var recordCount = batch.records == null ? 0 : batch.records.Count;
+    var records = new List<object>(recordCount);
     var originDt = batch.channel == "delayed" ? batch.originDt : "";
 
-    for (var i = 0; i < batch.records.Count; i++)
+    for (var i = 0; i < recordCount; i++)
     {
       var wireRecord = batch.records[i].ToWireRecord(originDt);
       if (encryptRecords && _crypto != null)
@@ -715,24 +1020,14 @@ return;
       records.Add(wireRecord);
     }
 
-    return new Dictionary<string, object>
-    {
-      { "app_id", _config.appId },
-      { "uid", _state.uid },
-      { "batch_id", batch.batchId },
-      { "dt", string.IsNullOrEmpty(batch.dt) ? UtcDateToday() : batch.dt },
-      { "part", batch.part },
-      { "records", records },
-    };
-  }
-
-  private void DisableEncryptionFallback(Exception ex)
-  {
-    _config.encryptionEnabled = false;
-    _crypto = null;
-    LogWarn(
-      "encryption(disabled) reason=" + ex.Message +
-      " fallback=plaintext platform=" + Application.platform);
+    var payload = new Dictionary<string, object>(6);
+    payload["app_id"] = _config.appId;
+    payload["uid"] = _state.uid;
+    payload["batch_id"] = batch.batchId;
+    payload["dt"] = string.IsNullOrEmpty(batch.dt) ? UtcDateToday() : batch.dt;
+    payload["part"] = batch.part;
+    payload["records"] = records;
+    return payload;
   }
 
   private void EncryptWireRecordInPlace(Dictionary<string, object> wireRecord)
@@ -826,7 +1121,7 @@ return;
     var delayedStart = realtimeCap;
     var delayedCap = Partitions - delayedStart;
 
-    if (batch.channel == "realtime")
+    if (batch.channel == "realtime" || batch.channel == "user_profile_realtime")
     {
       var seq = GetCounter(_state.realtimeSeqByDt, dt);
       if (seq >= realtimeCap)
@@ -1011,6 +1306,30 @@ return;
     }
   }
 
+  private static object SanitizeUserPropertyValueForLog(string key, object value)
+  {
+    if (string.Equals(key, "ip_address", StringComparison.OrdinalIgnoreCase))
+    {
+      return value == null ? null : "[redacted]";
+    }
+    return value;
+  }
+
+  private static Dictionary<string, object> SanitizeUserPropertiesForLog(Dictionary<string, object> userProps)
+  {
+    var sanitized = new Dictionary<string, object>();
+    if (userProps == null)
+    {
+      return sanitized;
+    }
+
+    foreach (var kv in userProps)
+    {
+      sanitized[kv.Key] = SanitizeUserPropertyValueForLog(kv.Key, kv.Value);
+    }
+    return sanitized;
+  }
+
   private static string Colorize(string color, string message)
   {
     return "<color=" + color + ">" + LogPrefix + " " + message + "</color>";
@@ -1071,6 +1390,23 @@ return;
     _stateStore.Save(_state);
   }
 
+  private void LogReportingSamplingSnapshot()
+  {
+    if (!_config.verboseLog)
+    {
+      return;
+    }
+
+    var bucketText = IsValidReportingBucket(_reportingBucket)
+      ? _reportingBucket.ToString("0.000000", CultureInfo.InvariantCulture)
+      : "unavailable";
+    LogSuccess(
+      "startup(reporting_sampling) formal_package_enabled=" + _config.formalPackageReportingEnabled +
+      " ratio=" + _config.reportingRatio.ToString("0.######", CultureInfo.InvariantCulture) +
+      " bucket=" + bucketText +
+      " enabled=" + IsReportingEnabled);
+  }
+
   private void LogStartupSnapshot()
   {
     if (!_config.verboseLog)
@@ -1086,12 +1422,13 @@ return;
       "startup(buffer_state) register_sent=" + _state.registerSent +
       " today_records=" + GetDailyRecordCount(today) +
       " today_active_seconds=" + Math.Floor(GetDailyElapsed(today)) +
-      " realtime_records=" + _state.realtimeBuffer.Count +
+      " event_realtime_records=" + _state.realtimeBuffer.Count +
+      " user_profile_records=" + _state.userProfileBuffer.Count +
       " pending_batches=" + _state.pendingBatches.Count +
       " pending_records=" + CountQueuedRecords(_state.pendingBatches) +
       " delayed_batches=" + _state.delayedQueue.Count +
       " delayed_records=" + CountQueuedRecords(_state.delayedQueue));
-    LogSuccess("startup(user_props) " + SerializeForLog(_state.userProps));
+    LogSuccess("startup(user_props) " + SerializeForLog(SanitizeUserPropertiesForLog(_state.userProps)));
   }
 
   private static int CountQueuedRecords(List<BizzaBatch> batches)

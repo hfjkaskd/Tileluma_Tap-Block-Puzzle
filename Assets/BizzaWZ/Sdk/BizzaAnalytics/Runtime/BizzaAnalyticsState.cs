@@ -45,13 +45,11 @@ internal sealed class BizzaRecord
   {
     if (type == "event")
     {
-      var eventRecord = new Dictionary<string, object>
-      {
-        { "type", "event" },
-        { "ts", ts },
-        { "event_name", eventName },
-        { "payload", payload ?? new Dictionary<string, object>() },
-      };
+      var eventRecord = new Dictionary<string, object>(string.IsNullOrEmpty(originDt) ? 4 : 5);
+      eventRecord["type"] = "event";
+      eventRecord["ts"] = ts;
+      eventRecord["event_name"] = eventName;
+      eventRecord["payload"] = payload ?? new Dictionary<string, object>();
       if (!string.IsNullOrEmpty(originDt))
       {
         eventRecord["origin_dt"] = originDt;
@@ -59,7 +57,10 @@ internal sealed class BizzaRecord
       return eventRecord;
     }
 
-    var metaObj = new Dictionary<string, object>();
+    var hasOriginDt = !string.IsNullOrEmpty(originDt);
+    var metaCount = meta == null ? 0 : meta.Count;
+    var addOriginDtToMeta = hasOriginDt && (meta == null || !meta.ContainsKey("origin_dt"));
+    var metaObj = new Dictionary<string, object>(metaCount + (addOriginDtToMeta ? 1 : 0));
     if (meta != null)
     {
       foreach (var kv in meta)
@@ -67,24 +68,32 @@ internal sealed class BizzaRecord
         metaObj[kv.Key] = kv.Value;
       }
     }
-    if (!string.IsNullOrEmpty(originDt) && !metaObj.ContainsKey("origin_dt"))
+    if (addOriginDtToMeta)
     {
       metaObj["origin_dt"] = originDt;
     }
 
-    var profileRecord = new Dictionary<string, object>
+    var profileRecordCapacity = 5;
+    if (metaObj.Count > 0)
     {
-      { "type", "user_profile_change" },
-      { "ts", ts },
-      { "key", key },
-      { "old", oldValue },
-      { "new", newValue },
-    };
+      profileRecordCapacity += 1;
+    }
+    if (hasOriginDt)
+    {
+      profileRecordCapacity += 1;
+    }
+
+    var profileRecord = new Dictionary<string, object>(profileRecordCapacity);
+    profileRecord["type"] = "user_profile_change";
+    profileRecord["ts"] = ts;
+    profileRecord["key"] = key;
+    profileRecord["old"] = oldValue;
+    profileRecord["new"] = newValue;
     if (metaObj.Count > 0)
     {
       profileRecord["meta"] = metaObj;
     }
-    if (!string.IsNullOrEmpty(originDt))
+    if (hasOriginDt)
     {
       profileRecord["origin_dt"] = originDt;
     }
@@ -205,12 +214,14 @@ internal sealed class BizzaState
   public string playerId = "";
   public bool registerSent;
   public double gameDurationSeconds;
+  public double userProfileFlushElapsedSeconds;
   public Dictionary<string, int> dailyRecordCountByDt = new Dictionary<string, int>();
   public Dictionary<string, double> dailyActiveSecondsByDt = new Dictionary<string, double>();
   public Dictionary<string, double> dailyFirstPhaseFlushElapsedByDt = new Dictionary<string, double>();
   public Dictionary<string, double> dailyFallbackFlushElapsedByDt = new Dictionary<string, double>();
   public Dictionary<string, object> userProps = new Dictionary<string, object>();
   public List<BizzaRecord> realtimeBuffer = new List<BizzaRecord>();
+  public List<BizzaRecord> userProfileBuffer = new List<BizzaRecord>();
   public List<BizzaBatch> pendingBatches = new List<BizzaBatch>();
   public List<BizzaBatch> delayedQueue = new List<BizzaBatch>();
   public Dictionary<string, int> realtimeSeqByDt = new Dictionary<string, int>();
@@ -228,6 +239,12 @@ internal sealed class BizzaState
     for (var i = 0; i < realtimeBuffer.Count; i++)
     {
       realtimeList.Add(realtimeBuffer[i].ToStateObject());
+    }
+
+    var userProfileList = new List<object>();
+    for (var i = 0; i < userProfileBuffer.Count; i++)
+    {
+      userProfileList.Add(userProfileBuffer[i].ToStateObject());
     }
 
     var pendingList = new List<object>();
@@ -248,12 +265,14 @@ internal sealed class BizzaState
       { "player_id", playerId },
       { "register_sent", registerSent },
       { "game_duration_seconds", gameDurationSeconds },
+      { "user_profile_flush_elapsed_seconds", userProfileFlushElapsedSeconds },
       { "daily_record_count_by_dt", dailyRecordCountByDt },
       { "daily_active_seconds_by_dt", dailyActiveSecondsByDt },
       { "daily_first_phase_flush_elapsed_by_dt", dailyFirstPhaseFlushElapsedByDt },
       { "daily_fallback_flush_elapsed_by_dt", dailyFallbackFlushElapsedByDt },
       { "user_props", userProps },
       { "realtime_buffer", realtimeList },
+      { "user_profile_buffer", userProfileList },
       { "pending_batches", pendingList },
       { "delayed_queue", delayedList },
       { "realtime_seq_by_dt", realtimeSeqByDt },
@@ -271,6 +290,10 @@ internal sealed class BizzaState
     state.playerId = BizzaValueUtil.AsString(map.ContainsKey("player_id") ? map["player_id"] : null, "");
     state.registerSent = BizzaValueUtil.AsBool(map.ContainsKey("register_sent") ? map["register_sent"] : null, false);
     state.gameDurationSeconds = BizzaValueUtil.AsDouble(map.ContainsKey("game_duration_seconds") ? map["game_duration_seconds"] : null, 0);
+    state.userProfileFlushElapsedSeconds = BizzaValueUtil.AsDouble(
+      map.ContainsKey("user_profile_flush_elapsed_seconds") ? map["user_profile_flush_elapsed_seconds"] : null,
+      0d
+    );
     state.dailyRecordCountByDt = BizzaValueUtil.AsStringIntDictionary(map.ContainsKey("daily_record_count_by_dt") ? map["daily_record_count_by_dt"] : null);
     state.dailyActiveSecondsByDt = BizzaValueUtil.AsStringDoubleDictionary(
       map.ContainsKey("daily_active_seconds_by_dt") ? map["daily_active_seconds_by_dt"] : null
@@ -293,6 +316,12 @@ internal sealed class BizzaState
     for (var i = 0; i < realtimeRaw.Count; i++)
     {
       state.realtimeBuffer.Add(BizzaRecord.FromStateObject(realtimeRaw[i]));
+    }
+
+    var userProfileRaw = BizzaValueUtil.AsList(map.ContainsKey("user_profile_buffer") ? map["user_profile_buffer"] : null);
+    for (var i = 0; i < userProfileRaw.Count; i++)
+    {
+      state.userProfileBuffer.Add(BizzaRecord.FromStateObject(userProfileRaw[i]));
     }
 
     var pendingRaw = BizzaValueUtil.AsList(map.ContainsKey("pending_batches") ? map["pending_batches"] : null);

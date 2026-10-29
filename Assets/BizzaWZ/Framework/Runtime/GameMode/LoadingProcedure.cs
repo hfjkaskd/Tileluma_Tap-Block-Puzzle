@@ -1,3 +1,4 @@
+using Bizza.GameAnalytics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -209,16 +210,20 @@ public class LoadingProcedure
             });
         }
 
+        string analyticsStageId = BizzaGameAnalytics.TrackGameLoadStageStart(GetAnalyticsStageName(task.TaskName));
         try
         {
             LogLogger.LogInfo($"开始执行Task:{task.TaskName}  {task.GetType().Name}");
             await task.Execute();
+            BizzaGameAnalytics.TrackGameLoadStageComplete(analyticsStageId, true);
             LogLogger.LogInfo($"结束执行Task:{task.TaskName}  {task.GetType().Name}");
             _completedTasks.Add(task.TaskName);
             UpdateProgress();
         }
         catch (Exception e)
         {
+            BizzaGameAnalytics.TrackGameLoadStageComplete(analyticsStageId, false,
+                e is OperationCanceledException ? "OperationCanceledException" : "loading_task_failed");
             LogLogger.LogVerbose(LogTag.LOG_Load,$"任务 {task.TaskName} 执行失败: {e.Message}");
             throw;
         }
@@ -227,6 +232,28 @@ public class LoadingProcedure
     /// <summary>
     /// 更新总进度
     /// </summary>
+    // Explicit IDs stay stable under Obfuz; values match the APK task names.
+    private static string GetAnalyticsStageName(LoadingTaskName taskName)
+    {
+        switch (taskName)
+        {
+            case LoadingTaskName.None: return "None";
+            case LoadingTaskName.LoadRemoteConfig: return "LoadRemoteConfig";
+            case LoadingTaskName.LoadTables: return "LoadTables";
+            case LoadingTaskName.LoadGameData: return "LoadGameData";
+            case LoadingTaskName.InitPlatform: return "InitPlatform";
+            case LoadingTaskName.ReadLanguage: return "ReadLanguage";
+            case LoadingTaskName.LoadGameRes: return "LoadGameRes";
+            case LoadingTaskName.ShowSplashAd: return "ShowSplashAd";
+            case LoadingTaskName.PreLoadAsset: return "PreLoadAsset";
+            case LoadingTaskName.LoadUserId: return "LoadUserId";
+            case LoadingTaskName.LoadUserInfo: return "LoadUserInfo";
+            case LoadingTaskName.CheckNetwork: return "CheckNetwork";
+            case LoadingTaskName.TestWait3s: return "TestWait3s";
+            default: return "UnknownLoadingTask";
+        }
+    }
+
     private void UpdateProgress()
     {
         float totalWeight = 0f;
