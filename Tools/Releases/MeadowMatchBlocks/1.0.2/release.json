@@ -1,0 +1,37 @@
+{
+  "application": "Meadow Match Blocks",
+  "packageName": "com.meadowmatch.blocks",
+  "versionName": "1.0.2",
+  "versionCode": 102,
+  "unityApplicationVersion": "1.0.2",
+  "releaseTag": "meadowmatchblocks-v1.0.2",
+  "releaseUrl": "https://github.com/hfjkaskd/Tileluma_Tap-Block-Puzzle/releases/tag/meadowmatchblocks-v1.0.2",
+  "buildSource": {
+    "type": "matching-android-gradle-export",
+    "referenceApkSha256": "251ae43e1b8bb62dfdcb4c549638ae09e96db0b7a27a6463c124e29eb368ef14",
+    "reusePrecompiledUnityGame": true,
+    "unityVersion": "2022.3.62f2"
+  },
+  "advertising": {
+    "adMobApplicationId": "ca-app-pub-1221806785970132~7150018194",
+    "mediation": "AppLovin MAX",
+    "appLovinSdkVersion": "13.5.1",
+    "googleAdapterVersion": "24.4.0.0",
+    "googleMobileAdsSdkVersion": "24.4.0",
+    "dashboardConfigurationRequired": true,
+    "liveAdRequestTestPerformed": false
+  },
+  "signingCertificateSha256": "bfeb733689023b77c4252ca423388fb7ad64c3f6fc109be322e4f53c8c346b37",
+  "artifacts": [
+    {
+      "name": "MeadowMatchBlocks-1.0.2-AdMob.apk",
+      "size": 99737816,
+      "sha256": "07520d5df2a93c38a404144b86cdc2a6f65a5012ebbdb298ad6a57ec75032928"
+    },
+    {
+      "name": "MeadowMatchBlocks-1.0.2-AdMob.aab",
+      "size": 97131067,
+      "sha256": "47d2e1e1137868a4983df888275a6543591d0c6cbf04aea3a63f5afd81b17902"
+    }
+  ]
+}
